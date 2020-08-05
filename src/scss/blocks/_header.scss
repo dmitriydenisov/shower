@@ -64,6 +64,8 @@ ul.top-nav__list {
     padding-top: 40px;
     padding-bottom: 8px;
 
+    
+
     li {
         margin: 0 0 20px;
         padding: 0;
@@ -84,6 +86,10 @@ ul.top-nav__list {
     margin-right: 18px;
     position: absolute;
     right: 0;
+
+    &:hover {
+        cursor: pointerl
+    } 
 }
 .header-rhombus {
     position: absolute;
@@ -99,6 +105,7 @@ ul.top-nav__list {
     width: 409px;
     text-align: center;
     margin-top: 215px;
+    margin-left: 68px;
 }
 .header-logo {
     position: absolute;
