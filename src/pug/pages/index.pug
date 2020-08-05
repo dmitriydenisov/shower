@@ -4,6 +4,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap")
+        link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
+        link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="css/main.css")
         title Document
     body
@@ -20,8 +22,29 @@ html(lang="en")
                 .top-nav__contact                    
                         a(href="tel:+7 (499) 677 20 67").contact__phone +7 (499) 677 20 67                     
                         a(href="#").contact__all Все контакты  
-                .top-nav-toogle                
-            //- .header-bottom   
+                .top-nav-toogle 
+
+                    .navigation__toggle
+                        i(aria-hidden = true).fa.fa-bars
+
+                    ul.top-nav__list
+                        li 
+                            a(href="#") Резка и обработка стекла
+                        li
+                            a(href="#") Многослойное стекло
+                        li
+                            a(href="#") Душевые ограждения
+                        li
+                            a(href="#") Перегородки и двери
+                        li
+                            a(href="#") Зеркала на заказ
+                        li
+                            a(href="#") Кухонные фартуки
+                        li
+                            a(href="#") Гнутое стекло
+
+
+
 
         .view
             h2.view__title Виды и примеры душевых ограждений
@@ -33,5 +56,6 @@ html(lang="en")
 
 
 
-
+        script(src="libs/jquery/jquery-1.11.2.min.js")
         script(src="js/main.js")
+        script(src="js/navigation.js")
