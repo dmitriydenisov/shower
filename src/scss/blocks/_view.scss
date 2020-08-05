@@ -13,7 +13,7 @@
 }
 .view__slider-item {
     margin: 0 ;
-    padding: 5px 20px ;
+    padding: 8px 20px ;
     display: inline-block;
     background-color: #7EA0AD;
     list-style-type: none;
@@ -28,15 +28,27 @@
         background-color: #F4B955;
     }
 
+    &--active {
+        background-color: #F4B955;
+        border: 3px solid #799DAD;
+    }
+
     &:last-child {
         margin-right: 0;
         line-height: 1.5;
-        padding: 13px 10px 5px 10px;
+        padding: 0;
         color: #fff;
         font-weight: 500;
         font-size: 14px;
         border: 3px solid #799DAD;        
         background-color: #F4B955;
+        text-align: center;
+
+
+        width: 118px;
+        padding-top: 7px;
+        height: 55px;
+        vertical-align: bottom;
 
         a {
             color: #fff;
@@ -44,9 +56,35 @@
     }
 }
 .viev__slider-big {
-    margin-top: 20px;
+    position: relative;
+    margin-top: 50px;
     width: 1085px;
-    height: 200px;
+    height: 450px;
     border: 3px solid #7EA0AD;
     border-radius: 10px;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: -77px;
+        border: 33px solid transparent;
+        border-bottom: 45px solid #7EA0AD;
+        border-radius: 13px;
+    }
+}
+.calculation-btn {
+    position: absolute;
+    bottom: -30px;
+    left: 342px;
+    padding: 20px 30px;
+    background-color: #F4B955;
+    outline: none;
+    border: 2px solid #7EA0AD;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;    
 }
