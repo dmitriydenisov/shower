@@ -1,5 +1,5 @@
 .benifit-section {
-    background-color: #91B7C6;
+    background:url('../img/bg/bg-benefit.png')  no-repeat top left, url('../img/bg/bg-benefit-bottom.png')  no-repeat bottom right, #7EA0AD ;
     margin-top: 90px;
     text-align: center;
     padding-top: 30px;
@@ -20,12 +20,15 @@
 .benifit__item {
     position: relative;
     border: 3px solid transparent;
-    border-image: linear-gradient(127deg,rgba(180,172,133,1), rgba(126,160,173,1));
+    border-image: linear-gradient(127deg,rgba(180,172,133,1), rgba(145,183,198,1));
     border-image-slice: 1;
     width: 270px;
     height: 130px;
     margin-bottom: 55px;
-    margin-right: 25px;    
+    margin-right: 25px; 
+    padding-left: 23px;
+    padding-right: 25px; 
+    padding-bottom: 23px;
 }
 
 .benefit__circle {
@@ -45,13 +48,47 @@
         transform: translate(-50%, -50%);
     }
 }
+.benefit__description {
+    margin-top: 10px;
+    color: #fff;
+    text-align: left;  
+    line-height: 1.4;
+    font-size: 14px;
+
+    span {
+        display: block;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
 .benefit__btn{
-    width: 270px;
-    height: 40px;
+    position: relative;
+    display: inline-block;
     border: 3px solid #F4B955;  
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
+    padding: 13px 30px 13px 70px;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+
+    &::after {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        content: '';
+        width: 23px;
+        height: 21px;
+        background-image: url('../img/icon/senler.png');
+
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F4B955;
+        border: 3px solid #fff;
+    }
 }
 
 

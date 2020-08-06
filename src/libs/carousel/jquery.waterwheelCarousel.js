@@ -228,7 +228,11 @@
                 'visibility': 'visible',
                 'position': 'absolute',
                 'z-index': 0,
-                'opacity': 0,
+                'opacity': 0,                
+                'border': 1 ,
+                'border-style': 'solid',
+                'border-color': '#F4B955',
+                'border-radius': 7,
               })
               // Give each image a data object so it remembers specific data about
               // it's original form

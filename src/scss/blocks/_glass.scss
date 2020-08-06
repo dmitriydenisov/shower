@@ -1,0 +1,37 @@
+.type-glass {
+    margin-top: 30px;
+    text-align: center;
+}
+.type-glass__title {
+    font-weight: 500;
+    font-size: 22px;
+    color: #7EA0AD;
+}
+.type-glass__block {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    &:after {
+        position: absolute;
+        top: 22px;
+        left: 530px;
+        content: '';
+        width: 823px;
+        height: 71px;
+        background-color: #7EA0AD;
+        z-index: -1;
+    }
+}
+.glass__item {
+    margin-right: 30px;
+    
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
