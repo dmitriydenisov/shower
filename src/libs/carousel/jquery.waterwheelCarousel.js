@@ -329,8 +329,8 @@
       // Depth will be reverse distance from center
       var newDepth = options.flankingItems + 2 - newDistanceFromCenter;
 
-      $item.data('width',310);
-      $item.data('height',340);
+      $item.data('width',newWidth);
+      $item.data('height',newHeight);
       $item.data('top',newTop);
       $item.data('left',newLeft);
       $item.data('oldPosition',$item.data('currentPosition'));

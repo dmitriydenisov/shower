@@ -1,25 +1,37 @@
-$(document).ready(function() {
-    
-     var carousel = $(".carousel").waterwheelCarousel({
-         flankingItems: 3,
-         imageNav: true,
-         separation: 100,
-         startingItem: 2,
-         horizonOffset: 1,
-         horizonOffsetMultiplier: 0,
-        //  sizeMultiplier: 0.7, // размер изображений по краям
-        //  opacityMultiplier: 0.7
-        horizon: 2
-
-     });
-     $('#prev').bind('click', function() {
-         carousel.prev();
-         return false;
-     }); 
-     $('#next').bind('click', function() {
-        carousel.next();
-        return false;
+$(document).ready(function () {
+    var carousel = $("#carousel").waterwheelCarousel({
+      flankingItems: 3,
+      movingToCenter: function ($item) {
+        $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movedToCenter: function ($item) {
+        $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movingFromCenter: function ($item) {
+        $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movedFromCenter: function ($item) {
+        $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+      },
+      clickedCenter: function ($item) {
+        $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+      }
     });
-      
-    // $("#carousel").waterwheelCarousel({});
+
+    $('#prev').bind('click', function () {
+      carousel.prev();
+      return false
+    });
+
+    $('#next').bind('click', function () {
+      carousel.next();
+      return false;
+    });
+
+    $('#reload').bind('click', function () {
+      newOptions = eval("(" + $('#newoptions').val() + ")");
+      carousel.reload(newOptions);
+      return false;
+    });
+
   });
