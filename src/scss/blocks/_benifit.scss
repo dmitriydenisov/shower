@@ -1,0 +1,57 @@
+.benifit-section {
+    background-color: #91B7C6;
+    margin-top: 90px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 56px;
+}
+.benefit__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+.benefit__block {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.benifit__item {
+    position: relative;
+    border: 3px solid transparent;
+    border-image: linear-gradient(127deg,rgba(180,172,133,1), rgba(126,160,173,1));
+    border-image-slice: 1;
+    width: 270px;
+    height: 130px;
+    margin-bottom: 55px;
+    margin-right: 25px;    
+}
+
+.benefit__circle {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border: 3px solid #B4AC85;
+    background-color: #91B7C6;
+    border-radius: 50%;
+    margin-top: -35px;
+    margin-left: 100px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.benefit__btn{
+    width: 270px;
+    height: 40px;
+    border: 3px solid #F4B955;  
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

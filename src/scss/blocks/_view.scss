@@ -74,6 +74,22 @@
         border-radius: 13px;
     }
 }
+.prev {    
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 52px;
+    height: 36px;
+    background: url('../img/arrow-left.png');
+}
+.next {
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    width: 52px;
+    height: 36px;
+    background: url('../img/arrow-right.png');
+}
 .slider-big__item {
     width: 310px;
     height: 340px;
