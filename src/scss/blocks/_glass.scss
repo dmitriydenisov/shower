@@ -1,21 +1,18 @@
-.type-glass {
+.section-glass {
     margin-top: 30px;
     text-align: center;
 }
-.type-glass__title {
-    font-weight: 500;
-    font-size: 22px;
-    color: #7EA0AD;
-}
-.type-glass__block {
+.type-glass {
     position: relative;
+    display: flex;
+    justify-content: center;    
     margin-top: 30px;
     margin-bottom: 60px;
 
     &:after {
         position: absolute;
         top: 22px;
-        left: 530px;
+        left: 125px;
         content: '';
         width: 823px;
         height: 71px;
@@ -23,15 +20,53 @@
         z-index: -1;
     }
 }
-.glass__item {
+.section-glass__title {
+    font-weight: 500;
+    font-size: 22px;
+    color: #7EA0AD;
+}
+.type-glass-block {    
     margin-right: 30px;
-    
-
-    &:hover {
-        cursor: pointer;
-    }
 
     &:last-child{
         margin-right: 0;
+    }   
+}
+.type-glass-block__img {
+    position: relative;
+    margin-bottom: 15px;
+}
+.type-glass__description {
+    position: absolute;
+    top: -190px;
+    left: 0;
+    width: 815px;
+    height: 180px;
+    background-color: #B8E3F2;
+    background-size: 50px;
+    display: none;  
+    
+    &--last {
+        //width: 50px;  
+        left: -710px;
     }
+}
+.type-glass-block__img:hover .type-glass__description {
+    display: block;
+    
+    // &:last-child {
+    //     width: 50px;
+    // }
+}
+.type-glass-block__title {
+    color: #7EA0AD;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+.glass__item {
+    &:hover {
+        cursor: pointer;
+    }    
 }

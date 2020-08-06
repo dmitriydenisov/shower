@@ -150,14 +150,36 @@ html(lang="en")
                             |от бюджетного до премиум сегмента стекла и фурнитуры
                 .benefit__btn
                     | Заказать душевую
-        .type-glass
-            .type-glass__title Основные виды стекла
-            .type-glass__block
-                img(src="img/glass/item-1.png", alt="Прозрачное").glass__item
-                img(src="img/glass/item-2.png", alt="Осветвленное").glass__item
-                img(src="img/glass/item-3.png", alt="Матовое").glass__item
-                img(src="img/glass/item-4.png", alt="Графит").glass__item
-                img(src="img/glass/item-5.png", alt="Бронза").glass__item
+        .section-glass
+            .container
+                .section-glass__title Основные виды стекла
+                .type-glass
+                    .type-glass-block
+                        .type-glass-block__img
+                            img(src="img/glass/item-1.png", alt="Прозрачное").glass__item
+                            .type-glass__description Стекло М1, прозрачное, или просто обычное стекло. Все это - названия флоат-стекла,        являющегося самым популярным материалом стекольной промышленности. Имеет зеленоватый оттенок, ярко выраженный в виде с торца. Очень часто используется в темных помещениях, или в помещениях с темной плиткой / черным мрамором, так как зеленоватый отлив, при темном фоне не виден так отчетливо, а учитывая самую низкую цену стекла среди базовых видов, является лучшим выбором для таких помещений. 
+                        .type-glass-block__title Прозрачное
+                    .type-glass-block
+                        .type-glass-block__img
+                            img(src="img/glass/item-2.png", alt="Осветвленное").glass__item
+                            .type-glass__description описание 2
+                        .type-glass-block__title Осветвленное
+                    .type-glass-block
+                        .type-glass-block__img
+                            img(src="img/glass/item-3.png", alt="Матовое").glass__item
+                            .type-glass__description описание 3
+                        .type-glass-block__title Матовое
+                    .type-glass-block
+                        .type-glass-block__img
+                            img(src="img/glass/item-4.png", alt="Графит").glass__item                            
+                            .type-glass__description описание 4
+                        .type-glass-block__title Графит
+                    .type-glass-block
+                        .type-glass-block__img
+                            img(src="img/glass/item-5.png", alt="Бронза").glass__item
+                            .type-glass__description.type-glass__description--last описание 5
+                        .type-glass-block__title Бронза
+
 
                     
                     
@@ -180,6 +202,6 @@ html(lang="en")
 
 
         script(src="libs/jquery/jquery-1.11.2.min.js")
-        script(src="libs/carousel/jquery.waterwheelCarousel.js")
+        script(src="libs/carousel/jquery.waterwheelCarousel.min.js")
         script(src="js/main.js")
         script(src="js/navigation.js")
