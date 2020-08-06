@@ -74,6 +74,28 @@
         border-radius: 13px;
     }
 }
+.slider-big__item {
+    width: 310px;
+    height: 340px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #F4B955;
+    border-radius: 5px;
+
+    img {
+
+    }
+}
+
+.carousel {
+    display: relative;
+  }
+  #carousel img {
+    display: hidden; /* hide images until carousel prepares them */
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+  }
+
 .calculation-btn {
     position: absolute;
     bottom: -30px;
