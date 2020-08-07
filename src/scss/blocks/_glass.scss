@@ -40,15 +40,55 @@
     position: absolute;
     top: -190px;
     left: 0;
-    width: 815px;
-    height: 180px;
-    background-color: #B8E3F2;
+     width: 765px;
+    // height: 150px;
     background-size: 50px;
     display: none;  
+    background-color: #fff;
+    border: 4px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 20px 16px;
+
+    color: #7EA0AD;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
     
+    
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: -11px;
+    //     right: 0;
+    //     width: 540px;
+    //     height: 170px;
+    //     background-color: #B8E3F2;
+
+    // }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        bottom: -64px;
+        border: 29px solid transparent;
+        border-top: 35px solid #D4E2E8;
+        border-radius: 2px;
+    }
+
     &--last {
         //width: 50px;  
-        left: -710px;
+        left: -700px;
+
+        &:after {
+            left: 720px;
+            right: 15px;
+            bottom: -64px;
+            border: 29px solid transparent;
+            border-top: 35px solid #D4E2E8;
+            border-radius: 2px;
+        }
     }
 }
 .type-glass-block__img:hover .type-glass__description {
