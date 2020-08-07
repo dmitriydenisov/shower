@@ -80,7 +80,7 @@ html(lang="en")
                     li.view__slider-item 
                         a(href="#")
                             | вызвать <br> специалиста
-                .viev__slider-big#carousel                    
+                .viev__slider-big#carousel(data-card="1")                    
                     img(src="img/angular/1.jpg", alt="")#item-1 
                     img(src="img/angular/2.jpg", alt="")#item-2
                     img(src="img/angular/3.jpg", alt="")#item-3
@@ -106,7 +106,70 @@ html(lang="en")
                     a(href="#")#prev.prev 
                     a(href="#")#next.next
 
-                    button.calculation-btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").calculation-btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden(data-card="2")
+                    .slider-big__heading 2. Выберите вид стекла
+                    .slider-big__view
+                        .block-view
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box
+                                img(src="img/glass/item-1.png", alt="")
+                                span.slider-big__title Прозрачное
+                        .block-view                
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box
+                                img(src="img/glass/item-2.png", alt="")
+                                span.slider-big__title Осветлённое
+                        .block-view            
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box
+                                img(src="img/glass/item-3.png", alt="")
+                                span.slider-big__title Матовое
+                        .block-view            
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box
+                                img(src="img/glass/item-4.png", alt="")
+                                span.slider-big__title Графит
+                        .block-view            
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box
+                                img(src="img/glass/item-5.png", alt="")
+                                span.slider-big__title Бронза
+                    .slider-big__options
+                        .block-option                    
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box.check__box--option
+                                | Добавить рисунок<br />(пескоструй, матовка)
+                        .block-option                            
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box.check__box--option
+                                | Гидрофобное напыление<br />(антикапля/противогрибковое)
+                        .block-option                            
+                            label.check                        
+                                input(type="checkbox").check__input
+                                span.check__box.check__box--option
+                                | Толщина стекла 10мм<br />(по умолчанию 8мм)
+                    .pagination
+                        .pagination__item(data-showCard="1") 1
+                        .pagination__item(data-showCard="2") 2
+                        .pagination__item(data-showCard="3") 3
+                        .pagination__item(data-showCard="4") 4
+                    button(data-showCard="3").calculation-btn Перейти к выбору фурнитуры
+                .viev__slider-big.hidden(data-card="3")
+                    button(data-showCard="4").calculation-btn Перейти к выбору услуг
+                .viev__slider-big.hidden(data-card="4")
+                    button(data-showCard="5").calculation-btn Перейти к расчету
+                .viev__slider-big.hidden(data-card="5")
+                    button(data-showCard="1").calculation-btn.send-email 1. Отправить расчёт на e-mail
+                    button(data-showCard="1").calculation-btn.gager 2. Вызвать замерщика
+                    button(data-showCard="1").calculation-btn.consultation 3. Консультация
         .benifit-section
             .container
                 .benefit__title Плюсы и преимущества
@@ -183,18 +246,48 @@ html(lang="en")
                         .type-glass-block__img
                             img(src="img/glass/item-5.png", alt="Бронза").glass__item
                             .type-glass__description.type-glass__description--last Тонированное в массе стекло (без пленок и покрытий) темно-бронзового цвета. Как и вышеперечисленные стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах. 
-                        .type-glass-block__title Бронза
-                    
+                        .type-glass-block__title Бронза                    
             .comparison-glass 
-                .container
-                    .comparison-glass__title Сравнение видов прозрачного стекла
-                    .comparison-glass-type
-                        .glass-type__color Прозрачное <br /> (б/ц, М1, “обычное”)
-                        .glass-type__visual
-                            img(src="img/visual-glass.png", alt="")
-                        .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
-
-
+                .section-glass__title Сравнение видов прозрачного стекла
+                .comparison-glass-type
+                    .glass-type__color Прозрачное <br /> (б/ц, М1, “обычное”)
+                    .glass-type__visual
+                        img(src="img/visual-glass.png", alt="")
+                    .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
+                .glass-qualities
+                    .qualities-left
+                        .glass-qualities-block.glass-qualities-block--left                           
+                            .qualities-block__title Низкая стоимость
+                        .glass-qualities-block.glass-qualities-block--left                            
+                            .qualities-block__title Зеленый отблеск на светлых оттенках
+                    .qualities-right                    
+                        .glass-qualities-block.glass-qualities-block--right                          
+                            .qualities-block__title Высокая стоимость
+                        .glass-qualities-block.glass-qualities-block--right                           
+                            .qualities-block__title Идеальная цветопередача и прозрачность
+        .section-jobs
+            .container
+                .section-glass__title Примеры работ
+                .all
+                    input(type="chckbox" name="all")#all
+                    label(for="all")
+                .accordion
+                    .trigger
+                        input(type="chckbox" name="checkbox-1")#checkbox-1
+                        label(for="checkbox-1").checkbox
+                            | test slide 1 
+                            i
+                        .content
+                            h3 1. Угловая душевая с бронзовым стеклом
+                            p Стекло - бронза 8мм (AGC, евро) с закалкой; Ручка - скоба; Полосы выполнены путем пескоструйной обработки (матирования) с нанесением лака в 6 слоев с сушкой; Верхняя компенсирующая штанга 30х10 прямоугольная. Вся фурнитура - хромированная.
+                    .trigger
+                        input(type="chckbox" name="checkbox-1")#checkbox-2
+                        label(for="checkbox-2").checkbox
+                            | test slide 2 
+                            i
+                        .content
+                            h3 1. Угловая душевая с бронзовым стеклом
+                            p ddd
 
                     
                     

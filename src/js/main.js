@@ -35,3 +35,16 @@ $(document).ready(function () {
     });
 
   });
+
+
+const cards = document.querySelectorAll('.viev__slider-big')
+
+document.querySelectorAll('[data-showCard]').forEach(btn => {
+	btn.addEventListener("click", () => {
+		cards.forEach(x => x.classList.add('hidden'))
+		
+		const showCard = document.querySelector(`[data-card="${btn.dataset.showcard}"]`)
+		
+		showCard.classList.remove('hidden')
+	})
+})

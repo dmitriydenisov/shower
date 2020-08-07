@@ -58,11 +58,12 @@
 .viev__slider-big {
     position: relative;
     margin-top: 50px;
+    padding-top: 30px;
     width: 1085px;
     height: 450px;
     border: 3px solid #7EA0AD;
     border-radius: 10px;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);    
 
     &:after {
         content: '';
@@ -100,14 +101,6 @@
     border-radius: 5px;
 }
 
-// .carousel {
-//     display: relative;
-//   }
-//   .carousel img {
-//     display: hidden; /* hide images until carousel prepares them */
-//     cursor: pointer; /* not needed if you wrap carousel items in links */
-//   }
-
 .calculation-btn {
     position: absolute;
     bottom: -30px;
@@ -121,9 +114,125 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;      
-    transition: all 0.3s ease-in;  
+    transition: all 0.3s ease-in;      
+    width: 390px;
 
     &:hover {
         border: 2px solid #fff;
     }
 }
+.send-email{
+    left: 65px;
+    width: 286px;
+}
+.gager{
+    left: 390px;
+    width: 235px;
+}
+.consultation{
+    left: 660px;
+    width: 235px;
+}
+.check {
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.check__input {
+    position: absolute;
+    appearance: none;  
+    
+}
+.check__input:checked + .check__box {
+    background-image: url('../img/input-on.png');
+
+}.check__input:checked + .check__box--option {
+    background-image: url('../img/input-opt.png');
+}
+.check__box {
+    position: absolute;
+    top: -7px;
+    left: -8px;
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/input.png');
+
+    &--option {
+        top: 7px;
+        left: -36px;
+    }
+    
+}
+.slider-big__heading {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.slider-big__view {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+    display: flex;
+    
+    
+}
+.slider-big__title {
+    margin-top: 10px;
+    color: #fff;
+}
+.slider-big__options {
+    margin-top: 120px;
+    width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.block-view {
+    display: flex;
+    //text-align: center;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.block-option {
+    position: relative;
+    margin-right: 70px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.pagination {
+    display: flex;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.pagination__item {
+    margin-right: 30px;
+    cursor: pointer;
+    border: 1px solid #D4E2E8;
+    border-radius: 5px;
+    padding: 6px 11px;
+    color: #7EA0AD;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+
+    &:hover, &:active{
+        color: #fff;
+        background: #7EA0AD;
+        border: 1px solid #F4B955;;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+ }

@@ -54,19 +54,6 @@
     text-align: left;
     font-weight: 500;
     font-size: 14px;
-    
-    
-
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     top: -11px;
-    //     right: 0;
-    //     width: 540px;
-    //     height: 170px;
-    //     background-color: #B8E3F2;
-
-    // }
 
     &:after {
         content: '';
@@ -92,10 +79,8 @@
         }
     }
 }
-.description-bg {
 
-}
-.type-glass-block__img:hover .type-glass__description {
+.type-glass-block__img:hover .type-glass__description{
     display: block;
 }
 .type-glass-block__title {
@@ -112,15 +97,33 @@
 }
 
 .comparison-glass {
-    background-color: #7EA0AD;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: 125px;
+        left: 0;
+        width: 100%;
+        height: 275px;
+        background-color: #7EA0AD;
+    }
     
 }
 .comparison-glass-type {
     display: flex;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1240px;
 }
 .glass-type__color {
     display: flex;
     align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
     
 }
 .glass-type__visual {
@@ -150,4 +153,52 @@
         border: 3px solid rgba(152, 214, 236, 0.7);
         border-radius: 3px;
     }
+}
+.glass-qualities {
+    display: flex;
+    width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+.qualities-left {
+    text-align: right;
+    margin-right: 55px;
+}
+.qualities-right {
+    text-align-last: left;
+    margin-left: 55px;
+}
+.glass-qualities-block {
+    position: relative;
+    margin-bottom: 20px; 
+    
+    &::after {
+        position: absolute;
+        content: '';
+        top: 15%;
+        border-radius: 50%;
+        background-color: #F4B955;
+        width: 14px;
+        height: 14px;
+    }
+
+    &--left {
+        &::after {
+            right: -25px;
+        }       
+    }
+
+    &--right {
+        &::after {
+            left: -25px;
+        }       
+    }
+    
+}
+.qualities-block__title {
+    font-weight: 500;
+    font-size: 17px;
+    color: #7EA0AD;
+    
 }
