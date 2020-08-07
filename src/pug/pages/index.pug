@@ -6,6 +6,8 @@ html(lang="en")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap")
         link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
         link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="libs/owl/assets/owl.carousel.css")
+        //link(rel="stylesheet", href="libs/owl/assets/owl.theme.default.css")
         link(rel="stylesheet", href="css/main.css")
         title Document
     body
@@ -106,16 +108,18 @@ html(lang="en")
                     a(href="#")#prev.prev 
                     a(href="#")#next.next
 
-                    button(data-showCard="2").calculation-btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
                 .viev__slider-big.hidden(data-card="2")
                     .slider-big__heading 2. Выберите вид стекла
                     .slider-big__view
-                        .block-view
+                        .block-view                
                             label.check                        
                                 input(type="checkbox").check__input
                                 span.check__box
                                 img(src="img/glass/item-1.png", alt="")
-                                span.slider-big__title Прозрачное
+                                span.slider-big__title прозрачное
+
+
                         .block-view                
                             label.check                        
                                 input(type="checkbox").check__input
@@ -161,15 +165,68 @@ html(lang="en")
                         .pagination__item(data-showCard="2") 2
                         .pagination__item(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
-                    button(data-showCard="3").calculation-btn Перейти к выбору фурнитуры
+                    button(data-showCard="3").slider-big__btn Перейти к выбору фурнитуры
                 .viev__slider-big.hidden(data-card="3")
-                    button(data-showCard="4").calculation-btn Перейти к выбору услуг
+                    .slider-big__heading 3. Выберите вид фурнитуры
+                    .slider-big__description Фурнитура влияет на функционал, внешний вид и на срок службы изделия. Дешево и идеально — не бывает, следует это понимать. Правда, и идеалы у всех разные.
+                    .btn-block
+                        button.btn-block__item Бюджетный сегмент
+                        button.btn-block__item Комбин. комплекты
+                        button.btn-block__item Премиум
+                        button.btn-block__item Заказные / Люкс
+                    .slider-big__slider
+                        .owl-carousel.owl-theme
+                            .carousel__item
+                                img(src="img/furniture/1.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/2.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/3.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/4.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/5.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/6.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/7.png", alt="")
+                            .carousel__item
+                                img(src="img/furniture/8.png", alt="")
+                        a(href="#")#prev.prev.prev--furniture
+                        a(href="#")#next.next.next--furniture
+                    .slider-big__description-footer Так выглядит популярная фурнитура этого ценового сегмента. В реальности выбор очень большой. Со всеми деталями Вас ознакомит замерщик, который привозит образцы стекол, полные каталоги, и некоторые образцы фурнитуры для примерки или показа.
+                    .pagination
+                        .pagination__item(data-showCard="1") 1
+                        .pagination__item(data-showCard="2") 2
+                        .pagination__item(data-showCard="3") 3
+                        .pagination__item(data-showCard="4") 4
+                    button(data-showCard="4").slider-big__btn Перейти к выбору услуг
                 .viev__slider-big.hidden(data-card="4")
-                    button(data-showCard="5").calculation-btn Перейти к расчету
+                    .slider-big__heading 4. Детали и услуги
+                    .slider-big__services
+                        .block-services        
+                            input(type="checkbox")#serv.block-services___input
+                            label(for="serv").block-services___label Самовывоз
+                        .block-services                    
+                            input(type="checkbox")#install.block-services___input
+                            label(for="install").block-services___label Установка (монтаж) 
+                        .block-services
+                            input(type="checkbox")#vizeo.block-services___input
+                            label(for="vizeo").block-services___label Визуализация
+                        .block-services
+                            input(type="checkbox")#upper.block-services___input
+                            label(for="upper").block-services___label Подъём без лифта
+                        .block-services
+                            input(type="checkbox")#devili.block-services___input
+                            label(for="devili").block-services___label Доставка - 2000руб
+                        .block-services 
+                            input(type="checkbox")#glass.block-services___input
+                            label(for="glass").block-services___label Стеклянные полки
+                    button(data-showCard="5").slider-big__btn Перейти к расчету
                 .viev__slider-big.hidden(data-card="5")
-                    button(data-showCard="1").calculation-btn.send-email 1. Отправить расчёт на e-mail
-                    button(data-showCard="1").calculation-btn.gager 2. Вызвать замерщика
-                    button(data-showCard="1").calculation-btn.consultation 3. Консультация
+                    button(data-showCard="1").slider-big__btn.send-email 1. Отправить расчёт на e-mail
+                    button(data-showCard="1").slider-big__btn.gager 2. Вызвать замерщика
+                    button(data-showCard="1").slider-big__btn.consultation 3. Консультация
         .benifit-section
             .container
                 .benefit__title Плюсы и преимущества
@@ -309,7 +366,9 @@ html(lang="en")
 
 
 
-        script(src="libs/jquery/jquery-1.11.2.min.js")
+        //script(src="libs/jquery/jquery-1.11.2.min.js")
+        script(src="libs/jquery/jquery-3.5.1.min.js")
+        script(src="libs/owl/owl.carousel.js")
         script(src="libs/carousel/jquery.waterwheelCarousel.js")
         script(src="js/main.js")
         script(src="js/navigation.js")

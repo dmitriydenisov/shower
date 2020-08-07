@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  //главная карусель на первом слайде
     var carousel = $("#carousel").waterwheelCarousel({
       flankingItems: 3,
       movingToCenter: function ($item) {
@@ -34,9 +36,27 @@ $(document).ready(function () {
       return false;
     });
 
+    //слайдер в блоке фурнитуры
+    
+
+    let slider = $(".owl-carousel"); 
+    slider.owlCarousel({
+      loop:true,
+      dots:false
+    });
+    
+    $('.prev').click(function() {
+      event.preventDefault()      
+      slider.trigger('prev.owl.carousel');
+  })
+    $('.next').click(function() {
+      event.preventDefault()
+      slider.trigger('next.owl.carousel');
+    })
+
   });
 
-
+//переключение слайдов по кнопке
 const cards = document.querySelectorAll('.viev__slider-big')
 
 document.querySelectorAll('[data-showCard]').forEach(btn => {

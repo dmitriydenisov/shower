@@ -46,8 +46,8 @@
 
 
         width: 118px;
-        padding-top: 7px;
-        height: 55px;
+        padding-top: 7px;        
+        height: 67px;
         vertical-align: bottom;
 
         a {
@@ -77,19 +77,29 @@
 }
 .prev {    
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 50px;
     width: 52px;
     height: 36px;
     background: url('../img/arrow-left.png');
+
+    &--furniture {
+        left: 120px;
+    }
+    
 }
 .next {
     position: absolute;
-    top: 200px;
+    top: 220px;
     right: 50px;
     width: 52px;
     height: 36px;
     background: url('../img/arrow-right.png');
+
+    &--furniture {
+        right: 120px;
+    }
+    
 }
 .slider-big__item {
     width: 310px;
@@ -101,7 +111,7 @@
     border-radius: 5px;
 }
 
-.calculation-btn {
+.slider-big__btn {
     position: absolute;
     bottom: -30px;
     left: 342px;
@@ -139,6 +149,17 @@
         cursor: pointer;
     }
 }
+.slider-big__description-footer {
+    width: 780px;
+    text-align: center;
+    color: #7EA0AD;
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
 .check__input {
     position: absolute;
     appearance: none;  
@@ -170,6 +191,16 @@
     color: #fff;
     text-align: center;
 }
+.slider-big__description {
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    width: 690px;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
 .slider-big__view {
     margin-top: 40px;
     margin-left: auto;
@@ -184,21 +215,72 @@
     color: #fff;
 }
 .slider-big__options {
-    margin-top: 120px;
+    margin-top: 80px;
+    margin-bottom: 30px;
     width: 845px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-around;
 }
+.slider-big__services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 935px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.p{
+    padding-right: -130px;
+}
+.block-services{
+    width: 225px;
+    margin-right: 130px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    &:nth-child(3){
+        margin-right: 0;
+    }
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+.block-services___label {
+    padding-left: 20px;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        top: 5px;
+        left: 25px;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background-image: url('../img/input.png');
+        vertical-align: middle;
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+}
+
+.block-services___input[type="checkbox"]:checked + .block-services___label::before {
+    background-image: url('../img/input-on.png');
+}
 .block-view {
     display: flex;
     //text-align: center;
     margin-right: 30px;
 
-    &:last-child {
-        margin-right: 0;
-    }
+    // &:last-child {
+    //     margin-right: 0;
+    // }
 }
 .block-option {
     position: relative;
@@ -213,7 +295,6 @@
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
 }
 .pagination__item {
     margin-right: 30px;
@@ -236,3 +317,45 @@
         margin-right: 0;
     }
  }
+.btn-block {
+    width: 850px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-block__item {
+    width: 200px;
+    background: #FFFFFF;;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #F4B955;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #668997;
+    margin-right: 10px;
+    transition: all 0.3s ease-in;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover {        
+        background: #F4B955;
+        color: #fff;        
+        border: 2px solid #F4B955;
+    }
+}
+.slider-big__slider {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.carousel__item {
+    margin-right: 10px;
+    width: 170px;
+    height: 125px;
+}
