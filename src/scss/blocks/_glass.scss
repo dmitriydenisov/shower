@@ -65,13 +65,20 @@
         border-radius: 2px;
     }
 
+    &--faq {
+        top: -190px;
+    }
+
+    &--faq-right {
+        left: -800px;
+    }
+
     &--last {
         //width: 50px;  
-        left: -700px;
+        left: -670px;
 
         &:after {
-            left: 720px;
-            right: 15px;
+            left: 675px;
             bottom: -64px;
             border: 29px solid transparent;
             border-top: 35px solid #D4E2E8;

@@ -161,8 +161,8 @@ html(lang="en")
                                 span.check__box.check__box--option
                                 | Толщина стекла 10мм<br />(по умолчанию 8мм)
                     .pagination
-                        .pagination__item(data-showCard="1") 1
-                        .pagination__item(data-showCard="2") 2
+                        .pagination__item.color(data-showCard="1") 1
+                        .pagination__item.color(data-showCard="2") 2
                         .pagination__item(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="3").slider-big__btn Перейти к выбору фурнитуры
@@ -196,9 +196,9 @@ html(lang="en")
                         a(href="#")#next.next.next--furniture
                     .slider-big__description-footer Так выглядит популярная фурнитура этого ценового сегмента. В реальности выбор очень большой. Со всеми деталями Вас ознакомит замерщик, который привозит образцы стекол, полные каталоги, и некоторые образцы фурнитуры для примерки или показа.
                     .pagination
-                        .pagination__item(data-showCard="1") 1
-                        .pagination__item(data-showCard="2") 2
-                        .pagination__item(data-showCard="3") 3
+                        .pagination__item.color(data-showCard="1") 1
+                        .pagination__item.color(data-showCard="2") 2
+                        .pagination__item.color(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="4").slider-big__btn Перейти к выбору услуг
                 .viev__slider-big.hidden(data-card="4")
@@ -215,13 +215,56 @@ html(lang="en")
                             label(for="vizeo").block-services___label Визуализация
                         .block-services
                             input(type="checkbox")#upper.block-services___input
-                            label(for="upper").block-services___label Подъём без лифта
+                            label(for="upper").block-services___label Подъём без лифта                            
+                            span(href="#").services-option.services-option--floor Этаж - 
+                                input(type="text").services-option-input 
                         .block-services
                             input(type="checkbox")#devili.block-services___input
-                            label(for="devili").block-services___label Доставка - 2000руб
+                            label(for="devili").block-services___label Доставка - 2000руб <br /> 
+                            a(href="#").services-option В пределах МКАД 
+                                img(src="img/test.png", alt="")
                         .block-services 
-                            input(type="checkbox")#glass.block-services___input
-                            label(for="glass").block-services___label Стеклянные полки
+                            input(type="checkbox")#shelf.block-services___input
+                            label(for="shelf").block-services___label Стеклянные полки
+                            span(href="#").services-option.services-option--shelf Количество - 
+                                input(type="text").services-option-input 
+                    .services-faq
+                        .services-img
+                        .services-faq-left
+                            .services-faq-block
+                                .services-faq__item Из чего складывается цена установки?
+                                .type-glass__description.type-glass__description--faq
+                                    |Для начала, посчитайте стоимость работы двух грамотных рабочих узкой, стекольной специализации, 
+                                    |с учетом того, что один монтаж идет от 4 до 8 часов + дорога. К этому стоит прибавить множество расходников 
+                                    |(сверла, герметики, диски, полотна и т.п.), стоимость хороших присосок, которые меняются каждые 2-3 месяца, 
+                                    |риск повреждения / порчи инструментов, риски повреждения стекла и разные мелочи. В совокупности это и образует 
+                                    |ту стоимость работ, которую Вы видете или Вам озвучили.
+                            .services-faq-block
+                                .services-faq__item Возможен ли монтаж без доставки?                                 
+                                .type-glass__description.type-glass__description--faq 
+                                    |Когда мы делаем установку изделия, всегда сами осуществляем доставку, но бывают исключения. Например, 
+                                    |если Вы хотите заказать стекло или зеркала заранее и складировать у себя на объекте до монтажа, чтобы 
+                                    |по ним подготовить проемы / поддоны / рамы. В таких ситуациях мы сделаем монтаж отдельным выездом, 
+                                    |но стоимость доставки (выезда) бригады на установку так же будет включена в общую смету. 
+                                    |Мы прописываем отдельно стоимость доставки и стоимость монтажа, чтобы Вы понимали из чего складывается общая смета.
+                        .services-faq-right
+                            .services-faq-block
+                                .services-faq__item Откуда и когда осуществляется самовывоз?
+                                .type-glass__description.type-glass__description--faq.type-glass__description--last
+                                    |Забрать готовое изделие можно с нашего производства в Москве (Район метро “Бутырская”, 
+                                    |рядом с Огородным проездом и ул. Руставели - Проезд Добролюбова д 6А) в рабочие дни с 09.40 до 16.30 или 
+                                    |в г. Наро-Фоминск (МО, ~75 км от МКАД, ул. Новикова ПК “Альянс”) так же, в рабочие дни, но уже с 9.00 до 19.00.
+                            .services-faq-block
+                                .services-faq__item Вы делаете только душевые из стекла?
+                                .type-glass__description.type-glass__description--faq.type-glass__description--last
+                                    | Нет, мы занимаемся всем спектром стекольных работ. Делаем практически все из листового стекла - полируем, красим, печатаем, 
+                                    |гнем, пескоструим, закаливаем, режем и обрабатываем зеркала, полки. Как закончите оформление заказа по душевой, 
+                                    |посмотрите другие страницы нашего сайта, может Вы найдете что-то, что Вы хотели бы увидеть у себя в ближайшее время!
+                    .pagination
+                        .pagination__item.color(data-showCard="1") 1
+                        .pagination__item.color(data-showCard="2") 2
+                        .pagination__item.color(data-showCard="3") 3
+                        .pagination__item.color(data-showCard="4") 4
                     button(data-showCard="5").slider-big__btn Перейти к расчету
                 .viev__slider-big.hidden(data-card="5")
                     button(data-showCard="1").slider-big__btn.send-email 1. Отправить расчёт на e-mail
