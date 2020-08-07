@@ -48,6 +48,7 @@
     border: 4px solid #E5E5E5;
     border-radius: 10px;
     padding: 20px 16px;
+    z-index: 1;
 
     color: #7EA0AD;
     text-align: left;
@@ -91,12 +92,11 @@
         }
     }
 }
+.description-bg {
+
+}
 .type-glass-block__img:hover .type-glass__description {
     display: block;
-    
-    // &:last-child {
-    //     width: 50px;
-    // }
 }
 .type-glass-block__title {
     color: #7EA0AD;
@@ -109,4 +109,45 @@
     &:hover {
         cursor: pointer;
     }    
+}
+
+.comparison-glass {
+    background-color: #7EA0AD;
+    
+}
+.comparison-glass-type {
+    display: flex;
+}
+.glass-type__color {
+    display: flex;
+    align-items: center;
+    
+}
+.glass-type__visual {
+    position: relative;
+    margin: 0 90px;
+
+
+    &:after {
+        position: absolute;
+        top: 20px;
+        left: -60px;
+        content: '';
+        width: 365px;
+        height: 365px;
+        background-color: rgba(151, 213, 200, .15);
+        border: 3px solid rgba(151, 213, 200, .7);
+        border-radius: 3px;
+    }
+    &:before {
+        position: absolute;
+        top: 20px;
+        right: -60px;
+        content: '';
+        width: 365px;
+        height: 365px;
+        background-color: rgba(152, 214, 236, 0.04);
+        border: 3px solid rgba(152, 214, 236, 0.7);
+        border-radius: 3px;
+    }
 }
