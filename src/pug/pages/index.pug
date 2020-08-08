@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap")
         link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
         link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="libs/owl/assets/owl.carousel.css")
@@ -500,28 +500,100 @@ html(lang="en")
             .section-perfect__title Перфекционизм и внимание к деталям
             .item
                 .section-perfect__wrapper
-                    p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat?
+                    p.description Мы всегда стараемся сделать идельный стык. Эстетика, гидроизоляция, без уплотнителей.
                     .section-perfect__marker
                     .section-perfect__video.section-perfect__video--right 
-                        video 
-                            img(src="img/media/1.jpeg", alt="")
+                        .video-img 
+                            img(src="img/media/1.jpeg", alt="", width=280, height=190)
                 .section-perfect__wrapper
-                    p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat
+                    p.description Красим фурнитуру в любой цвет по Вашему вкусу. На фото пример с черной матовой окраской. 
                     .section-perfect__marker
                     .section-perfect__video.section-perfect__video--right 
-                        video 
+                        .video-img 
+                            img(src="img/media/2.jpeg", alt="", width=280, height=190) 
                 .section-perfect__wrapper
                     //- p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat
                     .section-perfect__marker
                     .section-perfect__video 
-                        a(href="#").video 
-                        
+                        .video-img 
+                            img(src="img/media/3.png", alt="", width=280, height=190)                        
                     .section-perfect__video 
-                        a(href="#").video
+                        a(href="#").video Видео 1
                     .section-perfect__video 
-                        a(href="#").video
+                        a(href="#").video Видео 2
             
-            .section-perfectionism__description
+            .section-perfectionism__description Премиальный вариант - вся фурнитура Bohle Premium, а стекло заподлицо со стеной. А главное - минимум металла.
+        .section-help
+        .container
+                .section-glass__title Часто задаваемые вопросы
+                .section-jobs__slider
+                    .wrapper                  
+                        <button class="accordion--help">1. Насколько стекло прочное?</button>
+                            <div class="panel">                                                                                                                       
+                                <p>- После закалки стекло становится гибким, сломать его можно сильным ударом в торец, и только подобрав правильный угол. 
+                                    |С лицевой стороны, стекло очень трудно разбить. Даже в случае удара, оно просто немного согнется, после чего вернется 
+                                    |в исходное положение. В душевых мы используем толстые, каленые стекла, разбить такое стекло случайно - очень сложная задача. 
+                                    |Для голого человека в душе практически нереальная.
+                            </div>
+                    .wrapper                        
+                        <button class="accordion--help">2. Если получилось разбить стекло, что будет?</button>
+                            <div class="panel">                                                                                                                          
+                                <p>- Разбив каленое стекло, максимум что Вас ждет - Вы поцарапаетесь и испугаетесь. Каленое стекло называют травмобезопасным не просто так.
+                                    |При разбитии, оно раскалывается в мелкую крошку (как боковое стекло в автомобиле). В отличии от сырого стекла, эта крошка не обладает 
+                                    |настолько острым режущим краем, поскольку это другой тип трещины. В готовых кабинках с тонкими стеклами, никто не гарантирует закалку, 
+                                    |пишут просто "Стекло". Разбив СЫРОЕ (не каленое) стекло из такой кабинки - можно получить серьезные повреждения и глубокие раны, более опасные, 
+                                    |чем ножевые.
+                            </div>
+                    .wrapper                    
+                        <button class="accordion--help">3. Может ли стекло разбиться само по себе?</button>
+                            <div class="panel">                                                                                      
+                                <p>- Нет. Это абсолютный бред от незнающих людей. Единственный возможный случай разбития с отсрочкой, - это когда стекло, после закалки обработали, 
+                                    |соответственно, оставив очень маленький внешний слой, окружающий ядро с напряжением (практически, оголив ядро). Тогда при малейшем изгибе, 
+                                    |структура может быть нарушена в области съема, что приведет к полному разбитию закаленного стекла. Как правило, такие стекла “живут” не 
+                                    |больше нескольких минут после обработки. Во всех иных случаях, "оно само разбилось" - это лишь оправдания людей, которые случайно ударили изделие, 
+                                    |или поставили его на камень.
+                            </div>
+                    .wrapper                    
+                        <button class="accordion--help">4. Насколько хорошо перегородка держит воду?</button>
+                            <div class="panel">                                                                                        
+                                <p>- Гидроизоляция - весьма сравнительная характеристика. Очень зависит от типа фурнитуры, способа монтажа и вида ремонта. 
+                                    |Чем дешевле фурнитура - тем больше зазоры и менее продуманы водоотводы. Но даже при очень хорошей фурнитуре, если Вы направите поток 
+                                    |воды прямо на уплотнитель, то он просто может немного прогнутся и пропустить капли. При нормальной эксплуатации, это вообще не имеет значения. 
+                                    |В отдельных случаях можно поставить профиль, который на 100% сдерживает даже очень большой поток воды. Тем не менее, стоит понимать, 
+                                    |что душевая - это не аквариум. 
+                            </div>
+                    .wrapper                    
+                        <button class="accordion--help">5. Отличаются ли основные технические характеристики от вида стекла?</button>
+                            <div class="panel">                                                                                     
+                                <p>- Нет, не отличаются. Показатели прочности, степени закалки и характеристик по резке одинаковые для обычных листовых стекол.
+                            </div>
+        .section-footer
+            .container 
+                .footer-wrapper
+                    .footer-contact
+                        .footer-contact__item.footer-contact__item--city Москва
+                        .footer-contact__item Телефон +7(499)677-20-67 <br /> E-mail info@v-t-x.ru
+                        //.footer-contact__item 
+                        .footer-contact__item.footer-contact__item--address Сборочный цех / производство простых изделий - г. Москва, проезд Добролюбова д.6А. Метро - Бутырская
+                        .footer-contact__item.footer-contact__item--address Склад, сложное производство - МО,  г. Наро-Фоминск. ул. Новикова, ПК “Альянс”.
+                    ul.footer-navigation
+                        li 
+                           a(href="#") Отзывы
+                        li 
+                           a(href="#") Доставка
+                        li 
+                           a(href="#") Вакансии
+                        li 
+                           a(href="#") Установка
+                        li 
+                           a(href="#") Политика cookie
+                        li 
+                           a(href="#") Договор оферты
+                        li 
+                           a(href="#") Технические условия
+                        li 
+                           a(href="#") Политика конфеденциальности
+
 
 
 
