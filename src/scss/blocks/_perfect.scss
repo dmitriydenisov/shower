@@ -1,0 +1,32 @@
+.section-perfect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #7EA0AD;
+}
+.section-perfect__title {
+
+}
+.section-perfect__list {
+    li {
+        border: 2px solid #F4B955;
+        border-radius: 10px;
+        margin-bottom: 140px;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &::after {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            transform: translate(-50%, -50%);
+            content: '';
+            width: 235px;
+            height: 188px;
+            border: 2px solid #F4B955;
+            background-image: url('../img/media/1.jpeg');
+            background-size: contain;
+        }
+    }
+}

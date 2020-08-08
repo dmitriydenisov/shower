@@ -117,6 +117,7 @@
     position: absolute;
     bottom: -30px;
     left: 342px;
+    display: block;
     padding: 20px 30px;
     background-color: #F4B955;
     outline: none;
@@ -136,10 +137,12 @@
 .send-email{
     left: 65px;
     width: 286px;
+    padding: 20px 10px;
 }
 .gager{
     left: 390px;
     width: 235px;
+    padding: 20px 10px;
 }
 .consultation{
     left: 660px;

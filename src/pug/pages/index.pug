@@ -287,9 +287,9 @@ html(lang="en")
                             li Если Вам достаточно приблизительного расчёта. то можем отправить смету Вам на почту.
                             li Для получения точного расчёта предлагаем отправить к Вам замерщика.
                             li Так же, мы можем в срочном порядке сделать точный расчёт по телефону, исходя из заполненной Вами информации.
-                    button(data-showCard="1").slider-big__btn.send-email 1. Отправить расчёт на e-mail
-                    button(data-showCard="1").slider-big__btn.gager 2. Вызвать замерщика
-                    button(data-showCard="1").slider-big__btn.consultation 3. Консультация
+                    button(href="#popup").slider-big__btn.send-email.popup-link 1. Отправить расчёт на e-mail
+                    button(href="#")(data-showCard="1").slider-big__btn.gager.popup-link 2. Вызвать замерщика
+                    button(href="#")(data-showCard="1").slider-big__btn.consultation.popup-link 3. Консультация
         .benifit-section
             .container
                 .benefit__title Плюсы и преимущества
@@ -330,7 +330,7 @@ html(lang="en")
                         .benefit__description
                             span Большой ассортимент
                             |от бюджетного до премиум сегмента стекла и фурнитуры
-                .benefit__btn
+                .btn
                     | Заказать душевую
         .section-glass
             .container
@@ -387,43 +387,105 @@ html(lang="en")
                             .qualities-block__title Идеальная цветопередача и прозрачность
         .section-jobs
             .container
-                .section-glass__title Примеры работ
-                .all
-                    input(type="chckbox" name="all")#all
-                    label(for="all")
-                .accordion
-                    .trigger
-                        input(type="chckbox" name="checkbox-1")#checkbox-1
-                        label(for="checkbox-1").checkbox
-                            | test slide 1 
-                            i
-                        .content
-                            h3 1. Угловая душевая с бронзовым стеклом
-                            p Стекло - бронза 8мм (AGC, евро) с закалкой; Ручка - скоба; Полосы выполнены путем пескоструйной обработки (матирования) с нанесением лака в 6 слоев с сушкой; Верхняя компенсирующая штанга 30х10 прямоугольная. Вся фурнитура - хромированная.
-                    .trigger
-                        input(type="chckbox" name="checkbox-1")#checkbox-2
-                        label(for="checkbox-2").checkbox
-                            | test slide 2 
-                            i
-                        .content
-                            h3 1. Угловая душевая с бронзовым стеклом
-                            p ddd
-
+                .section-glass__title Примеры работ 
+                .section-jobs__slider
+                    .wrapper                  
+                        <button class="accordion">1. Угловая душевая с бронзовым стеклом</button>
+                            <div class="panel">
+                                .accordion-img
+                                    .accordiom-img__item
+                                        img(src="img/job/1.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/2.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/3.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item 
+                                        img(src="img/job/4.jpeg", alt="", width=235, height=300)                                                                                       
+                                <p>Стекло - бронза 8мм (AGC, евро) с закалкой; Ручка - скоба; Полосы выполнены путем пескоструйной обработки (матирования) с нанесением лака 
+                                    |в 6 слоев с сушкой; Верхняя компенсирующая штанга 30х10 прямоугольная. Вся фурнитура - хромированная.
+                            </div>
+                    .wrapper                        
+                        <button class="accordion">2. Душевая - трапеция со стеклом Графит</button>
+                            <div class="panel">
+                                .accordion-img
+                                    .accordiom-img__item
+                                        img(src="img/job/5.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/6.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/8.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/9.jpeg", alt="", width=235, height=300)                                                                                        
+                                <p>Стекло - серое 8мм (AGC, евро) с закалкой; Ручка - кноб; На данной душевой предусмотрена система с штангой-петлей, 
+                                    |без дополнительных упоров в стену. Так получается сделать редко, поскольку конструкции поддонов не всегда это позволяют. 
+                                    |Монтаж к стенам и к бортику выполнен с помощью П-образного профиля.
+                            </div>
+                    .wrapper                    
+                        <button class="accordion">3. Прямая душевая со стеклом OptiWhite (прозрачное, осветленное)</button>
+                            <div class="panel">
+                                .accordion-img
+                                    .accordiom-img__item
+                                        img(src="img/job/10.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/11.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/12.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item 
+                                        img(src="img/job/13.jpeg", alt="", width=235, height=300)                                                                                        
+                                <p>На фото прямая душевая из осветленного, закаленного стекла 10мм; Ручка - кноб; Тип крепления - коннектора. Петли с доводкой и регулировкой 
+                                |   0 - положения. Бренд комплектующих - Bohle. Отделка фурнитуры - хроом. Штанга - параллельная, квадратная.
+                            </div>
+                    .wrapper                    
+                        <button class="accordion">4. Трапецевидная душевая из стекла М1 (обычное прозрачное)</button>
+                            <div class="panel">
+                                .accordion-img
+                                    .accordiom-img__item
+                                        img(src="img/job/14.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/15.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/16.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item 
+                                        img(src="img/job/17.jpeg", alt="", width=235, height=300)                                                                                        
+                                <p>Душевая - трапеция из обычного стекла М1, толщиной 8мм. На данном объекте не особо видна зеленца, но при белых стенах будет бросаться в глаза.
+                                    |В то же время, при темных стенах нет смысла переплачивать за “Оптивайт” (осветленное) 
+                            </div>
+                    .wrapper                    
+                        <button class="accordion">5. Угловая душевая и ограждение в сауну из матового стекла</button>
+                            <div class="panel">
+                                .accordion-img
+                                    .accordiom-img__item
+                                        img(src="img/job/18.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/19.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item
+                                        img(src="img/job/20.jpeg", alt="", width=235, height=300)
+                                    .accordiom-img__item 
+                                        img(src="img/job/20.jpeg", alt="", width=235, height=300)                                                                                        
+                                <p>На этом объекте были застеклены душевая и сауна. Стекло - 10мм матовое; Хромированная фурнитура ТИТАН (Россия). 
+                                    |При выборе матового стекла, всегда нужно учитывать что мы делаем его на основе либо осветленного стекла, либо обычного М1. 
+                                    |От этого сильно зависит стоимость и внешний вид изделия. На фото - осветленное, матовое.
+                            </div>
                     
+                .section-jobs__description Спасибо за внимание! Это всего несколько из тысяч наших работ. Надеемся, что Ваши идеи так же появятся тут, уже в следующем году!
+                .btn.btn--bgc
+                    | Заказать душевую
+        .section-perfect
+            .section-perfect__title Перфекционизм и внимание к деталям
+            .section-perfect__wrapper-list
+                ul.section-perfect__list  
+                    li
+                        //- img(src="img/media/1.jpeg", alt="", width=282, height=188)
+                        |Мы всегда стараемся сделать идельный стык. Эстетика, гидроизоляция, без уплотнителей.
+                    li
+                        //- img(src="img/media/2.jpeg", alt="", width=282, height=188)
+                        |Красим фурнитуру в любой цвет по Вашему вкусу. На фото пример с черной матовой окраской.
+                    li  
+                        //- img(src="img/media/3.png", alt="", width=282, height=188)
+                        //- img(src="img/.jpeg", alt="", width=282, height=188)
+                        //- img(src="img/.jpeg", alt="", width=282, height=188)
                     
-
-
-
-
-
-
-
-
-
-
-                    
-
-
+            .section-perfectionism__description
 
 
 
@@ -435,3 +497,4 @@ html(lang="en")
         script(src="libs/carousel/jquery.waterwheelCarousel.js")
         script(src="js/main.js")
         script(src="js/navigation.js")
+        script(src="js/ac.js")
