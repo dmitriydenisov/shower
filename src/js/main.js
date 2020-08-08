@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function () {  
 
   //главная карусель на первом слайде
-    var carousel = $("#carousel").waterwheelCarousel({
+    var carousel1 = $("#carousel-1").waterwheelCarousel({
       flankingItems: 3,
       movingToCenter: function ($item) {
         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
@@ -20,13 +20,13 @@ $(document).ready(function () {
       }
     });
 
-    $('#prev').bind('click', function () {
-      carousel.prev();
+    $('#prev1').bind('click', function () {
+      carousel1.prev();
       return false
     });
 
-    $('#next').bind('click', function () {
-      carousel.next();
+    $('#next1').bind('click', function () {
+      carousel1.next();
       return false;
     });
 
@@ -36,6 +36,46 @@ $(document).ready(function () {
       return false;
     });
 
+    var carousel2 = $("#carousel-2").waterwheelCarousel({
+      flankingItems: 3,
+      movingToCenter: function ($item) {
+        $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movedToCenter: function ($item) {
+        $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movingFromCenter: function ($item) {
+        $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+      },
+      movedFromCenter: function ($item) {
+        $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+      },
+      clickedCenter: function ($item) {
+        $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+      }
+    });
+
+    
+
+    $('#prev2').bind('click', function () {
+      carousel1.prev();
+      return false
+    });
+
+    $('#next2').bind('click', function () {
+      carousel1.next();
+      return false;
+    });
+
+    $('#reload').bind('click', function () {
+      newOptions = eval("(" + $('#newoptions').val() + ")");
+      carousel.reload(newOptions);
+      return false;
+    });
+
+    
+
+    
     //слайдер в блоке фурнитуры
     
 
@@ -68,3 +108,5 @@ document.querySelectorAll('[data-showCard]').forEach(btn => {
 		showCard.classList.remove('hidden')
 	})
 })
+
+

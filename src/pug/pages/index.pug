@@ -52,37 +52,34 @@ html(lang="en")
             .container
                 h2.view__title Виды и примеры душевых ограждений            
                 ul.view__slider
-                    li.view__slider-item.view__slider-item--active
-                        a(href="tab1")
-                            img(src="img/slider/item-1.png", alt="1")
                     li.view__slider-item
-                        a(href="tab2") 
+                        button(data-showCard="1")
                             img(src="img/slider/item-2.png", alt="2")
                     li.view__slider-item 
-                        a(href="tab3")
+                        button(data-showCard="6")
                             img(src="img/slider/item-3.png", alt="3")
                     li.view__slider-item 
-                        a(href="tab4")
+                        button(data-showCard="7")
                             img(src="img/slider/item-4.png", alt="4")
                     li.view__slider-item 
-                        a(href="tab5")
+                        button(data-showCard="8")
                             img(src="img/slider/item-5.png", alt="5")
                     li.view__slider-item 
-                        a(href="tab6")
+                        button(data-showCard="9")
                             img(src="img/slider/item-6.png", alt="6")
                     li.view__slider-item 
-                        a(href="tab7")
+                        button(data-showCard="10")
                             img(src="img/slider/item-7.png", alt="7")
                     li.view__slider-item 
-                        a(href="tab8")
+                        button(data-showCard="11")
                             img(src="img/slider/item-8.png", alt="8")
                     li.view__slider-item 
-                        a(href="tab9")
+                        button(data-showCard="12")
                             img(src="img/slider/item-9.png", alt="9")
                     li.view__slider-item 
                         a(href="#")
                             | вызвать <br> специалиста
-                .viev__slider-big#carousel(data-card="1")                    
+                .viev__slider-big#carousel-1(data-card="1")                    
                     img(src="img/angular/1.jpg", alt="")#item-1 
                     img(src="img/angular/2.jpg", alt="")#item-2
                     img(src="img/angular/3.jpg", alt="")#item-3
@@ -105,10 +102,39 @@ html(lang="en")
                     img(src="img/angular/21.jpeg", alt="")#item-21
                     img(src="img/angular/22.jpg", alt="")#item-22
                         
-                    a(href="#")#prev.prev 
-                    a(href="#")#next.next
+                    a(href="#")#prev1.prev 
+                    a(href="#")#next1.next
 
                     button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.viev__slider-big--ml120.hidden#carousel-2(data-card="6")
+                    img(src="img/angular/1.jpg", alt="")#item-1 
+                    img(src="img/angular/2.jpg", alt="")#item-2
+                    img(src="img/angular/3.jpg", alt="")#item-3
+                    img(src="img/angular/4.jpg", alt="")#item-4
+                    img(src="img/angular/5.jpg", alt="")#item-5
+                    a(href="#")#prev2.prev 
+                    a(href="#")#next2.next
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-3(data-card="7")
+                    img(src="img/angular/1.jpg", alt="")#item-1 
+                    img(src="img/angular/2.jpg", alt="")#item-2
+                    img(src="img/angular/3.jpg", alt="")#item-3
+                    img(src="img/angular/4.jpg", alt="")#item-4
+                    img(src="img/angular/5.jpg", alt="")#item-5
+                    a(href="#")#prev2.prev 
+                    a(href="#")#next2.next
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-4(data-card="8")
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-5(data-card="9")
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-6(data-card="10")
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-7(data-card="11")
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-8(data-card="12")
+                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                
                 .viev__slider-big.hidden(data-card="2")
                     .slider-big__heading 2. Выберите вид стекла
                     .slider-big__view
@@ -472,19 +498,29 @@ html(lang="en")
                     | Заказать душевую
         .section-perfect
             .section-perfect__title Перфекционизм и внимание к деталям
-            .section-perfect__wrapper-list
-                ul.section-perfect__list  
-                    li
-                        //- img(src="img/media/1.jpeg", alt="", width=282, height=188)
-                        |Мы всегда стараемся сделать идельный стык. Эстетика, гидроизоляция, без уплотнителей.
-                    li
-                        //- img(src="img/media/2.jpeg", alt="", width=282, height=188)
-                        |Красим фурнитуру в любой цвет по Вашему вкусу. На фото пример с черной матовой окраской.
-                    li  
-                        //- img(src="img/media/3.png", alt="", width=282, height=188)
-                        //- img(src="img/.jpeg", alt="", width=282, height=188)
-                        //- img(src="img/.jpeg", alt="", width=282, height=188)
-                    
+            .item
+                .section-perfect__wrapper
+                    p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat?
+                    .section-perfect__marker
+                    .section-perfect__video.section-perfect__video--right 
+                        video 
+                            img(src="img/media/1.jpeg", alt="")
+                .section-perfect__wrapper
+                    p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat
+                    .section-perfect__marker
+                    .section-perfect__video.section-perfect__video--right 
+                        video 
+                .section-perfect__wrapper
+                    //- p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad non beatae in dignissimos deleniti delectus eius harum ex est sint suscipit doloremque, commodi, accusamus cum nesciunt, odio porro voluptate quaerat
+                    .section-perfect__marker
+                    .section-perfect__video 
+                        a(href="#").video 
+                        
+                    .section-perfect__video 
+                        a(href="#").video
+                    .section-perfect__video 
+                        a(href="#").video
+            
             .section-perfectionism__description
 
 
