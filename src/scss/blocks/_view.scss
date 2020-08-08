@@ -55,6 +55,7 @@
         }
     }
 }
+
 .viev__slider-big {
     position: relative;
     margin-top: 50px;
@@ -63,7 +64,8 @@
     height: 450px;
     border: 3px solid #7EA0AD;
     border-radius: 10px;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);    
+    background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);   
+    color: #fff; 
 
     &:after {
         content: '';
@@ -213,6 +215,8 @@
 .slider-big__title {
     margin-top: 10px;
     color: #fff;
+
+    
 }
 .slider-big__options {
     margin-top: 80px;
@@ -369,6 +373,55 @@ input[type="checkbox"] {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.deadlines, .price {
+    margin-left: 60px;
+    font-weight: 500;
+    font-size: 16px
+}
+.deadlines-options {
+    display: flex;
+    align-items: center;
+}
+.slider-big__list {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    li {
+        width: 840px;        
+    }
+}
+.deadlines-options__total {
+    margin-right: 70px;
+    padding: 12px 15px;
+    background: #97B0BA;
+    border: 1px solid #BFD7E0;
+    border-radius: 5px;
+}
+.deadlines-options___label {
+    cursor: pointer;
+    &:before {
+        content: '';
+        top: 5px;
+        left: 25px;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background-image: url('../img/input.png');
+        vertical-align: middle;
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+}
+.deadlines-options___input[type="checkbox"]:checked + .deadlines-options___label:before {
+    background-image: url('../img/input-on.png');
+}
+.price {
+    color: #7EA0AD;
+    margin-top: 25px;
+}
+.slider-big__list {
+    padding-left: 18px;
+}
 .pagination {
     display: flex;
     width: 200px;
@@ -438,8 +491,11 @@ input[type="checkbox"] {
     width: 170px;
     height: 125px;
 }
-.color {
+.bg-color {
     color: #fff;
     background: #7EA0AD;
     border: 1px solid #F4B955; 
+}
+.color {
+    color: #7EA0AD;
 }

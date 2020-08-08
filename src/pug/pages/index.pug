@@ -144,7 +144,7 @@ html(lang="en")
                                 span.check__box
                                 img(src="img/glass/item-5.png", alt="")
                                 span.slider-big__title Бронза
-                    .slider-big__options
+                    .slider-big__options.color
                         .block-option                    
                             label.check                        
                                 input(type="checkbox").check__input
@@ -161,8 +161,8 @@ html(lang="en")
                                 span.check__box.check__box--option
                                 | Толщина стекла 10мм<br />(по умолчанию 8мм)
                     .pagination
-                        .pagination__item.color(data-showCard="1") 1
-                        .pagination__item.color(data-showCard="2") 2
+                        .pagination__item.bg-color(data-showCard="1") 1
+                        .pagination__item.bg-color(data-showCard="2") 2
                         .pagination__item(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="3").slider-big__btn Перейти к выбору фурнитуры
@@ -196,9 +196,9 @@ html(lang="en")
                         a(href="#")#next.next.next--furniture
                     .slider-big__description-footer Так выглядит популярная фурнитура этого ценового сегмента. В реальности выбор очень большой. Со всеми деталями Вас ознакомит замерщик, который привозит образцы стекол, полные каталоги, и некоторые образцы фурнитуры для примерки или показа.
                     .pagination
-                        .pagination__item.color(data-showCard="1") 1
-                        .pagination__item.color(data-showCard="2") 2
-                        .pagination__item.color(data-showCard="3") 3
+                        .pagination__item.bg-color(data-showCard="1") 1
+                        .pagination__item.bg-color(data-showCard="2") 2
+                        .pagination__item.bg-color(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="4").slider-big__btn Перейти к выбору услуг
                 .viev__slider-big.hidden(data-card="4")
@@ -233,7 +233,7 @@ html(lang="en")
                         .services-faq-left
                             .services-faq-block
                                 .services-faq__item Из чего складывается цена установки?
-                                .type-glass__description.type-glass__description--faq
+                                .type-glass__description
                                     |Для начала, посчитайте стоимость работы двух грамотных рабочих узкой, стекольной специализации, 
                                     |с учетом того, что один монтаж идет от 4 до 8 часов + дорога. К этому стоит прибавить множество расходников 
                                     |(сверла, герметики, диски, полотна и т.п.), стоимость хороших присосок, которые меняются каждые 2-3 месяца, 
@@ -241,7 +241,7 @@ html(lang="en")
                                     |ту стоимость работ, которую Вы видете или Вам озвучили.
                             .services-faq-block
                                 .services-faq__item Возможен ли монтаж без доставки?                                 
-                                .type-glass__description.type-glass__description--faq 
+                                .type-glass__description
                                     |Когда мы делаем установку изделия, всегда сами осуществляем доставку, но бывают исключения. Например, 
                                     |если Вы хотите заказать стекло или зеркала заранее и складировать у себя на объекте до монтажа, чтобы 
                                     |по ним подготовить проемы / поддоны / рамы. В таких ситуациях мы сделаем монтаж отдельным выездом, 
@@ -250,23 +250,43 @@ html(lang="en")
                         .services-faq-right
                             .services-faq-block
                                 .services-faq__item Откуда и когда осуществляется самовывоз?
-                                .type-glass__description.type-glass__description--faq.type-glass__description--last
+                                .type-glass__description.type-glass__description--last
                                     |Забрать готовое изделие можно с нашего производства в Москве (Район метро “Бутырская”, 
                                     |рядом с Огородным проездом и ул. Руставели - Проезд Добролюбова д 6А) в рабочие дни с 09.40 до 16.30 или 
                                     |в г. Наро-Фоминск (МО, ~75 км от МКАД, ул. Новикова ПК “Альянс”) так же, в рабочие дни, но уже с 9.00 до 19.00.
                             .services-faq-block
                                 .services-faq__item Вы делаете только душевые из стекла?
-                                .type-glass__description.type-glass__description--faq.type-glass__description--last
+                                .type-glass__description.type-glass__description--last
                                     | Нет, мы занимаемся всем спектром стекольных работ. Делаем практически все из листового стекла - полируем, красим, печатаем, 
                                     |гнем, пескоструим, закаливаем, режем и обрабатываем зеркала, полки. Как закончите оформление заказа по душевой, 
                                     |посмотрите другие страницы нашего сайта, может Вы найдете что-то, что Вы хотели бы увидеть у себя в ближайшее время!
                     .pagination
-                        .pagination__item.color(data-showCard="1") 1
-                        .pagination__item.color(data-showCard="2") 2
-                        .pagination__item.color(data-showCard="3") 3
-                        .pagination__item.color(data-showCard="4") 4
+                        .pagination__item.bg-color(data-showCard="1") 1
+                        .pagination__item.bg-color(data-showCard="2") 2
+                        .pagination__item.bg-color(data-showCard="3") 3
+                        .pagination__item.bg-color(data-showCard="4") 4
                     button(data-showCard="5").slider-big__btn Перейти к расчету
                 .viev__slider-big.hidden(data-card="5")
+                    .slider-big__heading 5. Итоги
+                    .deadlines
+                        .slider-big__title Сроки производства:
+                        ol.slider-big__list
+                            li Подготовка чертежей, расчеты изделия, проверка — 1 день 
+                            li Резка стекла, обработка, сверление — 2 рабочих дня 
+                            li Первая помывка, закалка изделий, вторая помывка — 1 день 
+                            li Подготовка трафарета дизайнером — 1 день 
+                            li Нанесение рисунка на стекло по трафарету — 2 дня 
+                            li Сборка фурнитуры, проверки, планирование монтажных работ и доставки — 2 дня
+                        .deadlines-options
+                            .deadlines-options__total Общий срок - 9 рабочих дней
+                            input(type="checkbox")#total.deadlines-options___input
+                            label(for="total").deadlines-options___label нужно срочно
+                    .price
+                        .slider-big__title.color Стоимость
+                        ol.slider-big__list
+                            li Если Вам достаточно приблизительного расчёта. то можем отправить смету Вам на почту.
+                            li Для получения точного расчёта предлагаем отправить к Вам замерщика.
+                            li Так же, мы можем в срочном порядке сделать точный расчёт по телефону, исходя из заполненной Вами информации.
                     button(data-showCard="1").slider-big__btn.send-email 1. Отправить расчёт на e-mail
                     button(data-showCard="1").slider-big__btn.gager 2. Вызвать замерщика
                     button(data-showCard="1").slider-big__btn.consultation 3. Консультация

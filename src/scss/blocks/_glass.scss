@@ -38,8 +38,9 @@
 }
 .type-glass__description {
     position: absolute;
-    top: -190px;
+    top: -20px;
     left: 0;
+    transform: translateY(-108%);
      width: 765px;
     // height: 150px;
     background-size: 50px;
@@ -63,10 +64,6 @@
         border: 29px solid transparent;
         border-top: 35px solid #D4E2E8;
         border-radius: 2px;
-    }
-
-    &--faq {
-        top: -190px;
     }
 
     &--faq-right {
