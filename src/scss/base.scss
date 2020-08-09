@@ -23,9 +23,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0;
 }
 .container {
-    width: 1095px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+@media(min-width:520px){
+    .container {
+        width: 1095px;
+    }
 }
 .hidden {
     display: none;

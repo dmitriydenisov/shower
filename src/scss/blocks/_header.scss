@@ -3,8 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color: #7EA0AD;
-    height: 637px;
+    color: #7EA0AD;    
     background: url("../img/bg-header.png");
     color: #7EA0AD;
 
@@ -17,6 +16,11 @@
         bottom: 0;
     }
 }
+@media (min-width:540px) { 
+    .header {
+        height: 637px;
+    }
+}
 .logo {
     z-index: 2;
     width: 83px;
@@ -24,12 +28,23 @@
 }
 
 .top-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 69px;
-    background: rgba(152, 214, 236, 0.1);
+    background: #f5fbfd;
     border: 1px solid rgba(152, 214, 236, 0.7);
     border-radius: 0 0 0 50px;
-    z-index: 2;
     display: flex;
+    justify-content: flex-end;
+}
+@media (min-width:1024px) { 
+    .top-nav {
+        position: static;        
+        background: rgba(152, 214, 236, 0.1);
+        width: auto;
+        z-index: 2;
+    }
 }
 
 .top-nav__contact {
@@ -92,25 +107,64 @@ ul.top-nav__list {
     } 
 }
 .header-rhombus {
-    position: absolute;
-    top: 45px;
-    &--right {
-        right: 0;
+    position: static;
+    display: none;
+}
+@media (min-width:540px) { 
+    .header-rhombus {
+        position: absolute;
+        display: block;
+        top: 45px;
+        &--right {
+            right: 0;
+        }
     }
 }
-.header__title {
-    text-transform: uppercase;
+
+.header__title {    
+    display: none;
+}
+.header__title--mobile {
     font-weight: 500;
-    font-size: 30px;
-    width: 409px;
+    font-size: 19px;
+    width: 225px;
     text-align: center;
-    margin-top: 215px;
-    margin-left: 68px;
+    margin-bottom: 140px;
+    margin-left: 75px;
+    margin-top: 69px;
+    display: block;
+}
+@media (min-width:540px) { 
+    .header__title {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 30px;
+        width: 409px;
+        text-align: center;
+        margin-top: 215px;
+        margin-left: 68px;
+    }
+
+    .header__title--mobile {
+        display: none;
+    }
 }
 .header-logo {
+    width: 368px;
     position: absolute;
-    top: -8px;
-    left: 490px;
+    top: 50px;
+    left: 0;
+    // max-width: 100%;
+    // max-height: 100%;
+}
+@media (min-width:540px) {
+    .header-logo {
+        width: 857px;
+        height: 667px;
+        top: -8px;
+        left: 490px;
+    }
 }
 .header-bottom {
     height: 27px;
