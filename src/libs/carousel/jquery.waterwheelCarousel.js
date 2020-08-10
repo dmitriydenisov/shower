@@ -315,7 +315,7 @@
 
       if (options.orientation == 'horizontal') {
         var center = data.containerWidth / 2;
-        var newLeft = center + newDistance - (newWidth / 2);
+        var newLeft = center + newDistance - (newWidth /2);
         var newTop = options.horizon - newOffset - (newHeight / 2);
       } else {
         var center = data.containerHeight / 2;
@@ -647,7 +647,7 @@
   $.fn.waterwheelCarousel.defaults = {
     // number tweeks to change apperance
     startingItem:               1,   // item to place in the center of the carousel. Set to 0 for auto
-    separation:                 175, // distance between items in carousel
+    separation:                 145, // distance between items in carousel
     separationMultiplier:       0.6, // multipled by separation distance to increase/decrease distance for each additional item
     horizonOffset:              0,   // offset each item from the "horizon" by this amount (causes arching)
     horizonOffsetMultiplier:    1,   // multipled by horizon offset to increase/decrease offset for each additional item

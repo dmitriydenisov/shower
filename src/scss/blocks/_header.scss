@@ -110,7 +110,7 @@ ul.top-nav__list {
     position: static;
     display: none;
 }
-@media (min-width:540px) { 
+@media (min-width:1024px) { 
     .header-rhombus {
         position: absolute;
         display: block;
@@ -126,15 +126,15 @@ ul.top-nav__list {
 }
 .header__title--mobile {
     font-weight: 500;
-    font-size: 19px;
+    font-size: 18px;
     width: 225px;
     text-align: center;
-    margin-bottom: 140px;
-    margin-left: 75px;
-    margin-top: 69px;
+    margin-bottom: 110px;
+    margin-left: 60px;
+    margin-top: 67px;
     display: block;
 }
-@media (min-width:540px) { 
+@media (min-width:1024px) { 
     .header__title {
         display: block;
         text-transform: uppercase;
@@ -151,14 +151,14 @@ ul.top-nav__list {
     }
 }
 .header-logo {
-    width: 368px;
+    width: 320px;
     position: absolute;
     top: 50px;
-    left: 0;
+    left: 10px;
     // max-width: 100%;
     // max-height: 100%;
 }
-@media (min-width:540px) {
+@media (min-width:1024px) {
     .header-logo {
         width: 857px;
         height: 667px;

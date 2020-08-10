@@ -81,39 +81,43 @@ html(lang="en")
                     li.view__slider-item 
                         a(href="#")
                             | вызвать <br> специалиста
-                .viev__slider-big#carousel-1(data-card="1")                    
-                    img(src="img/angular/1.jpg", alt="")#item-1 
-                    img(src="img/angular/2.jpg", alt="")#item-2
-                    img(src="img/angular/3.jpg", alt="")#item-3
-                    img(src="img/angular/4.jpg", alt="")#item-4
-                    img(src="img/angular/5.jpg", alt="")#item-5
-                    img(src="img/angular/6.jpg", alt="")#item-6
-                    img(src="img/angular/7.jpg", alt="")#item-7
-                    img(src="img/angular/8.jpg", alt="")#item-8
-                    img(src="img/angular/9.jpeg", alt="")#item-9
-                    img(src="img/angular/10.jpg", alt="")#item-10
-                    img(src="img/angular/11.jpg", alt="")#item-11
-                    img(src="img/angular/12.jpg", alt="")#item-12
-                    img(src="img/angular/13.jpg", alt="")#item-13
-                    img(src="img/angular/14.jpg", alt="")#item-14
-                    img(src="img/angular/15.jpg", alt="")#item-15
-                    img(src="img/angular/16.jpeg", alt="")#item-16
-                    img(src="img/angular/17.jpg", alt="")#item-17
-                    img(src="img/angular/18.jpeg", alt="")#item-18
-                    img(src="img/angular/19.jpg", alt="")#item-19
-                    img(src="img/angular/21.jpeg", alt="")#item-21
-                    img(src="img/angular/22.jpg", alt="")#item-22
+                .viev__slider-big(data-card="1")            
+                    #carousel-1        
+                        img(src="img/angular/1.jpg", alt="")#item-1 
+                        img(src="img/angular/2.jpg", alt="")#item-2
+                        img(src="img/angular/3.jpg", alt="")#item-3
+                        img(src="img/angular/4.jpg", alt="")#item-4
+                        img(src="img/angular/5.jpg", alt="")#item-5
+                        img(src="img/angular/6.jpg", alt="")#item-6
+                        img(src="img/angular/7.jpg", alt="")#item-7
+                        img(src="img/angular/8.jpg", alt="")#item-8
+                        img(src="img/angular/9.jpeg", alt="")#item-9
+                        img(src="img/angular/10.jpg", alt="")#item-10
+                        img(src="img/angular/11.jpg", alt="")#item-11
+                        img(src="img/angular/12.jpg", alt="")#item-12
+                        img(src="img/angular/13.jpg", alt="")#item-13
+                        img(src="img/angular/14.jpg", alt="")#item-14
+                        img(src="img/angular/15.jpg", alt="")#item-15
+                        img(src="img/angular/16.jpeg", alt="")#item-16
+                        img(src="img/angular/17.jpg", alt="")#item-17
+                        img(src="img/angular/18.jpeg", alt="")#item-18
+                        img(src="img/angular/19.jpg", alt="")#item-19
+                        img(src="img/angular/21.jpeg", alt="")#item-21
+                        img(src="img/angular/22.jpg", alt="")#item-22
                         
                     a(href="#")#prev1.prev 
                     a(href="#")#next1.next
-
+                    p.mobile-p Мы предлагаем сделать расчет стоимости и срока изготовления удаленно. Если Вас все устроит в нашем предложении, мы пришлем к Вам замерщика. Если у Вас нет времени - обращайтесь, отправим замерщика сразу!  
+                    button(data-showCard="2").mobile-btn Рассчитать стоимость
+                    button.mobile-btn Вызвать замерщика
                     button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
-                .viev__slider-big.viev__slider-big--ml120.hidden#carousel-2(data-card="6")
-                    img(src="img/angular/1.jpg", alt="")#item-1 
-                    img(src="img/angular/2.jpg", alt="")#item-2
-                    img(src="img/angular/3.jpg", alt="")#item-3
-                    img(src="img/angular/4.jpg", alt="")#item-4
-                    img(src="img/angular/5.jpg", alt="")#item-5
+                .viev__slider-big.viev__slider-big--ml120.hidden(data-card="6")
+                    #carousel-2
+                        img(src="img/angular/1.jpg", alt="")#item-1 
+                        img(src="img/angular/2.jpg", alt="")#item-2
+                        img(src="img/angular/3.jpg", alt="")#item-3
+                        img(src="img/angular/4.jpg", alt="")#item-4
+                        img(src="img/angular/5.jpg", alt="")#item-5
                     a(href="#")#prev2.prev 
                     a(href="#")#next2.next
                     button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
@@ -123,8 +127,8 @@ html(lang="en")
                     img(src="img/angular/3.jpg", alt="")#item-3
                     img(src="img/angular/4.jpg", alt="")#item-4
                     img(src="img/angular/5.jpg", alt="")#item-5
-                    a(href="#")#prev2.prev 
-                    a(href="#")#next2.next
+                    a(href="#")#prev3.prev 
+                    a(href="#")#next3.next
                     button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-4(data-card="8")
                     button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
@@ -395,6 +399,25 @@ html(lang="en")
                             img(src="img/glass/item-5.png", alt="Бронза").glass__item
                             .type-glass__description.type-glass__description--last Тонированное в массе стекло (без пленок и покрытий) темно-бронзового цвета. Как и вышеперечисленные стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах. 
                         .type-glass-block__title Бронза                    
+            .conpression-glass-mobile
+                .section-glass__title Сравнение видов прозрачного стекла
+                .comparison-glass-mobile-type
+                .comparison-glass-mobile-type__color
+                .comparison-glass-mobile-type__visual
+                .glass-qualities-mobile
+                    .qualities-mobile-left
+                        .glass-qualities-mobile__heading Прозрачное (б/ц, М1, “обычное”)
+                        .glass-qualities-mobile-block.glass-qualities-block--left                           
+                            .qualities-mobile-block__title Низкая <br /> стоимость
+                        .glass-qualities-mobile-block.glass-qualities-block--left                            
+                            .qualities-mobile-block__title Зеленый <br /> отблеск на светлом
+                    .qualities-mobile-right                 
+                        .glass-qualities-mobile__heading  Осветленное (OptiWhite, CrystalVision)    
+                        .glass-qualities-mobile-block.glass-qualities-block--right                          
+                            .qualities-mobile-block__title Высокая стоимость
+                        .glass-qualities-mobile-block.glass-qualities-block--right                           
+                            .qualities-mobile-block__title Идеальная прозрачность
+
             .comparison-glass 
                 .section-glass__title Сравнение видов прозрачного стекла
                 .comparison-glass-type
@@ -403,12 +426,14 @@ html(lang="en")
                         img(src="img/visual-glass.png", alt="")
                     .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
                 .glass-qualities
-                    .qualities-left
+                    .qualities-left 
+                        
                         .glass-qualities-block.glass-qualities-block--left                           
                             .qualities-block__title Низкая стоимость
                         .glass-qualities-block.glass-qualities-block--left                            
                             .qualities-block__title Зеленый отблеск на светлых оттенках
-                    .qualities-right                    
+                    .qualities-right
+                                         
                         .glass-qualities-block.glass-qualities-block--right                          
                             .qualities-block__title Высокая стоимость
                         .glass-qualities-block.glass-qualities-block--right                           

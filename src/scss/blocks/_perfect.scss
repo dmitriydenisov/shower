@@ -24,37 +24,7 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.section-perfect__video {
-    margin: 5px 10px;
-    border:2px solid #f39c12;
-    border-radius:3px;
-    position:relative;
-    background-color: #7EA0AD;
 
-    &:before, &:after {
-        content:'';
-        position:absolute;
-        width: 20px;
-        height: 50px;
-        box-shadow:0px 1px #e74c3c,0px -1px #e74c3c;
-    }
-
-    &:after {
-        top:50%;
-        left:-21px;
-        transform:translateY(-50%);
-    }
-    &:before {
-        top:50%;
-        right:-21px;
-        transform:translateY(-50%);
-    }
-    a.video {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-}
 .section-perfect__marker {
     width: 20px;
     height: 20px;
@@ -89,32 +59,37 @@
     flex-wrap:wrap;
     justify-content:center;
   }
-  
+  .section-perfect__video{
+    width: 280px;
+    height: 190px;
+  }
   .section-perfect__video {
-    margin: 5px 10px;
+    margin: 5px 38px;
     border:2px solid #f39c12;
     border-radius:10px;
     // min-width:100px;
     // max-width:200px;
-    position:relative;
+    position:relative;    
+    background-color: #7EA0AD;
   }
   .section-perfect__video:after,
   .section-perfect__video:before{
     content:'';
     position:absolute;
-    width: 20px;
+    width: 40px;
     height: 50px;
-   box-shadow:0px 1px #e74c3c,0px -1px #e74c3c;
+   box-shadow:0px 1px #f39c12,0px -1px #f39c12;
   }
   .section-perfect__video:after {
     top:50%;
-    left:-21px;
+    left:-45px;
+    width: 45px;
     transform:translateY(-50%);
   
   }
   .section-perfect__video:before{
     top:50%;
-    right:-21px;
+    right:-40px;
     transform:translateY(-50%);
      
   }
@@ -135,7 +110,9 @@
     height: 100%;
     overflow: hidden;   
   }
-  
+  @media(min-width:520px){
+    
+  }
   .description {
     position: absolute;
     left: 375px;      
@@ -180,13 +157,20 @@
     }
     .section-perfect__video {
       //position: absolute;
-      right: 117px;;
+      right: 117px;
       width: 280px;
       height: 190px;
+      margin: 5px 10px;
+      z-index: 1;
 
-      &--right {
-          right: 75%;
+      &:before {
+        right:-21px;
       }
+      &--right {
+        right: 75%;
+    }
+    }
+      
     }
     .section-perfect__marker {
         width: 16px;
@@ -198,6 +182,9 @@
         top: 27px;
     }
     
+    .section-perfect__video{
+      
+     
   }
 
   .item {
