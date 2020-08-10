@@ -61,14 +61,14 @@
           <li class="view__slider-item"> 
             <button data-showCard="12"><img src="img/slider/item-9.png" alt="9"/></button>
           </li>
-          <li class="view__slider-item"> <a href="#">вызвать <br> специалиста</a></li>
+          <li class="view__slider-item"> <a href="#">Вызвать <br> специалиста</a></li>
         </ul>
         <div class="viev__slider-big" data-card="1">           
-          <div id="carousel-1">       <img src="img/angular/1.jpg" alt="" id="item-1"/><img src="img/angular/2.jpg" alt="" id="item-2"/><img src="img/angular/3.jpg" alt="" id="item-3"/><img src="img/angular/4.jpg" alt="" id="item-4"/><img src="img/angular/5.jpg" alt="" id="item-5"/><img src="img/angular/6.jpg" alt="" id="item-6"/><img src="img/angular/7.jpg" alt="" id="item-7"/><img src="img/angular/8.jpg" alt="" id="item-8"/><img src="img/angular/9.jpeg" alt="" id="item-9"/><img src="img/angular/10.jpg" alt="" id="item-10"/><img src="img/angular/11.jpg" alt="" id="item-11"/><img src="img/angular/12.jpg" alt="" id="item-12"/><img src="img/angular/13.jpg" alt="" id="item-13"/><img src="img/angular/14.jpg" alt="" id="item-14"/><img src="img/angular/15.jpg" alt="" id="item-15"/><img src="img/angular/16.jpeg" alt="" id="item-16"/><img src="img/angular/17.jpg" alt="" id="item-17"/><img src="img/angular/18.jpeg" alt="" id="item-18"/><img src="img/angular/19.jpg" alt="" id="item-19"/><img src="img/angular/21.jpeg" alt="" id="item-21"/><img src="img/angular/22.jpg" alt="" id="item-22"/></div><a class="prev" href="#" id="prev1"> </a><a class="next" href="#" id="next1"></a>
+          <div id="carousel-1">       <img class="items" src="img/angular/1.jpg" alt="" id="item-1"/><img class="items" src="img/angular/2.jpg" alt="" id="item-2"/><img class="items" src="img/angular/3.jpg" alt="" id="item-3"/><img class="items" src="img/angular/4.jpg" alt="" id="item-4"/><img class="items" src="img/angular/5.jpg" alt="" id="item-5"/><img class="items" src="img/angular/6.jpg" alt="" id="item-6"/><img class="items" src="img/angular/7.jpg" alt="" id="item-7"/><img class="items" src="img/angular/8.jpg" alt="" id="item-8"/><img class="items" src="img/angular/9.jpeg" alt="" id="item-9"/><img class="items" src="img/angular/10.jpg" alt="" id="item-10"/><img class="items" src="img/angular/11.jpg" alt="" id="item-11"/><img class="items" src="img/angular/12.jpg" alt="" id="item-12"/><img class="items" src="img/angular/13.jpg" alt="" id="item-13"/><img class="items" src="img/angular/14.jpg" alt="" id="item-14"/><img class="items" src="img/angular/15.jpg" alt="" id="item-15"/><img class="items" src="img/angular/16.jpeg" alt="" id="item-16"/><img class="items" src="img/angular/17.jpg" alt="" id="item-17"/><img class="items" src="img/angular/18.jpeg" alt="" id="item-18"/><img class="items" src="img/angular/19.jpg" alt="" id="item-19"/><img class="items" src="img/angular/21.jpeg" alt="" id="item-21"/><img class="items" src="img/angular/22.jpg" alt="" id="item-22"/></div><a class="prev" href="#" id="prev1"> </a><a class="next" href="#" id="next1"></a>
           <p class="mobile-p">Мы предлагаем сделать расчет стоимости и срока изготовления удаленно. Если Вас все устроит в нашем предложении, мы пришлем к Вам замерщика. Если у Вас нет времени - обращайтесь, отправим замерщика сразу!  </p>
           <button class="mobile-btn" data-showCard="2">Рассчитать стоимость</button>
           <button class="mobile-btn">Вызвать замерщика</button>
-          <button class="slider-big__btn" data-showCard="2">Заполнить бриф и получить расчет</button>
+          <button class="slider-big__btn slider-big__btn--index" data-showCard="2">Заполнить бриф и получить расчет</button>
         </div>
         <div class="viev__slider-big viev__slider-big--ml120 hidden" data-card="6">
           <div id="carousel-2"><img src="img/angular/1.jpg" alt="" id="item-1"/><img src="img/angular/2.jpg" alt="" id="item-2"/><img src="img/angular/3.jpg" alt="" id="item-3"/><img src="img/angular/4.jpg" alt="" id="item-4"/><img src="img/angular/5.jpg" alt="" id="item-5"/></div><a class="prev" href="#" id="prev2"> </a><a class="next" href="#" id="next2"></a>
@@ -210,41 +210,54 @@
             <div class="services-img"></div>
             <div class="services-faq-left">
               <div class="services-faq-block">
-                <div class="services-faq__item">Из чего складывается цена установки?</div>
-                <div class="type-glass__description">
-                  Для начала, посчитайте стоимость работы двух грамотных рабочих узкой, стекольной специализации, 
-                  с учетом того, что один монтаж идет от 4 до 8 часов + дорога. К этому стоит прибавить множество расходников 
-                  (сверла, герметики, диски, полотна и т.п.), стоимость хороших присосок, которые меняются каждые 2-3 месяца, 
-                  риск повреждения / порчи инструментов, риски повреждения стекла и разные мелочи. В совокупности это и образует 
-                  ту стоимость работ, которую Вы видете или Вам озвучили.
+                <div class="services-faq__item">Из чего складывается цена установки?
+                  <div class="test-mod">   
+                    <div class="test-bg"></div>
+                    <div class="type-glass__description">
+                      Для начала, посчитайте стоимость работы двух грамотных рабочих узкой, стекольной специализации, 
+                      с учетом того, что один монтаж идет от 4 до 8 часов + дорога. К этому стоит прибавить множество расходников 
+                      (сверла, герметики, диски, полотна и т.п.), стоимость хороших присосок, которые меняются каждые 2-3 месяца, 
+                      риск повреждения / порчи инструментов, риски повреждения стекла и разные мелочи. В совокупности это и образует 
+                      ту стоимость работ, которую Вы видете или Вам озвучили.
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="services-faq-block">
                 <div class="services-faq__item">Возможен ли монтаж без доставки?                                 </div>
-                <div class="type-glass__description">
-                  Когда мы делаем установку изделия, всегда сами осуществляем доставку, но бывают исключения. Например, 
-                  если Вы хотите заказать стекло или зеркала заранее и складировать у себя на объекте до монтажа, чтобы 
-                  по ним подготовить проемы / поддоны / рамы. В таких ситуациях мы сделаем монтаж отдельным выездом, 
-                  но стоимость доставки (выезда) бригады на установку так же будет включена в общую смету. 
-                  Мы прописываем отдельно стоимость доставки и стоимость монтажа, чтобы Вы понимали из чего складывается общая смета.
+                <div class="test-mod">   
+                  <div class="test-bg"></div>
+                  <div class="type-glass__description">
+                    Когда мы делаем установку изделия, всегда сами осуществляем доставку, но бывают исключения. Например, 
+                    если Вы хотите заказать стекло или зеркала заранее и складировать у себя на объекте до монтажа, чтобы 
+                    по ним подготовить проемы / поддоны / рамы. В таких ситуациях мы сделаем монтаж отдельным выездом, 
+                    но стоимость доставки (выезда) бригады на установку так же будет включена в общую смету. 
+                    Мы прописываем отдельно стоимость доставки и стоимость монтажа, чтобы Вы понимали из чего складывается общая смета.
+                  </div>
                 </div>
               </div>
             </div>
             <div class="services-faq-right">
               <div class="services-faq-block">
                 <div class="services-faq__item">Откуда и когда осуществляется самовывоз?</div>
-                <div class="type-glass__description type-glass__description--last">
-                  Забрать готовое изделие можно с нашего производства в Москве (Район метро “Бутырская”, 
-                  рядом с Огородным проездом и ул. Руставели - Проезд Добролюбова д 6А) в рабочие дни с 09.40 до 16.30 или 
-                  в г. Наро-Фоминск (МО, ~75 км от МКАД, ул. Новикова ПК “Альянс”) так же, в рабочие дни, но уже с 9.00 до 19.00.
+                <div class="test-mod test-mod--last">   
+                  <div class="test-bg test-bg--last"></div>
+                  <div class="type-glass__description">
+                                                 Забрать готовое изделие можно с нашего производства в Москве (Район метро “Бутырская”, 
+                    рядом с Огородным проездом и ул. Руставели - Проезд Добролюбова д 6А) в рабочие дни с 09.40 до 16.30 или 
+                    в г. Наро-Фоминск (МО, ~75 км от МКАД, ул. Новикова ПК “Альянс”) так же, в рабочие дни, но уже с 9.00 до 19.00.
+                  </div>
                 </div>
               </div>
               <div class="services-faq-block">
                 <div class="services-faq__item">Вы делаете только душевые из стекла?</div>
-                <div class="type-glass__description type-glass__description--last">
-                  Нет, мы занимаемся всем спектром стекольных работ. Делаем практически все из листового стекла - полируем, красим, печатаем, 
-                  гнем, пескоструим, закаливаем, режем и обрабатываем зеркала, полки. Как закончите оформление заказа по душевой, 
-                  посмотрите другие страницы нашего сайта, может Вы найдете что-то, что Вы хотели бы увидеть у себя в ближайшее время!
+                <div class="test-mod test-mod--last">   
+                  <div class="test-bg test-bg--last"></div>
+                  <div class="type-glass__description">
+                    Нет, мы занимаемся всем спектром стекольных работ. Делаем практически все из листового стекла - полируем, красим, печатаем, 
+                    гнем, пескоструим, закаливаем, режем и обрабатываем зеркала, полки. Как закончите оформление заказа по душевой, 
+                    посмотрите другие страницы нашего сайта, может Вы найдете что-то, что Вы хотели бы увидеть у себя в ближайшее время!
+                  </div>
                 </div>
               </div>
             </div>
@@ -327,38 +340,53 @@
         <div class="type-glass">
           <div class="type-glass-block">
             <div class="type-glass-block__img"><img class="glass__item" src="img/glass/item-1.png" alt="Прозрачное"/>
-              <div class="type-glass__description">
-                 Стекло М1, прозрачное, или просто обычное стекло. Все это - названия флоат-стекла, являющегося самым популярным
-                материалом стекольной промышленности. Имеет зеленоватый оттенок, ярко выраженный в виде с торца.
-                Очень часто используется в темных помещениях, или в помещениях с темной плиткой / черным мрамором, 
-                так как зеленоватый отлив, при темном фоне не виден так отчетливо, а учитывая самую низкую цену стекла среди базовых видов,
-                является лучшим выбором для таких помещений.
+              <div class="test-mod">   
+                <div class="test-bg"></div>
+                <div class="type-glass__description">
+                  Стекло М1, прозрачное, или просто обычное стекло. Все это - названия флоат-стекла, являющегося самым популярным
+                  материалом стекольной промышленности. Имеет зеленоватый оттенок, ярко выраженный в виде с торца.
+                  Очень часто используется в темных помещениях, или в помещениях с темной плиткой / черным мрамором, 
+                  так как зеленоватый отлив, при темном фоне не виден так отчетливо, а учитывая самую низкую цену стекла среди базовых видов,
+                  является лучшим выбором для таких помещений.
+                </div>
               </div>
             </div>
             <div class="type-glass-block__title">Прозрачное</div>
           </div>
           <div class="type-glass-block">
             <div class="type-glass-block__img"><img class="glass__item" src="img/glass/item-2.png" alt="Осветвленное"/>
-              <div class="type-glass__description type-glass__description--ml">Осветленное стекло (Optiwhite,Clearvision). Кристально чистое, прозрачное стекло. Данный вид материала почти не имеет сторонних оттенков, кроме благородного светло-голубого цвета, заметного глазу лишь с торца полотна. Это стекло самое дорогое из базового сырья, из-за многоступенчатой очистки стекломассы при отливе листа. Самое лучшее применение - если в помещении или на фоне светлая плитка или белый мрамор. Вживую, в светлых помещениях стекло смотрится как на визуализациях дизайнера - кристально чистым и прозрачным, без оттенков.</div>
+              <div class="test-mod">   
+                <div class="test-bg"></div>
+                <div class="type-glass__description">Осветленное стекло (Optiwhite,Clearvision). Кристально чистое, прозрачное стекло. Данный вид материала почти не имеет сторонних оттенков, кроме благородного светло-голубого цвета, заметного глазу лишь с торца полотна. Это стекло самое дорогое из базового сырья, из-за многоступенчатой очистки стекломассы при отливе листа. Самое лучшее применение - если в помещении или на фоне светлая плитка или белый мрамор. Вживую, в светлых помещениях стекло смотрится как на визуализациях дизайнера - кристально чистым и прозрачным, без оттенков.</div>
+              </div>
               <div class="description-bg"></div>
             </div>
             <div class="type-glass-block__title">Осветвленное</div>
           </div>
           <div class="type-glass-block">
             <div class="type-glass-block__img"><img class="glass__item" src="img/glass/item-3.png" alt="Матовое"/>
-              <div class="type-glass__description">Матовое стекло (сатинат, Satinato) - это вид стекла с односторонним травлением, за счет чего был достигнут оригинальный светорассеивающий эффект, благодаря которому, видно лишь силуэты объектов и проникающий свет, дальше 5 сантиметров от полотна. За счет фирменного лака легче мыть. Матовое стекло делается на основе либо оптивайта, либо на основе обычного, зеленоватого стекла. От этого очень сильно зависит стоимость. По умолчанию, под матовым стеклом подразумевается, обычное прозрачное (М1, с зеленцой) с матирующей обработкой.</div>
+              <div class="test-mod">   
+                <div class="test-bg"></div>
+                <div class="type-glass__description">Матовое стекло (сатинат, Satinato) - это вид стекла с односторонним травлением, за счет чего был достигнут оригинальный светорассеивающий эффект, благодаря которому, видно лишь силуэты объектов и проникающий свет, дальше 5 сантиметров от полотна. За счет фирменного лака легче мыть. Матовое стекло делается на основе либо оптивайта, либо на основе обычного, зеленоватого стекла. От этого очень сильно зависит стоимость. По умолчанию, под матовым стеклом подразумевается, обычное прозрачное (М1, с зеленцой) с матирующей обработкой.</div>
+              </div>
             </div>
             <div class="type-glass-block__title">Матовое</div>
           </div>
           <div class="type-glass-block">
             <div class="type-glass-block__img"><img class="glass__item" src="img/glass/item-4.png" alt="Графит"/>
-              <div class="type-glass__description type-glass__description--ml">Тонированное в массе стекло (без пленок и покрытий) серого цвета. Как и вышеперечисленные  виды стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах.</div>
+              <div class="test-mod">   
+                <div class="test-bg"></div>
+                <div class="type-glass__description">Тонированное в массе стекло (без пленок и покрытий) серого цвета. Как и вышеперечисленные  виды стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах.</div>
+              </div>
             </div>
             <div class="type-glass-block__title">Графит</div>
           </div>
           <div class="type-glass-block">
             <div class="type-glass-block__img"><img class="glass__item" src="img/glass/item-5.png" alt="Бронза"/>
-              <div class="type-glass__description type-glass__description--last">Тонированное в массе стекло (без пленок и покрытий) темно-бронзового цвета. Как и вышеперечисленные стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах. </div>
+              <div class="test-mod test-mod--last">   
+                <div class="test-bg"></div>
+                <div class="type-glass__description">Тонированное в массе стекло (без пленок и покрытий) темно-бронзового цвета. Как и вышеперечисленные стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах. </div>
+              </div>
             </div>
             <div class="type-glass-block__title">Бронза                    </div>
           </div>
@@ -579,26 +607,24 @@
       </div>
     </div>
     <div class="section-footer">
-      <div class="container"> 
-        <div class="footer-wrapper">
-          <div class="footer-contact">
-            <div class="footer-contact__item footer-contact__item--city">Москва</div>
-            <div class="footer-contact__item">Телефон +7(499)677-20-67 <br /> E-mail info@v-t-x.ru</div>
-            <!--.footer-contact__item -->
-            <div class="footer-contact__item footer-contact__item--address">Сборочный цех / производство простых изделий - г. Москва, проезд Добролюбова д.6А. Метро - Бутырская</div>
-            <div class="footer-contact__item footer-contact__item--address">Склад, сложное производство - МО,  г. Наро-Фоминск. ул. Новикова, ПК “Альянс”.</div>
-          </div>
-          <ul class="footer-navigation">
-            <li> <a href="#">Отзывы</a></li>
-            <li> <a href="#">Доставка</a></li>
-            <li> <a href="#">Вакансии</a></li>
-            <li> <a href="#">Установка</a></li>
-            <li> <a href="#">Политика cookie</a></li>
-            <li> <a href="#">Договор оферты</a></li>
-            <li> <a href="#">Технические условия</a></li>
-            <li> <a href="#">Политика конфеденциальности</a></li>
-          </ul>
+      <div class="footer-wrapper">
+        <div class="footer-contact">
+          <div class="footer-contact__item footer-contact__item--city">Москва</div>
+          <div class="footer-contact__item">Телефон +7(499)677-20-67 <br /> E-mail info@v-t-x.ru</div>
+          <!--.footer-contact__item -->
+          <div class="footer-contact__item footer-contact__item--address">Сборочный цех / производство простых изделий - г. Москва, проезд Добролюбова д.6А. Метро - Бутырская</div>
+          <div class="footer-contact__item footer-contact__item--address">Склад, сложное производство - МО,  г. Наро-Фоминск. ул. Новикова, ПК “Альянс”.</div>
         </div>
+        <ul class="footer-navigation">
+          <li> <a href="#">Отзывы</a></li>
+          <li> <a href="#">Доставка</a></li>
+          <li> <a href="#">Вакансии</a></li>
+          <li> <a href="#">Установка</a></li>
+          <li> <a href="#">Политика cookie</a></li>
+          <li> <a href="#">Договор оферты</a></li>
+          <li> <a href="#">Технические условия</a></li>
+          <li> <a href="#">Политика конфеденциальности</a></li>
+        </ul>
       </div>
     </div>
     <!--script(src="libs/jquery/jquery-1.11.2.min.js")-->
