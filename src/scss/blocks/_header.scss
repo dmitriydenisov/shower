@@ -22,14 +22,17 @@
     }
 }
 .logo {
-    z-index: 2;
+    z-index: 100;
     width: 83px;
     height: 68px;
+    position: fixed;
 }
 
 .top-nav {
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 0;
+    right: 0;
     width: 100%;
     height: 69px;
     background: #f5fbfd;
@@ -39,8 +42,7 @@
     justify-content: flex-end;
 }
 @media (min-width:1024px) { 
-    .top-nav {
-        position: static;        
+    .top-nav {       
         background: rgba(152, 214, 236, 0.1);
         width: auto;
         z-index: 2;
@@ -142,8 +144,8 @@ ul.top-nav__list {
         font-size: 30px;
         width: 409px;
         text-align: center;
-        margin-top: 215px;
-        margin-left: 68px;
+        margin-top: 13%;
+        margin-left: 38%;
     }
 
     .header__title--mobile {

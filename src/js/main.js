@@ -8,8 +8,9 @@ document.querySelectorAll('[data-showCard]').forEach(btn => {
 		items.forEach(x => x.classList.add('viev__slider-item--active'))
 		
 		const showCard = document.querySelector(`[data-card="${btn.dataset.showcard}"]`)
-		
-		showCard.classList.remove('hidden')
+		setTimeout(
+      showCard.classList.remove('hidden'), 1000)
+    
 	})
 })
 
@@ -20,7 +21,7 @@ $(document).ready(function () {
     var carousel1 = $("#carousel-1").waterwheelCarousel({
       flankingItems: 3,
       imageNav: true,
-      autoPlay: 1000,
+      autoPlay: 4000,
       movingToCenter: function ($item) {
         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
       },
