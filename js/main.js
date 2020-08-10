@@ -1,8 +1,25 @@
+//переключение слайдов по кнопке
+const cards = document.querySelectorAll('.viev__slider-big')
+const items = document.querySelectorAll('.viev__slider--item')
+
+document.querySelectorAll('[data-showCard]').forEach(btn => {
+	btn.addEventListener("click", () => {
+		cards.forEach(x => x.classList.add('hidden'))
+		items.forEach(x => x.classList.add('viev__slider-item--active'))
+		
+		const showCard = document.querySelector(`[data-card="${btn.dataset.showcard}"]`)
+		
+		showCard.classList.remove('hidden')
+	})
+})
+
+
 $(document).ready(function () {  
 
   //главная карусель на первом слайде
     var carousel1 = $("#carousel-1").waterwheelCarousel({
       flankingItems: 3,
+      imageNav: true,
       movingToCenter: function ($item) {
         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
       },
@@ -37,39 +54,39 @@ $(document).ready(function () {
     });
 
     var carousel2 = $("#carousel-2").waterwheelCarousel({
-      flankingItems: 3,
-      movingToCenter: function ($item) {
-        $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-      },
-      movedToCenter: function ($item) {
-        $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-      },
-      movingFromCenter: function ($item) {
-        $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-      },
-      movedFromCenter: function ($item) {
-        $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-      },
-      clickedCenter: function ($item) {
-        $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-      }
+      flankingItems: 3,      
+      // movingToCenter: function ($item) {
+      //   $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+      // },
+      // movedToCenter: function ($item) {
+      //   $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+      // },
+      // movingFromCenter: function ($item) {
+      //   $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+      // },
+      // movedFromCenter: function ($item) {
+      //   $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+      // },
+      // clickedCenter: function ($item) {
+      //   $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+      // }
     });
 
     
 
     $('#prev2').bind('click', function () {
-      carousel1.prev();
+      carousel2.prev();
       return false
     });
 
     $('#next2').bind('click', function () {
-      carousel1.next();
+      carousel2.next();
       return false;
     });
 
     $('#reload').bind('click', function () {
       newOptions = eval("(" + $('#newoptions').val() + ")");
-      carousel.reload(newOptions);
+      carousel3.reload(newOptions);
       return false;
     });
 
@@ -96,17 +113,5 @@ $(document).ready(function () {
 
   });
 
-//переключение слайдов по кнопке
-const cards = document.querySelectorAll('.viev__slider-big')
-
-document.querySelectorAll('[data-showCard]').forEach(btn => {
-	btn.addEventListener("click", () => {
-		cards.forEach(x => x.classList.add('hidden'))
-		
-		const showCard = document.querySelector(`[data-card="${btn.dataset.showcard}"]`)
-		
-		showCard.classList.remove('hidden')
-	})
-})
 
 
