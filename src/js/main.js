@@ -20,6 +20,7 @@ $(document).ready(function () {
     var carousel1 = $("#carousel-1").waterwheelCarousel({
       flankingItems: 3,
       imageNav: true,
+      autoPlay: 1000,
       movingToCenter: function ($item) {
         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
       },

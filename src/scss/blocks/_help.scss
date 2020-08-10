@@ -12,12 +12,14 @@
     color: #444;
     cursor: pointer;
     padding: 11px;
-    width: 100%;
+    width: 316px;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 12px;
     transition: 0.4s; 
+    color: #7EA0AD;
+    font-weight: 200;
 
     &:after {
         content: '';
@@ -42,5 +44,12 @@
         border: 15px solid transparent;
         border-bottom: 20px solid #7EA0AD;
         border-radius: 2px;
+    }
+}
+@media(min-width:520px){
+    .accordion--help {   
+        
+    width: 100%;     
+        font-size: 19px;
     }
 }
