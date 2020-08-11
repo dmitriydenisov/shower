@@ -26,6 +26,11 @@
     width: 83px;
     height: 68px;
     position: fixed;
+    width: 85px;
+    height: 70px;
+    background:  url("../img/logo.png") no-repeat top 10px left 16px, rgba(152, 214, 236, 0.1);
+    border: 1px solid rgba(152, 214, 236, 0.7);
+    //background-color: red;
 }
 
 .top-nav {
@@ -37,12 +42,15 @@
     height: 69px;
     background: #f5fbfd;
     border: 1px solid rgba(152, 214, 236, 0.7);
-    border-radius: 0 0 0 50px;
     display: flex;
     justify-content: flex-end;
 }
 @media (min-width:1024px) { 
+    .logo {  
+        border-radius: 0 0 50px 0;
+     }
     .top-nav {       
+        border-radius: 0 0 0 50px;
         background: rgba(152, 214, 236, 0.1);
         width: auto;
         z-index: 2;
@@ -133,7 +141,7 @@ ul.top-nav__list {
     text-align: center;
     margin-bottom: 110px;
     margin-left: 60px;
-    margin-top: 67px;
+    margin-top: 135px;
     display: block;
 }
 @media (min-width:1024px) { 

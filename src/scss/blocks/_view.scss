@@ -21,7 +21,7 @@
     background-color: #7EA0AD;
     list-style-type: none;
     margin-right: 20px;
-    border: 3px solid #F4B955;
+    border: 1px solid #F4B955;
     transition: all 0.3s ease-in;
     border-radius: 10px;
     
@@ -38,7 +38,7 @@
 
     &:hover {
         cursor: pointer;
-        border: 3px solid #799DAD;        
+        border: 1px solid #799DAD;        
         background-color: #F4B955;
     }
 
@@ -110,9 +110,9 @@
         width: 33px;
         height: 24px;
     }
-    &--ml120 {
+    &--ml137 {
         &:after {
-            left: 120px;
+            left: 137px;
         }
     }
 }
@@ -419,6 +419,7 @@ input[type="checkbox"] {
     background-color: inherit;
     outline: none;
     margin-left: 5px;
+    color: #D4E2E8;
 }
 .services-option {
     color: #D4E2E8;

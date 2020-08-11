@@ -13,7 +13,7 @@
     text-align: center;
     line-height: 1;
     color: #7EA0AD;
-    font-weight: 200;    
+    font-weight: 100;    
     font-size: 13px;
     line-height: 1;
 }
@@ -38,7 +38,7 @@
     transition: 0.4s; 
     
 
-    font-weight: 200 !important;
+    font-weight: 500;
     font-size: 12px;
     color: #7EA0AD;
     
@@ -102,7 +102,7 @@
 .accordion__description--mobile {
     display: block;
     width: 277px;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 11px;
     text-align: center;
 }
@@ -131,6 +131,7 @@
         width: 975px;
         font-size: 19px;
         text-align: left;
+        color: #7EA0AD;
     }
 }
 

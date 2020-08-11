@@ -7,13 +7,13 @@ html(lang="en")
         link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
         link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="libs/owl/assets/owl.carousel.css")
-        //link(rel="stylesheet", href="libs/owl/assets/owl.theme.default.css")
+        link(rel="stylesheet", href="libs/calendar/css/datepicker.css")
         link(rel="stylesheet", href="css/main.css")
         title Document
     body
         .header            
             .logo
-                img(src="img/logo.png", alt="")
+                //img(src="img/logo.png", alt="")
             img(src="img/g.png", alt="").header-rhombus.header-rhombus--left 
             p.header__title
                 | Душевые ограждения и двери на заказ  
@@ -56,27 +56,30 @@ html(lang="en")
                 ul.view__slider
                     li.view__slider-item
                         button(data-showCard="1")
+                            img(src="img/slider/item-1.png", alt="1")
+                    li.view__slider-item
+                        button(data-showCard="6")
                             img(src="img/slider/item-2.png", alt="2")
                     li.view__slider-item 
-                        button(data-showCard="6")
+                        button(data-showCard="7")
                             img(src="img/slider/item-3.png", alt="3")
                     li.view__slider-item 
-                        button(data-showCard="7")
+                        button(data-showCard="8")
                             img(src="img/slider/item-4.png", alt="4")
                     li.view__slider-item 
-                        button(data-showCard="8")
+                        button(data-showCard="9")
                             img(src="img/slider/item-5.png", alt="5")
                     li.view__slider-item 
-                        button(data-showCard="9")
+                        button(data-showCard="10")
                             img(src="img/slider/item-6.png", alt="6")
                     li.view__slider-item 
-                        button(data-showCard="10")
+                        button(data-showCard="11")
                             img(src="img/slider/item-7.png", alt="7")
                     li.view__slider-item 
-                        button(data-showCard="11")
+                        button(data-showCard="12")
                             img(src="img/slider/item-8.png", alt="8")
                     li.view__slider-item 
-                        button(data-showCard="12")
+                        button(data-showCard="13")
                             img(src="img/slider/item-9.png", alt="9")
                     li.view__slider-item 
                         a(href="#")
@@ -111,7 +114,7 @@ html(lang="en")
                     button(data-showCard="2").mobile-btn Рассчитать стоимость
                     button.mobile-btn Вызвать замерщика
                     button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
-                .viev__slider-big.viev__slider-big--ml120.hidden(data-card="6")
+                .viev__slider-big.viev__slider-big--ml137.hidden(data-card="6")
                     #carousel-2
                         img(src="img/angular/1.jpg", alt="")#item-1 
                         img(src="img/angular/2.jpg", alt="")#item-2
@@ -120,7 +123,7 @@ html(lang="en")
                         img(src="img/angular/5.jpg", alt="")#item-5
                     a(href="#")#prev2.prev 
                     a(href="#")#next2.next
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-3(data-card="7")
                     img(src="img/angular/1.jpg", alt="")#item-1 
                     img(src="img/angular/2.jpg", alt="")#item-2
@@ -129,17 +132,19 @@ html(lang="en")
                     img(src="img/angular/5.jpg", alt="")#item-5
                     a(href="#")#prev3.prev 
                     a(href="#")#next3.next
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-4(data-card="8")
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-5(data-card="9")
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-6(data-card="10")
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-7(data-card="11")
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 .viev__slider-big.hidden#carousel-8(data-card="12")
-                    button(data-showCard="2").slider-big__btn Заполнить бриф и получить расчет
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
+                .viev__slider-big.hidden#carousel-8(data-card="13")
+                    button(data-showCard="2").slider-big__btn.slider-big__btn--index Заполнить бриф и получить расчет
                 
                 .viev__slider-big.hidden(data-card="2")
                     .slider-big__heading 2. Выберите вид стекла
@@ -392,7 +397,7 @@ html(lang="en")
                         .type-glass-block__img
                             img(src="img/glass/item-2.png", alt="Осветвленное").glass__item
                             .test-mod    
-                                .test-bg
+                                .test-bg.test-bg--big
                                 .type-glass__description Осветленное стекло (Optiwhite,Clearvision). Кристально чистое, прозрачное стекло. Данный вид материала почти не имеет сторонних оттенков, кроме благородного светло-голубого цвета, заметного глазу лишь с торца полотна. Это стекло самое дорогое из базового сырья, из-за многоступенчатой очистки стекломассы при отливе листа. Самое лучшее применение - если в помещении или на фоне светлая плитка или белый мрамор. Вживую, в светлых помещениях стекло смотрится как на визуализациях дизайнера - кристально чистым и прозрачным, без оттенков.
                             .description-bg
                         .type-glass-block__title Осветвленное
@@ -665,12 +670,40 @@ html(lang="en")
 
 
 
+        #gager-form.gager-form
+            .modal-wrapper
+                .bg-form
+                .gager-form__title Заполните форму для связи
+                form.gager-form__form
+                    .form-item
+                        label.form-label Ваш телефон*
+                        input(type="text" placeholder="+7(___)___-__-__ :").form-input
+                    .form-item
+                        label.form-label Ваше имя*
+                        input(type="text" placeholder="Иван").form-input                    
 
+                    .gager-form__button-option Укажите адрес, время и контакты представителя            
+                    
+                    .form-item
+                        label.form-label Комментарий
+                        textarea(placeholder="текст").form-input.form-input--textarea
+                    .gager-form__heading Выберите время и дату для звонка
+                    .gager-form__description в ближайшее время завтра вечером
+                    .time
+                        input(type="text" placeholder="00").form-input.form-input--time         
+                        p.test-p : 
+                        input(type="text" placeholder="00").form-input.form-input--time  
+                        input(type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
+                .gager-form__option
+                .gager-form-button-send Вызвать замерщика
+                .gager-form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies
+            
 
 
         //script(src="libs/jquery/jquery-1.11.2.min.js")
         script(src="libs/jquery/jquery-3.5.1.min.js")
         script(src="libs/owl/owl.carousel.js")
+        script(src="libs/calendar/js/datepicker.min.js")
         script(src="libs/carousel/jquery.waterwheelCarousel.js")
         script(src="js/main.js")
         script(src="js/navigation.js")
