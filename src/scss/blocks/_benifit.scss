@@ -29,12 +29,15 @@
     border-image-slice: 1;
     width: 280px;
     margin-bottom: 55px;
-    margin-right: 25px; 
     padding-left: 23px;
     padding-right: 25px; 
     padding-bottom: 23px;
 }
-
+@media(min-width:520px){
+    .benifit__item {
+        margin-right: 25px;
+    }
+}
 .benefit__circle {
     position: relative;
     width: 68px;

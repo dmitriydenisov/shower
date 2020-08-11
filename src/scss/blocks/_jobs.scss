@@ -109,6 +109,7 @@
 @media(min-width:520px){
     .accordion-img {
         flex-wrap: nowrap;
+        border-color: transparent;
     }
     .accordiom-img__item {
         &:nth-child(2) {
@@ -134,7 +135,19 @@
         color: #7EA0AD;
     }
 }
+.wrapper {
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;    
+    margin-bottom: 20px;
 
+    .border {
+        border: 2px solid ;
+        border-image: linear-gradient(130deg, rgba(244, 185, 85, .46), #91b7c6);
+        border-image-slice: 1;
+    }
+}
 .panel {    
     margin-left: 9px; 
     text-align: left;
@@ -142,26 +155,21 @@
     display: none;
     background-color: white;
     overflow: hidden;
+    display: none;
+    border: none;
 }
-.wrapper {
-    margin: 0 20px;
-    position: relative;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    border-image: linear-gradient(130deg, rgba(244, 185, 85, .46), #91b7c6);
-    border-image-slice: 1;
-    margin-bottom: 20px;
-}
+
 
 @media(min-width:520px) {
     .panel{
         padding: 11px 18px; 
         margin-right: 35px;
+        border: none;
     }
     .accordiom-img__item{        
         width: 235px;
         height: 300px;
         margin-bottom: 0;
+        border: none;
     }
 }
-  
