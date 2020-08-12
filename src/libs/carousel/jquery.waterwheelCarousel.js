@@ -233,6 +233,7 @@
                 'border-style': 'solid',
                 'border-color': '#F4B955',
                 'border-radius': 7,
+                'background-color': 'red',
               })
               // Give each image a data object so it remembers specific data about
               // it's original form

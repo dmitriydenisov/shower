@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   //карусель 1
   var carousel1 = $("#carousel-1").waterwheelCarousel({
-    flankingItems: 4,
+    flankingItems: 3,
     imageNav: true,
     autoPlay: 4000,
     movingToCenter: function ($item) {

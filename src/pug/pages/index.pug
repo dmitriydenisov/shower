@@ -3,6 +3,8 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="libs/jquery/jquery-3.5.1.min.js")        
+        script(src="libs/carousel/jquery.waterwheelCarousel.js")
         link(rel="stylesheet", href="fonts/Montserrat/stylesheet.css")
         link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
         link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
@@ -13,7 +15,7 @@ html(lang="en")
     body
         .header            
             .logo
-                //img(src="img/logo.png", alt="")
+                a(href="#")
             img(src="img/g.png", alt="").header-rhombus.header-rhombus--left 
             p.header__title
                 | Душевые ограждения и двери на заказ  
@@ -30,7 +32,8 @@ html(lang="en")
 
                     .navigation__toggle
                         i(aria-hidden = true).fa.fa-bars
-
+                        
+                    
                     ul.top-nav__list
                         li 
                             a(href="#") Резка и обработка стекла
@@ -85,8 +88,10 @@ html(lang="en")
                         button(data-grapper="")
                             | Вызвать <br> специалиста
                 .viev__slider-big(data-card="1")            
-                    #carousel-1        
-                        img(src="img/gallery/angular/1.jpg", alt="")#item-1.items 
+                    #carousel-1   
+                        div     
+                            img(src="img/gallery/angular/1.jpg", alt="")#item-1.items
+                        div 
                         img(src="img/gallery/angular/2.jpg", alt="")#item-2.items
                         img(src="img/gallery/angular/3.jpg", alt="")#item-3.items
                         img(src="img/gallery/angular/4.jpg", alt="")#item-4.items
@@ -313,19 +318,19 @@ html(lang="en")
                                 input(type="checkbox").check__input
                                 span.check__box
                                 img(src="img/glass/item-3.png", alt="")
-                                span.slider-big__title Матовое
+                                span.slider-big__title.slider-big__title--color Матовое
                         .block-view            
                             label.check                        
                                 input(type="checkbox").check__input
                                 span.check__box
                                 img(src="img/glass/item-4.png", alt="")
-                                span.slider-big__title Графит
+                                span.slider-big__title.slider-big__title--color Графит
                         .block-view            
                             label.check                        
                                 input(type="checkbox").check__input
                                 span.check__box
                                 img(src="img/glass/item-5.png", alt="")
-                                span.slider-big__title Бронза
+                                span.slider-big__title.slider-big__title--color Бронза
                     .slider-big__options.color
                         .block-option                    
                             label.check                        
@@ -587,25 +592,26 @@ html(lang="en")
                             .qualities-mobile-block__title Идеальная прозрачность
 
             .comparison-glass 
-                .section-glass__title Сравнение видов прозрачного стекла
-                .comparison-glass-type
-                    .glass-type__color Прозрачное <br /> (б/ц, М1, “обычное”)
-                    .glass-type__visual
-                        img(src="img/visual-glass.png", alt="")
-                    .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
-                .glass-qualities
-                    .qualities-left 
-                        
-                        .glass-qualities-block.glass-qualities-block--left                           
-                            .qualities-block__title Низкая стоимость
-                        .glass-qualities-block.glass-qualities-block--left                            
-                            .qualities-block__title Зеленый отблеск на светлых оттенках
-                    .qualities-right
-                                         
-                        .glass-qualities-block.glass-qualities-block--right                          
-                            .qualities-block__title Высокая стоимость
-                        .glass-qualities-block.glass-qualities-block--right                           
-                            .qualities-block__title Идеальная цветопередача и прозрачность
+                .container
+                    .section-glass__title Сравнение видов прозрачного стекла
+                    .comparison-glass-type
+                        .glass-type__color Прозрачное <br /> (б/ц, М1, “обычное”)
+                        .glass-type__visual
+                            img(src="img/visual-glass.png", alt="")
+                        .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
+                    .glass-qualities
+                        .qualities-left 
+                            
+                            .glass-qualities-block.glass-qualities-block--left                           
+                                .qualities-block__title Низкая стоимость
+                            .glass-qualities-block.glass-qualities-block--left                            
+                                .qualities-block__title Зеленый отблеск на светлых оттенках
+                        .qualities-right
+                                            
+                            .glass-qualities-block.glass-qualities-block--right                          
+                                .qualities-block__title Высокая стоимость
+                            .glass-qualities-block.glass-qualities-block--right                           
+                                .qualities-block__title Идеальная цветопередача и прозрачность
         .section-jobs
             .container
                 .section-glass__title Примеры работ 
@@ -868,10 +874,8 @@ html(lang="en")
 
 
         //script(src="libs/jquery/jquery-1.11.2.min.js")
-        script(src="libs/jquery/jquery-3.5.1.min.js")
         script(src="libs/owl/owl.carousel.js")
         script(src="libs/calendar/js/datepicker.min.js")
-        script(src="libs/carousel/jquery.waterwheelCarousel.js")
         script(src="js/main.js")
         script(src="js/navigation.js")
         script(src="js/ac.js")
