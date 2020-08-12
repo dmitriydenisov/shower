@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="libs/jquery/jquery-3.5.1.min.js">       </script>
+    <script src="libs/carousel/jquery.waterwheelCarousel.js"></script>
     <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css"/>
     <link rel="stylesheet" href="fonts/noto-webfont/noto.css"/>
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"/>
@@ -13,9 +15,7 @@
   </head>
   <body>
     <div class="header">           
-      <div class="logo">
-        <!--img(src="img/logo.png", alt="")-->
-      </div><img class="header-rhombus header-rhombus--left" src="img/g.png" alt=""/>
+      <div class="logo"><a href="#"></a></div><img class="header-rhombus header-rhombus--left" src="img/g.png" alt=""/>
       <p class="header__title">Душевые ограждения и двери на заказ  </p>
       <p class="header__title--mobile">
          Душевые ограждения и двери из стекла на заказ</p><img class="header-logo" src="img/logo-head.png" alt=""/><img class="header-rhombus header-rhombus--right" src="img/g2.png" alt=""/>
@@ -71,7 +71,10 @@
           </li>
         </ul>
         <div class="viev__slider-big" data-card="1">           
-          <div id="carousel-1">       <img class="items" src="img/gallery/angular/1.jpg" alt="" id="item-1"/><img class="items" src="img/gallery/angular/2.jpg" alt="" id="item-2"/><img class="items" src="img/gallery/angular/3.jpg" alt="" id="item-3"/><img class="items" src="img/gallery/angular/4.jpg" alt="" id="item-4"/><img class="items" src="img/gallery/angular/5.jpg" alt="" id="item-5"/><img class="items" src="img/gallery/angular/6.jpg" alt="" id="item-6"/><img class="items" src="img/gallery/angular/7.jpg" alt="" id="item-7"/><img class="items" src="img/gallery/angular/8.jpg" alt="" id="item-8"/><img class="items" src="img/gallery/angular/9.jpeg" alt="" id="item-9"/><img class="items" src="img/gallery/angular/10.jpg" alt="" id="item-10"/><img class="items" src="img/gallery/angular/11.jpg" alt="" id="item-11"/><img class="items" src="img/gallery/angular/12.jpg" alt="" id="item-12"/><img class="items" src="img/gallery/angular/13.jpg" alt="" id="item-13"/><img class="items" src="img/gallery/angular/14.jpg" alt="" id="item-14"/><img class="items" src="img/gallery/angular/15.jpg" alt="" id="item-15"/><img class="items" src="img/gallery/angular/16.jpeg" alt="" id="item-16"/><img class="items" src="img/gallery/angular/17.jpg" alt="" id="item-17"/><img class="items" src="img/gallery/angular/18.jpeg" alt="" id="item-18"/><img class="items" src="img/gallery/angular/19.jpg" alt="" id="item-19"/><img class="items" src="img/gallery/angular/21.jpeg" alt="" id="item-21"/><img class="items" src="img/gallery/angular/22.jpg" alt="" id="item-22"/></div><a class="prev" href="#" id="prev1"> </a><a class="next" href="#" id="next1"></a>
+          <div id="carousel-1">  
+            <div>    <img class="items" src="img/gallery/angular/1.jpg" alt="" id="item-1"/></div>
+            <div> </div><img class="items" src="img/gallery/angular/2.jpg" alt="" id="item-2"/><img class="items" src="img/gallery/angular/3.jpg" alt="" id="item-3"/><img class="items" src="img/gallery/angular/4.jpg" alt="" id="item-4"/><img class="items" src="img/gallery/angular/5.jpg" alt="" id="item-5"/><img class="items" src="img/gallery/angular/6.jpg" alt="" id="item-6"/><img class="items" src="img/gallery/angular/7.jpg" alt="" id="item-7"/><img class="items" src="img/gallery/angular/8.jpg" alt="" id="item-8"/><img class="items" src="img/gallery/angular/9.jpeg" alt="" id="item-9"/><img class="items" src="img/gallery/angular/10.jpg" alt="" id="item-10"/><img class="items" src="img/gallery/angular/11.jpg" alt="" id="item-11"/><img class="items" src="img/gallery/angular/12.jpg" alt="" id="item-12"/><img class="items" src="img/gallery/angular/13.jpg" alt="" id="item-13"/><img class="items" src="img/gallery/angular/14.jpg" alt="" id="item-14"/><img class="items" src="img/gallery/angular/15.jpg" alt="" id="item-15"/><img class="items" src="img/gallery/angular/16.jpeg" alt="" id="item-16"/><img class="items" src="img/gallery/angular/17.jpg" alt="" id="item-17"/><img class="items" src="img/gallery/angular/18.jpeg" alt="" id="item-18"/><img class="items" src="img/gallery/angular/19.jpg" alt="" id="item-19"/><img class="items" src="img/gallery/angular/21.jpeg" alt="" id="item-21"/><img class="items" src="img/gallery/angular/22.jpg" alt="" id="item-22"/>
+          </div><a class="prev" href="#" id="prev1"> </a><a class="next" href="#" id="next1"></a>
           <p class="mobile-p">Мы предлагаем сделать расчет стоимости и срока изготовления удаленно. Если Вас все устроит в нашем предложении, мы пришлем к Вам замерщика. Если у Вас нет времени - обращайтесь, отправим замерщика сразу!  </p>
           <button class="mobile-btn" data-showCard="2">Рассчитать стоимость</button>
           <button class="mobile-btn">Вызвать замерщика</button>
@@ -145,17 +148,17 @@
             </div>
             <div class="block-view">           
               <label class="check">                       
-                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-3.png" alt=""/><span class="slider-big__title">Матовое</span>
+                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-3.png" alt=""/><span class="slider-big__title slider-big__title--color">Матовое</span>
               </label>
             </div>
             <div class="block-view">           
               <label class="check">                       
-                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-4.png" alt=""/><span class="slider-big__title">Графит</span>
+                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-4.png" alt=""/><span class="slider-big__title slider-big__title--color">Графит</span>
               </label>
             </div>
             <div class="block-view">           
               <label class="check">                       
-                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-5.png" alt=""/><span class="slider-big__title">Бронза</span>
+                <input class="check__input" type="checkbox"/><span class="check__box"></span><img src="img/glass/item-5.png" alt=""/><span class="slider-big__title slider-big__title--color">Бронза</span>
               </label>
             </div>
           </div>
@@ -457,27 +460,29 @@
         </div>
       </div>
       <div class="comparison-glass"> 
-        <div class="section-glass__title">Сравнение видов прозрачного стекла</div>
-        <div class="comparison-glass-type">
-          <div class="glass-type__color">Прозрачное <br /> (б/ц, М1, “обычное”)</div>
-          <div class="glass-type__visual"><img src="img/visual-glass.png" alt=""/></div>
-          <div class="glass-type__color">Осветленное <br /> (OptiWhite, CrystalVision) </div>
-        </div>
-        <div class="glass-qualities">
-          <div class="qualities-left"> 
-            <div class="glass-qualities-block glass-qualities-block--left">                          
-              <div class="qualities-block__title">Низкая стоимость</div>
-            </div>
-            <div class="glass-qualities-block glass-qualities-block--left">                           
-              <div class="qualities-block__title">Зеленый отблеск на светлых оттенках</div>
-            </div>
+        <div class="container">
+          <div class="section-glass__title">Сравнение видов прозрачного стекла</div>
+          <div class="comparison-glass-type">
+            <div class="glass-type__color">Прозрачное <br /> (б/ц, М1, “обычное”)</div>
+            <div class="glass-type__visual"><img src="img/visual-glass.png" alt=""/></div>
+            <div class="glass-type__color">Осветленное <br /> (OptiWhite, CrystalVision) </div>
           </div>
-          <div class="qualities-right">
-            <div class="glass-qualities-block glass-qualities-block--right">                         
-              <div class="qualities-block__title">Высокая стоимость</div>
+          <div class="glass-qualities">
+            <div class="qualities-left"> 
+              <div class="glass-qualities-block glass-qualities-block--left">                          
+                <div class="qualities-block__title">Низкая стоимость</div>
+              </div>
+              <div class="glass-qualities-block glass-qualities-block--left">                           
+                <div class="qualities-block__title">Зеленый отблеск на светлых оттенках</div>
+              </div>
             </div>
-            <div class="glass-qualities-block glass-qualities-block--right">                          
-              <div class="qualities-block__title">Идеальная цветопередача и прозрачность</div>
+            <div class="qualities-right">
+              <div class="glass-qualities-block glass-qualities-block--right">                         
+                <div class="qualities-block__title">Высокая стоимость</div>
+              </div>
+              <div class="glass-qualities-block glass-qualities-block--right">                          
+                <div class="qualities-block__title">Идеальная цветопередача и прозрачность</div>
+              </div>
             </div>
           </div>
         </div>
@@ -734,10 +739,8 @@
       </div>
     </div>
     <!--script(src="libs/jquery/jquery-1.11.2.min.js")-->
-    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="libs/owl/owl.carousel.js"></script>
     <script src="libs/calendar/js/datepicker.min.js"></script>
-    <script src="libs/carousel/jquery.waterwheelCarousel.js"></script>
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/ac.js"></script>
