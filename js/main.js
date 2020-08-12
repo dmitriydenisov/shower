@@ -1,220 +1,53 @@
-$(document).ready(function () {
+// Уже активированные карусели
+const initedList = []
 
-  //главная карусель на первом слайде
+// Активируем карточку с каруселью
+function showCard(selector) {
+  // Скрываем все карусели
+  document.querySelectorAll('[data-card]').forEach(x => x.classList.add('hidden'))
 
-  //карусель 1
-  var carousel1 = $("#carousel-1").waterwheelCarousel({
+  // Находим публикуемую карточку
+  const card = document.querySelector(selector)
+
+  // Убираем у нее класс hidden, чтобы карточку было видно
+  card.classList.remove('hidden')
+
+  // Проверка уже активированной карусели
+  if (initedList.includes(selector)) {
+    return
+  }
+
+  initedList.push(selector)
+
+  // Находим карусель внутри карточки, и кнопки вперед назад
+  let carousel = card.querySelector('.carousel')
+  const next = card.querySelector('.next')
+  const prev = card.querySelector('.prev')
+
+  // Инициализа карусели
+  carousel = $(carousel).waterwheelCarousel({
     flankingItems: 3,
     imageNav: true,
     autoPlay: 4000,
-    movingToCenter: function ($item) {
-      $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-    },
-    movedToCenter: function ($item) {
-      $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-    },
-    movingFromCenter: function ($item) {
-      $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-    },
-    movedFromCenter: function ($item) {
-      $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-    },
-    clickedCenter: function ($item) {
-      $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-    }
   });
 
-  $('#prev1').bind('click', function () {
-    carousel1.prev();
-    return false
-  });
+  // Инициалируем кнопки
+  prev.addEventListener('click', e => {
+    e.preventDefault()
+    e.stopPropagation()
 
-  $('#next1').bind('click', function () {
-    carousel1.next();
-    return false;
-  });
+    carousel.prev();
+  })
 
-  $('#reload').bind('click', function () {
-    newOptions = eval("(" + $('#newoptions').val() + ")");
-    carousel.reload(newOptions);
-    return false;
-  });
+  next.addEventListener('click', e => {
+    e.preventDefault()
+    e.stopPropagation()
 
-  //карусель 2
-  var carousel2 = $("#carousel-2").waterwheelCarousel({
-    flankingItems: 4,
-    imageNav: true,
-    autoPlay: 4000
-  });
+    carousel.next();
+  })
+}
 
-
-
-  $('#prev2').bind('click', function () {
-    carousel2.prev();
-    return false
-  });
-
-  $('#next2').bind('click', function () {
-    carousel2.next();
-    return false;
-  });
-
-  $('#reload').bind('click', function () {
-    newOptions = eval("(" + $('#newoptions').val() + ")");
-    carousel3.reload(newOptions);
-    return false;
-  });
-//карусель 3
-  var carousel3 = $("#carousel-3").waterwheelCarousel({
-    flankingItems: 4,
-    imageNav: true,
-    autoPlay: 4000
-  });
-  $('#prev3').bind('click', function () {
-    carousel3.prev();
-    return false
-  });
-
-  $('#next3').bind('click', function () {
-    carousel3.next();
-    return false;
-  });
-
-  $('#reload').bind('click', function () {
-    newOptions = eval("(" + $('#newoptions').val() + ")");
-    carousel4.reload(newOptions);
-    return false;
-  });
-//карусель 4
-var carousel4 = $("#carousel-4").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev4').bind('click', function () {
-  carousel4.prev();
-  return false
-});
-
-$('#next4').bind('click', function () {
-  carousel4.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-//карусель 5
-var carousel5 = $("#carousel-5").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev5').bind('click', function () {
-  carousel5.prev();
-  return false
-});
-
-$('#next5').bind('click', function () {
-  carousel5.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-//карусель 6
-var carousel6 = $("#carousel-6").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev6').bind('click', function () {
-  carousel6.prev();
-  return false
-});
-
-$('#next6').bind('click', function () {
-  carousel6.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-//карусель 7
-var carousel7 = $("#carousel-7").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev7').bind('click', function () {
-  carousel7.prev();
-  return false
-});
-
-$('#next7').bind('click', function () {
-  carousel7.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-//карусель 8
-var carousel8 = $("#carousel-8").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev8').bind('click', function () {
-  carousel8.prev();
-  return false
-});
-
-$('#next8').bind('click', function () {
-  carousel8.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-//карусель 9
-var carousel9 = $("#carousel-9").waterwheelCarousel({
-  flankingItems: 4,
-  imageNav: true,
-  autoPlay: 4000
-});
-$('#prev9').bind('click', function () {
-  carousel9.prev();
-  return false
-});
-
-$('#next9').bind('click', function () {
-  carousel9.next();
-  return false;
-});
-
-$('#reload').bind('click', function () {
-  newOptions = eval("(" + $('#newoptions').val() + ")");
-  carousel4.reload(newOptions);
-  return false;
-});
-
-  //слайдер в блоке фурнитуры
-
-
+$(document).ready(function () {
   let slider = $(".owl-carousel");
   slider.owlCarousel({
     loop: true,
@@ -232,39 +65,61 @@ $('#reload').bind('click', function () {
 
   //переключение слайдов по кнопке
   const cards = document.querySelectorAll('.viev__slider-big')
-  const items = document.querySelectorAll('.viev__slider--item')
+
+  // document
+  //   .querySelectorAll('.viev__slider--item')
+  //   .forEach(x =>
+  //     x.classList.add('viev__slider-item--active')
+  //   )
 
   document.querySelectorAll('[data-showCard]').forEach(btn => {
-    btn.addEventListener("click", () => {
-      cards.forEach(x => x.classList.add('hidden'))
-      items.forEach(x => x.classList.add('viev__slider-item--active'))
-
-      const showCard = document.querySelector(`[data-card="${btn.dataset.showcard}"]`)
-      showCard.classList.remove('hidden')
-    })
+    btn.addEventListener("click", () =>
+      showCard(`[data-card="${btn.dataset.showcard}"]`)
+    )
   })
 
-  document.querySelectorAll('[data-card]').forEach(x => x.classList.add('hidden'))
-  document.querySelector('[data-card="1"]').classList.remove('hidden')
+  showCard('[data-card="1"]')
 
   //управление модальными окнами 
-  function modalOpen () {
-    document.querySelector('.gager-form').classList.add('gager-form--active')  
-    document.body.style.overflow='hidden'
+  function modalOpen() {
+    document.querySelector('.gager-form').classList.add('gager-form--active')
+    document.body.style.overflow = 'hidden'
   }
-  function modalClose ()  {
-    document.querySelector('.gager-form').classList.remove('gager-form--active')  
-    document.body.style.overflow='auto'
-  }
-  
-  document.querySelectorAll('[data-grapper]').forEach(
-    x => x.addEventListener('click', () =>modalOpen()
-    )
-  )  
- document.getElementById('gager-form').onclick = () =>modalClose() 
 
-  function optionTrigger ()  {
-    document.querySelector('.form-option').classList.toggle('form-option--active')  
+  function modalClose() {
+    document.querySelector('.gager-form').classList.remove('gager-form--active')
+    document.body.style.overflow = 'auto'
   }
-  document.querySelectorAll('[data-hidden]').onclick= () => optionTrigger() 
+
+  function openFormOption() {
+    document.querySelector('.form-option').classList.add('form-option--active')
+  }
+
+  function closeFormOption() {
+    document.querySelector('.form-option').classList.remove('form-option--active')
+  }
+
+  function toggleFormOption() {
+    document.querySelector('.form-option').classList.toggle('form-option--active')
+  }
+
+  document.querySelectorAll('[data-grapper]').forEach(
+    x => x.addEventListener('click', () => modalOpen())
+  )
+
+  document.getElementById('gager-form').addEventListener('click', function (event) {
+    if (event.target === this) {
+      modalClose()
+    }
+  })
+
+  // function optionTrigger() {
+  //   document.querySelector('.form-option').classList.toggle('form-option--active')
+  // }
+
+  // document.querySelectorAll('[data-hidden]').onclick = () => optionTrigger()
+
+  document.querySelector('.gager-form__button-option').addEventListener('click', () => {
+    toggleFormOption()
+  })
 });
