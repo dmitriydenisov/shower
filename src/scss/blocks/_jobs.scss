@@ -13,7 +13,7 @@
     text-align: center;
     line-height: 1;
     color: #7EA0AD;
-    font-weight: 100;    
+    font-weight: 300;    
     font-size: 13px;
     line-height: 1;
 }
@@ -102,9 +102,10 @@
 .accordion__description--mobile {
     display: block;
     width: 277px;
-    font-weight: 100;
+    font-weight: normal;
     font-size: 11px;
     text-align: center;
+    color: #7EA0AD;
 }
 @media(min-width:520px){
     .accordion-img {
@@ -127,7 +128,7 @@
         margin-left: 0;
         list-style-type: none;
         display: block;
-        font-weight: 200;
+        font-weight: normal;
         text-align: center;
         width: 975px;
         font-size: 19px;

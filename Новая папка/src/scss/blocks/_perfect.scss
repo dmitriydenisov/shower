@@ -1,0 +1,235 @@
+.section-perfect {
+    border-top: 2px solid #F4B955;
+    background-color: #7EA0AD;
+    position: relative;
+}
+.section-perfect__title {
+    width: 223px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;    
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+@media(min-width:520px){  
+  .section-perfect__title{
+    width: 520px;
+    font-size: 22px;
+    margin-bottom: 85px;
+    border: 2px solid #F4B955;
+    border-radius: 10px;
+  }
+}
+.section-perfect__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.section-perfect__marker {
+    width: 20px;
+    height: 20px;
+    background-color:#e67e22;
+    position:absolute;
+    left: 10px;
+    top: calc(50% / 2);
+  }
+.section-perfect__list {
+    li {
+        border: 2px solid #F4B955;
+        border-radius: 10px;
+        margin-bottom: 140px;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        &::after {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            transform: translate(-50%, -50%);
+            content: '';
+            width: 235px;
+            height: 188px;
+            border: 2px solid #F4B955;
+        }
+    }
+}
+.section-perfect__wrapper {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .section-perfect__video{
+    width: 280px;
+    height: 190px;
+  }
+  .section-perfect__video {
+    margin: 5px 38px;
+    border:2px solid #f39c12;
+    border-radius:10px;
+    // min-width:100px;
+    // max-width:200px;
+    position:relative;    
+    background-color: #7EA0AD;
+  }
+  .section-perfect__video:after,
+  .section-perfect__video:before{
+    content:'';
+    position:absolute;
+    width: 40px;
+    height: 50px;
+   box-shadow:0px 1px #f39c12,0px -1px #f39c12;
+  }
+  .section-perfect__video:after {
+    top:50%;
+    left:-45px;
+    width: 45px;
+    transform:translateY(-50%);
+  
+  }
+  .section-perfect__video:before{
+    top:50%;
+    right:-40px;
+    transform:translateY(-50%);
+     
+  }
+  
+  
+  .section-perfect__video a.video {
+    width: 100%;
+    height: 100%;
+    //background-image: url("../img/media/3.png");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .video-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;   
+  }
+  .description {
+    display: none;
+  }
+  .section-perfect__mobile-description {
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 322px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .item{
+    margin-bottom: 20px;
+  }
+  @media(min-width:520px){
+    .section-perfect__mobile-description{
+      display: none;
+    }
+    .description {
+      font-weight: normal;
+      display: block;
+      position: absolute;
+      left: 375px;      
+      font-size: 19px;
+      color: #fff;
+      width: 512px;
+    }
+  }
+
+ 
+
+  .section-perfectionism__description {
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+    width: 285px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+  
+  @media (min-width:540px) {
+    .section-perfectionism__description {
+      font-size: 19px;
+      width: 863px;
+      padding-bottom: 60px;
+    }
+    .text{
+      width: 100%;
+    }
+    .section-perfect__video:after,
+    .section-perfect__video:before {
+      display: none;
+    }
+    .section-perfect__wrapper {
+        position: relative;
+        top:0;
+        right: 0;
+        width: 1420px;
+        height: 70px;
+        border: 2px solid #F4B955;
+        border-radius: 10px;
+        border-right:none;
+     //margin: 100px auto;
+        margin-bottom: 180px;
+
+        &:last-child {
+            margin-bottom: 80px;
+        }
+    }
+    .section-perfect__video {
+      //position: absolute;
+      right: 117px;
+      width: 280px;
+      height: 190px;
+      margin: 5px 10px;
+      z-index: 1;
+
+      &:before {
+        right:-21px;
+      }
+      &--right {
+        right: 75%;
+    }
+    }
+      
+    }
+    .section-perfect__marker {
+      display: none;
+    }
+    @media(min-width:520px){
+      .section-perfect__marker {
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: #F4B955;
+          border-radius: 3px; 
+          position:absolute;
+          left: 30px;
+          top: 27px;
+      }
+    
+    
+    .section-perfect__video{
+      
+     
+  }
+
+  .item {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+  }
+}
