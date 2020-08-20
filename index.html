@@ -22,8 +22,8 @@
       <div class="top-nav">
         <div class="top-nav__contact">                   <a class="contact__phone" href="tel:+7 (499) 677 20 67">+7 (499) 677 20 67                     </a><a class="contact__all" href="#">Все контакты  </a></div>
         <div class="top-nav-toogle"> 
-          <div class="navigation__toggle"><i class="fa fa-bars" aria-hidden="aria-hidden"></i>
-            <div class="blur">
+          <div class="top-nav-toogle-btn">
+            <div class="navigation__toggle">
               <ul class="top-nav__list">
                 <li> <a href="#">Резка и обработка стекла</a></li>
                 <li><a href="#">Многослойное стекло</a></li>
@@ -194,12 +194,12 @@
           <div class="slider-big__heading">3. Выберите вид фурнитуры</div>
           <div class="slider-big__description">Фурнитура влияет на функционал, внешний вид и на срок службы изделия. Дешево и идеально — не бывает, следует это понимать. Правда, и идеалы у всех разные.</div>
           <div class="btn-block">
-            <button class="btn-block__item">Бюджетный сегмент</button>
-            <button class="btn-block__item">Комбин. комплекты</button>
-            <button class="btn-block__item">Премиум</button>
-            <button class="btn-block__item">Заказные / Люкс</button>
+            <button class="btn-block__item" data-variant="budget">Бюджетный сегмент</button>
+            <button class="btn-block__item" data-variant="combine">Комбин. комплекты</button>
+            <button class="btn-block__item" data-variant="premium">Премиум</button>
+            <button class="btn-block__item" data-variant="customized">Заказные / Люкс</button>
           </div>
-          <div class="slider-big__slider">
+          <div class="slider-big__slider" data-variant="budget">
             <div class="owl-carousel owl-theme">
               <div class="carousel__item"><img src="img/furniture/budget/1.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/budget/2.jpg" alt=""/></div>
@@ -210,9 +210,9 @@
               <div class="carousel__item"><img src="img/furniture/budget/7.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/budget/8.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/budget/9.jpg" alt=""/></div>
-            </div>
+            </div><a class="prev prev--furniture" href="#" id="prev"></a><a class="next next--furniture" href="#" id="next"></a>
           </div>
-          <div class="slider-big__slider">
+          <div class="slider-big__slider" data-variant="combine">
             <div class="owl-carousel owl-theme">
               <div class="carousel__item"><img src="img/furniture/comb/1.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/comb/2.jpg" alt=""/></div>
@@ -224,9 +224,9 @@
               <div class="carousel__item"><img src="img/furniture/comb/8.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/comb/9.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/comb/10.jpg" alt=""/></div>
-            </div>
+            </div><a class="prev prev--furniture" href="#" id="prev"></a><a class="next next--furniture" href="#" id="next"></a>
           </div>
-          <div class="slider-big__slider">
+          <div class="slider-big__slider" data-variant="premium">
             <div class="owl-carousel owl-theme">
               <div class="carousel__item"><img src="img/furniture/premium/1.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/premium/2.jpg" alt=""/></div>
@@ -238,9 +238,9 @@
               <div class="carousel__item"><img src="img/furniture/premium/8.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/premium/9.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/premium/10.jpg" alt=""/></div>
-            </div>
+            </div><a class="prev prev--furniture" href="#" id="prev"></a><a class="next next--furniture" href="#" id="next"></a>
           </div>
-          <div class="slider-big__slider">
+          <div class="slider-big__slider" data-variant="customized">
             <div class="owl-carousel owl-theme">
               <div class="carousel__item"><img src="img/furniture/luxe/1.jpg" alt=""/></div>
               <div class="carousel__item"><img src="img/furniture/luxe/2.jpg" alt=""/></div>
@@ -392,29 +392,53 @@
       <div class="container">
         <div class="benefit__title">Плюсы и преимущества</div>
         <div class="benefit__block">
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-1.png" alt=""/></div>
-            <div class="benefit__description"><span>Закаленное стекло 8-15мм</span>Английское сырье Guardian, Pilkington и Японское AGC</div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-1.png" alt=""/></div>
+                <div class="benefit__description"><span>Закаленное стекло 8-15мм</span>Английское сырье Guardian, Pilkington и Японское AGC</div>
+              </div>
+            </div>
           </div>
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-2.png" alt=""/></div>
-            <div class="benefit__description"><span>Срочное изготовление</span>- от 24-х часов. <br /> Стандартное - 7 дней</div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-2.png" alt=""/></div>
+                <div class="benefit__description"><span>Срочное изготовление</span>- от 24-х часов. <br /> Стандартное - 7 дней</div>
+              </div>
+            </div>
           </div>
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-3.png" alt=""/></div>
-            <div class="benefit__description"><span>Специальное покрытие</span>стекла и фурнитуры, <br /> защищающий от грязи и почернения (грибка)</div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-3.png" alt=""/></div>
+                <div class="benefit__description"><span>Специальное покрытие</span>стекла и фурнитуры, <br /> защищающий от грязи и почернения (грибка)</div>
+              </div>
+            </div>
           </div>
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-4.png" alt=""/></div>
-            <div class="benefit__description"><span>Гарантия на душевые</span>ограждения и двери - 5 лет. Качественное сервисное обслуживание </div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-4.png" alt=""/></div>
+                <div class="benefit__description"><span>Гарантия на душевые</span>ограждения и двери - 5 лет. Качественное сервисное обслуживание </div>
+              </div>
+            </div>
           </div>
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-5.png" alt=""/></div>
-            <div class="benefit__description"><span>Опытный персонал</span>со знанием дела, аккуратностью и опытом работы 3+ лет. Конструкторы в штате</div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-5.png" alt=""/></div>
+                <div class="benefit__description"><span>Опытный персонал</span>со знанием дела, аккуратностью и опытом работы 3+ лет. Конструкторы в штате</div>
+              </div>
+            </div>
           </div>
-          <div class="benifit__item">
-            <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-6.png" alt=""/></div>
-            <div class="benefit__description"><span>Большой ассортимент</span>от бюджетного до премиум сегмента стекла и фурнитуры</div>
+          <div class="wrapper-benifit">
+            <div class="border-benifit">
+              <div class="benifit__item">
+                <div class="benefit__circle"><img src="img/icon/benefit/benefit-icon-6.png" alt=""/></div>
+                <div class="benefit__description"><span>Большой ассортимент</span>от бюджетного до премиум сегмента стекла и фурнитуры</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="btn">Заказать душевую</div>
@@ -511,9 +535,9 @@
         <div class="container">
           <div class="section-glass__title">Сравнение видов прозрачного стекла</div>
           <div class="comparison-glass-type">
-            <div class="glass-type__color">Прозрачное <br /> (б/ц, М1, “обычное”)</div>
+            <div class="glass-type__color mr">Прозрачное <br /> (б/ц, М1, “обычное”)</div>
             <div class="glass-type__visual"><img src="img/visual-glass.png" alt=""/></div>
-            <div class="glass-type__color">Осветленное <br /> (OptiWhite, CrystalVision) </div>
+            <div class="glass-type__color ml">Осветленное <br /> (OptiWhite, CrystalVision) </div>
           </div>
           <div class="glass-qualities">
             <div class="qualities-left"> 
