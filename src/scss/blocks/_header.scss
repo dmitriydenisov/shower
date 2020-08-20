@@ -47,6 +47,7 @@
     display: flex;
     justify-content: flex-end;
 }
+
 @media (min-width:540px) { 
     .header {
         height: 637px;
@@ -84,6 +85,44 @@
     line-height: 15px;
     text-decoration: underline #F3B311;
 }
+
+.top-nav-toogle-btn {
+    cursor: pointer;
+    width: 37px;
+    height: 32px;
+    margin-top: 16px;
+    position: relative;
+    right: 15px;
+}
+.navigation__toggle {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    margin-top: 8px;
+    background: #7EA0AD;
+    width: 37px;
+    height: 3px;
+    transition: .4s;
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: #7EA0AD;
+        width: 37px;
+        height: 3px;
+        transition: .4s;
+    }
+    &::after {
+      top: 10px;
+    }
+    &::before {
+      top: -10px;
+    }
+}
+
 .top-nav__list {
     display: none;
     position: fixed;
@@ -124,7 +163,7 @@
     right: 0;
 
     &:hover {
-        cursor: pointerl
+        cursor: pointer;
     } 
 }
 .header-rhombus {

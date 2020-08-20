@@ -384,9 +384,15 @@
         color: #fff;
         
     }
+    .mr {
+        margin-right: 55px;
+    }
+    .ml{
+        margin-left: 55px;
+    }
     .glass-type__visual {
         position: relative;
-        margin: 0 90px;
+        margin: 0 15px;
     
     
         &:after {

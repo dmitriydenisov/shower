@@ -47,21 +47,51 @@ function showCard(selector) {
   })
 }
 
-$(document).ready(function () {
-  let slider = $(".owl-carousel");
-  slider.owlCarousel({
+function showOwl(variant) {
+  const sliders = document.querySelectorAll(`.slider-big__slider`)
+  sliders.forEach(x => x.classList.add('hidden'))
+
+  const carousel = document.querySelector(`.slider-big__slider[data-variant="${variant}"] > .owl-carousel`)
+  const slider = carousel.closest('.slider-big__slider')
+  slider.classList.remove('hidden')
+
+  const owlCarousel = $(carousel).owlCarousel({
     loop: true,
     dots: false
   });
 
   $('.prev').click(function () {
     event.preventDefault()
-    slider.trigger('prev.owl.carousel');
+    owlCarousel.trigger('prev.owl.carousel');
   })
+
   $('.next').click(function () {
     event.preventDefault()
-    slider.trigger('next.owl.carousel');
+    owlCarousel.trigger('next.owl.carousel');
   })
+}
+
+$(document).ready(function () {
+  const variantButtons = document.querySelectorAll('button[data-variant]')
+  variantButtons.forEach(vb => vb.addEventListener('click', () => showOwl(vb.dataset.variant)))
+  showOwl(variantButtons[0].dataset.variant)
+
+
+
+  // let slider = $(".owl-carousel");
+  // slider.owlCarousel({
+  //   loop: true,
+  //   dots: false
+  // });
+
+  // $('.prev').click(function () {
+  //   event.preventDefault()
+  //   slider.trigger('prev.owl.carousel');
+  // })
+  // $('.next').click(function () {
+  //   event.preventDefault()
+  //   slider.trigger('next.owl.carousel');
+  // })
 
   //переключение слайдов по кнопке
   const cards = document.querySelectorAll('.viev__slider-big')

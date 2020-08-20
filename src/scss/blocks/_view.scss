@@ -85,7 +85,7 @@
         button {
             color: #fff;
             line-height: 1.5;
-            padding-top: 0;
+            padding-top: 3px;
         }
     }
 }
@@ -256,7 +256,9 @@
         bottom: -30px;
         left: 342px;
         display: block;
-        padding: 20px 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
         background-color: #F4B955;
         outline: none;
         border: 2px solid #7EA0AD;

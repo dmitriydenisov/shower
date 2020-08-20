@@ -28,7 +28,7 @@ $(document).ready(function(){
 //           }
 //     }
 
-  $('.navigation__toggle').on('click', function(e){
+  $('.top-nav-toogle-btn').on('click', function(e){
     e.preventDefault();
     $('.top-nav__list').toggleClass('top-nav__list--open');
   })

@@ -29,11 +29,10 @@ html(lang="en")
                         a(href="tel:+7 (499) 677 20 67").contact__phone +7 (499) 677 20 67                     
                         a(href="#").contact__all Все контакты  
                 .top-nav-toogle 
-
-                    .navigation__toggle
-                        i(aria-hidden = true).fa.fa-bars
-                        
-                        div.blur
+                    .top-nav-toogle-btn
+                        .navigation__toggle
+                            //- i(aria-hidden = true).fa.fa-bars
+                            
                             ul.top-nav__list
                                 li 
                                     a(href="#") Резка и обработка стекла
@@ -357,11 +356,11 @@ html(lang="en")
                     .slider-big__heading 3. Выберите вид фурнитуры
                     .slider-big__description Фурнитура влияет на функционал, внешний вид и на срок службы изделия. Дешево и идеально — не бывает, следует это понимать. Правда, и идеалы у всех разные.
                     .btn-block
-                        button.btn-block__item Бюджетный сегмент
-                        button.btn-block__item Комбин. комплекты
-                        button.btn-block__item Премиум
-                        button.btn-block__item Заказные / Люкс
-                    .slider-big__slider
+                        button.btn-block__item(data-variant="budget") Бюджетный сегмент
+                        button.btn-block__item(data-variant="combine") Комбин. комплекты
+                        button.btn-block__item(data-variant="premium") Премиум
+                        button.btn-block__item(data-variant="customized") Заказные / Люкс
+                    .slider-big__slider(data-variant="budget")
                         .owl-carousel.owl-theme
                             .carousel__item
                                 img(src="img/furniture/budget/1.jpg", alt="")
@@ -381,7 +380,9 @@ html(lang="en")
                                 img(src="img/furniture/budget/8.jpg", alt="")
                             .carousel__item
                                 img(src="img/furniture/budget/9.jpg", alt="")
-                    .slider-big__slider
+                        a(href="#")#prev.prev.prev--furniture
+                        a(href="#")#next.next.next--furniture
+                    .slider-big__slider(data-variant="combine")
                         .owl-carousel.owl-theme
                             .carousel__item
                                 img(src="img/furniture/comb/1.jpg", alt="")
@@ -403,7 +404,9 @@ html(lang="en")
                                 img(src="img/furniture/comb/9.jpg", alt="")
                             .carousel__item
                                 img(src="img/furniture/comb/10.jpg", alt="")
-                    .slider-big__slider
+                        a(href="#")#prev.prev.prev--furniture
+                        a(href="#")#next.next.next--furniture
+                    .slider-big__slider(data-variant="premium")
                         .owl-carousel.owl-theme
                             .carousel__item
                                 img(src="img/furniture/premium/1.jpg", alt="")
@@ -425,7 +428,9 @@ html(lang="en")
                                 img(src="img/furniture/premium/9.jpg", alt="")
                             .carousel__item
                                 img(src="img/furniture/premium/10.jpg", alt="")
-                    .slider-big__slider
+                        a(href="#")#prev.prev.prev--furniture
+                        a(href="#")#next.next.next--furniture
+                    .slider-big__slider(data-variant="customized")
                         .owl-carousel.owl-theme
                             .carousel__item
                                 img(src="img/furniture/luxe/1.jpg", alt="")
@@ -555,42 +560,54 @@ html(lang="en")
             .container
                 .benefit__title Плюсы и преимущества
                 .benefit__block
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-1.png", alt="")
-                        .benefit__description
-                            span Закаленное стекло 8-15мм
-                            |Английское сырье Guardian, Pilkington и Японское AGC
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-2.png", alt="")
-                        .benefit__description
-                            span Срочное изготовление
-                            |- от 24-х часов. <br /> Стандартное - 7 дней
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-3.png", alt="")
-                        .benefit__description
-                            span Специальное покрытие
-                            |стекла и фурнитуры, <br /> защищающий от грязи и почернения (грибка)
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-4.png", alt="")
-                        .benefit__description
-                            span Гарантия на душевые
-                            |ограждения и двери - 5 лет. Качественное сервисное обслуживание 
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-5.png", alt="")
-                        .benefit__description
-                            span Опытный персонал
-                            |со знанием дела, аккуратностью и опытом работы 3+ лет. Конструкторы в штате
-                    .benifit__item
-                        .benefit__circle
-                            img(src="img/icon/benefit/benefit-icon-6.png", alt="")
-                        .benefit__description
-                            span Большой ассортимент
-                            |от бюджетного до премиум сегмента стекла и фурнитуры
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-1.png", alt="")
+                                .benefit__description
+                                    span Закаленное стекло 8-15мм
+                                    |Английское сырье Guardian, Pilkington и Японское AGC
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-2.png", alt="")
+                                .benefit__description
+                                    span Срочное изготовление
+                                    |- от 24-х часов. <br /> Стандартное - 7 дней
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-3.png", alt="")
+                                .benefit__description
+                                    span Специальное покрытие
+                                    |стекла и фурнитуры, <br /> защищающий от грязи и почернения (грибка)
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-4.png", alt="")
+                                .benefit__description
+                                    span Гарантия на душевые
+                                    |ограждения и двери - 5 лет. Качественное сервисное обслуживание 
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-5.png", alt="")
+                                .benefit__description
+                                    span Опытный персонал
+                                    |со знанием дела, аккуратностью и опытом работы 3+ лет. Конструкторы в штате
+                    .wrapper-benifit
+                        .border-benifit
+                            .benifit__item
+                                .benefit__circle
+                                    img(src="img/icon/benefit/benefit-icon-6.png", alt="")
+                                .benefit__description
+                                    span Большой ассортимент
+                                    |от бюджетного до премиум сегмента стекла и фурнитуры
                 .btn
                     | Заказать душевую
         .section-glass
@@ -663,10 +680,10 @@ html(lang="en")
                 .container
                     .section-glass__title Сравнение видов прозрачного стекла
                     .comparison-glass-type
-                        .glass-type__color Прозрачное <br /> (б/ц, М1, “обычное”)
+                        .glass-type__color.mr Прозрачное <br /> (б/ц, М1, “обычное”)
                         .glass-type__visual
                             img(src="img/visual-glass.png", alt="")
-                        .glass-type__color Осветленное <br /> (OptiWhite, CrystalVision) 
+                        .glass-type__color.ml Осветленное <br /> (OptiWhite, CrystalVision) 
                     .glass-qualities
                         .qualities-left 
                             
