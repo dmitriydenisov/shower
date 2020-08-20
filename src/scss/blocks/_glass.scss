@@ -30,9 +30,16 @@
 }
 .section-glass__title {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     color: #7EA0AD;
     text-align: center;
+    margin-bottom: 20px;
+}
+@media(min-width:520px){    
+    .section-glass__title {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
 }
 .type-glass-block { 
     position: relative;   
@@ -53,19 +60,38 @@
         margin-right: 0;
     }   
 }
+.type-glass-block-btn{
+    position: relative;
+    margin-top: 30px;
+    border: 3px solid #F4B955;
+    border-radius: 12px;
+    padding: 15px 18px;
+
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+
+    &:after {
+        position: absolute;
+        top: -11px;
+        left: -24px;
+        content: '';
+        width: 186px;
+        height: 71px;
+        background-color: #7EA0AD;
+        z-index: -1;
+    }
+}
 @media (min-width:1024px) {
     .type-glass-block {
         margin-bottom: 0;
-        position: relative;
-
-       
+        position: relative;       
     }
+    .type-glass-block-mobile{ display: none;}
 }
 .type-glass-block__img {
     position: relative;
-    margin-bottom: 15px;
-
-   
+    margin-bottom: 15px;   
 }
 .test-mod {
     display: none;
@@ -267,6 +293,64 @@
         border-radius: 3px;
     }
 }
+.glass-qualities-mobile {
+    display: flex;
+    margin-top: 10px;
+}
+.glass-qualities-mobile__heading{
+    font-weight: 500;
+    color: #7EA0AD;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    span{
+        font-size: 9px;
+    }
+}
+.qualities-mobile-left {
+    text-align: right;
+    padding-right: 50px;
+    margin-left: 15px;
+
+    .glass-qualities-mobile__heading {
+        margin-right: -64px;
+    }
+}
+.qualities-mobile-right {
+    text-align: left;
+    padding-left: 55px;
+    margin-right: 25px;
+    .glass-qualities-mobile__heading {
+        margin-left: -20px;
+    }
+}
+.qualities-mobile-block__title {
+    margin-bottom: 20px;
+    font-size: 9px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 15%;
+        border-radius: 50%;
+        background-color: #F4B955;
+        width: 14px;
+        height: 14px;
+    }
+
+    &--left {
+        &::after {
+            right: -25px;
+        }       
+    }
+
+    &--right {
+        &::after {
+            left: -25px;
+        }       
+    }
+}
 
 @media(min-width:1024px){
     .comparison-glass {
@@ -384,5 +468,7 @@
     .conpression-glass-mobile {
         display: none;
     }
+
+    
 }
 

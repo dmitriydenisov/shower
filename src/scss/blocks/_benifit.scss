@@ -1,18 +1,27 @@
 .benifit-section {
-    background:url('../img/bg/bg-benefit.png')  no-repeat top left, url('../img/bg/bg-benefit-bottom.png')  no-repeat bottom right, #7EA0AD ;
-    text-align: center;
+    background:url("../img/bg/bg-benefit.png") no-repeat top left -80px, url("../img/bg/bg-benefit-bottom.png") no-repeat bottom right -50px, #7EA0AD;
     padding-top: 30px;
     padding-bottom: 56px;
 }
 @media(min-width:520px){
     .benifit-section{
+        background:url('../img/bg/bg-benefit.png')  no-repeat top left, url('../img/bg/bg-benefit-bottom.png')  no-repeat bottom right, #7EA0AD ;
         margin-top: 90px;
     }
 }
 .benefit__title {
-    font-weight: 600;
-    font-size: 20px;
-    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff; 
+    margin-left: 25%;  
+}
+@media(min-width:520px){
+    .benefit__title {
+        margin: auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
 }
 .benefit__block {
     margin-top: 50px;
@@ -74,8 +83,7 @@
     display: inline-block;
     border: 3px solid #F4B955;  
     border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 13%;
     padding: 13px 30px 13px 70px;
     font-weight: 500;
     font-size: 17px;
@@ -113,6 +121,9 @@
     }
 }
 @media(min-width:520px){
+    .btn{
+        margin-left: 36%;
+    }
     .btn--bgc {
         margin-top: 60px;
         margin-bottom: 50px;

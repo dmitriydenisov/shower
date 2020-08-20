@@ -86,7 +86,8 @@
 }
 .top-nav__list {
     display: none;
-    position: absolute;
+    position: fixed;
+    backdrop-filter: blur(25px);
     right: 0;
     top: 70px;
     margin: 0;

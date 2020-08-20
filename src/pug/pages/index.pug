@@ -33,22 +33,22 @@ html(lang="en")
                     .navigation__toggle
                         i(aria-hidden = true).fa.fa-bars
                         
-                    
-                    ul.top-nav__list
-                        li 
-                            a(href="#") Резка и обработка стекла
-                        li
-                            a(href="#") Многослойное стекло
-                        li
-                            a(href="#") Душевые ограждения
-                        li
-                            a(href="#") Перегородки и двери
-                        li
-                            a(href="#") Зеркала на заказ
-                        li
-                            a(href="#") Кухонные фартуки
-                        li
-                            a(href="#") Гнутое стекло
+                        div.blur
+                            ul.top-nav__list
+                                li 
+                                    a(href="#") Резка и обработка стекла
+                                li
+                                    a(href="#") Многослойное стекло
+                                li
+                                    a(href="#") Душевые ограждения
+                                li
+                                    a(href="#") Перегородки и двери
+                                li
+                                    a(href="#") Зеркала на заказ
+                                li
+                                    a(href="#") Кухонные фартуки
+                                li
+                                    a(href="#") Гнутое стекло
 
 
 
@@ -637,7 +637,9 @@ html(lang="en")
                             .test-mod.test-mod--last    
                                 .test-bg
                                 .type-glass__description Тонированное в массе стекло (без пленок и покрытий) темно-бронзового цвета. Как и вышеперечисленные стекла можно закаливать. На стекле почти не заметна грязь и отпечатки рук. В сочетании общестекольным признаком - легкой очисткой, образует отличное сочетание для использования не только в частных домах, но и в общественных местах с высокой проходимостью. Так же стекло легко декорируется и может быть покрыто матирующим слоем, что выглядит очень роскошно в темных или контрасных интерьерах. 
-                        .type-glass-block__title Бронза                    
+                        .type-glass-block__title Бронза       
+                    .type-glass-block-mobile
+                        .type-glass-block-btn Консультация             
             .conpression-glass-mobile
                 .section-glass__title Сравнение видов прозрачного стекла
                 .comparison-glass-mobile-type
@@ -645,17 +647,17 @@ html(lang="en")
                 .comparison-glass-mobile-type__visual
                 .glass-qualities-mobile
                     .qualities-mobile-left
-                        .glass-qualities-mobile__heading Прозрачное (б/ц, М1, “обычное”)
+                        .glass-qualities-mobile__heading Прозрачное <br> <span>(б/ц, М1, “обычное”)</span>
                         .glass-qualities-mobile-block.glass-qualities-block--left                           
-                            .qualities-mobile-block__title Низкая <br /> стоимость
+                            .qualities-mobile-block__title.qualities-mobile-block__title--left Низкая <br /> стоимость
                         .glass-qualities-mobile-block.glass-qualities-block--left                            
-                            .qualities-mobile-block__title Зеленый <br /> отблеск на светлом
+                            .qualities-mobile-block__title.qualities-mobile-block__title--left Зеленый <br /> отблеск на светлом
                     .qualities-mobile-right                 
-                        .glass-qualities-mobile__heading  Осветленное (OptiWhite, CrystalVision)    
+                        .glass-qualities-mobile__heading  Осветленное <br> <span>(OptiWhite, CrystalVision)</span>    
                         .glass-qualities-mobile-block.glass-qualities-block--right                          
-                            .qualities-mobile-block__title Высокая стоимость
+                            .qualities-mobile-block__title.qualities-mobile-block__title--right Высокая <br> стоимость
                         .glass-qualities-mobile-block.glass-qualities-block--right                           
-                            .qualities-mobile-block__title Идеальная прозрачность
+                            .qualities-mobile-block__title.qualities-mobile-block__title--right Идеальная <br> прозрачность
 
             .comparison-glass 
                 .container
@@ -816,9 +818,9 @@ html(lang="en")
                             img(src="img/media/3.png", alt="", width=280, height=190)                        
                     .section-perfect__video 
                         //- a(href="#").video
-                        video(src="video/1.mp4" controls)
+                        video(src="video/1.mp4" controls poster="img/media/3.png")
                     .section-perfect__video 
-                        video(src="video/2.mp4" controls)
+                        video(src="video/2.mp4" controls poster="img/media/3.png")
             
             .section-perfectionism__description Премиальный вариант - вся фурнитура Bohle Premium, а стекло заподлицо со стеной. А главное - минимум металла.
         .section-help
