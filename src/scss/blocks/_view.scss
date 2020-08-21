@@ -14,7 +14,7 @@
         color: #7EA0AD;
     }
 }
-@media(min-width:520px){
+@media(min-width:1024px){
     .view__title {
         font-size: 22px;
         width: auto;
@@ -152,8 +152,8 @@
     height: 370px;
     margin-bottom: 13px;
 }
-@media(min-width:520px){
-    carousel {
+@media(min-width:1024px){
+    .carousel {
         margin-bottom: 60px;
     }
 }
@@ -421,7 +421,7 @@
     }
 
 }
-@media(min-width:520px){
+@media(min-width:1024px){
     .slider-big__title--color {
         color: #fff;
     }
@@ -743,7 +743,7 @@ input[type="checkbox"] {
     }
 }
 
-@media(min-width:520px){
+@media(min-width:1024px){
     .btn-block__item {
         padding: 15px 30px;
     }

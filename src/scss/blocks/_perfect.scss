@@ -14,7 +14,7 @@
     font-size: 18px;
     color: #fff;
 }
-@media(min-width:520px){  
+@media(min-width:1024px){  
   .section-perfect__title{
     width: 520px;
     font-size: 22px;
@@ -130,7 +130,7 @@
   .item{
     margin-bottom: 20px;
   }
-  @media(min-width:520px){
+  @media(min-width:1024px){
     .section-perfect__mobile-description{
       display: none;
     }
@@ -138,11 +138,14 @@
       font-weight: normal;
       display: block;
       position: absolute;
-      left: 375px;      
+      left: 475px;    
       font-size: 19px;
       color: #fff;
       width: 512px;
     }
+  }
+  @media(min-width:1920px){
+    left: 375px; 
   }
 
  
@@ -158,8 +161,19 @@
     font-weight: 200;
     line-height: 1.5;
   }
-  
-  @media (min-width:540px) {
+  @media(min-width:520px){
+    .section-perfect__video{
+      margin: 5px 246px;
+    }
+    .section-perfect__video:before{
+      right:-244px;
+      width: 244px;       
+    }
+    .section-perfect__video:after{
+      display: none;
+    }
+  }
+  @media (min-width:1024px) {
     .section-perfectionism__description {
       font-size: 19px;
       width: 863px;
@@ -208,12 +222,28 @@
         right: 75%;
     }
     }
+    @media(min-width:1024px){
+      .section-perfect__video {
+        right: 0;
+        &--right {
+          right: 66%;
+        }
+      }
+    }
+    @media(min-width:1920px){
+      .section-perfect__video {
+        right: 116px;
+        &--right {
+          right: 75%;
+        }
+      }
+    }
       
     }
     .section-perfect__marker {
       display: none;
     }
-    @media(min-width:520px){
+    @media(min-width:1024px){
       .section-perfect__marker {
           display: block;
           width: 16px;
