@@ -5,7 +5,7 @@
     padding-bottom: 11px;
     color: #fff;
 }
-@media(min-width:520px){
+@media(min-width:1024px){
     .section-footer {
         padding-top: 30px;
         padding-bottom: 0px;
@@ -30,7 +30,8 @@
 
 
 }
-@media(min-width:520px){
+
+@media(min-width:1024px){
     .footer-wrapper {
         margin: auto;
         height: 300px;
@@ -58,7 +59,12 @@
         display: none;        
     }
 }
-@media(min-width:520px) {
+@media(min-width:520px){
+    .footer-contact {        
+        background-position: right 0px bottom 5px;
+    }
+}
+@media(min-width:1024px) {
     .footer-contact {
         display: none;
         &--desctop{
@@ -113,7 +119,7 @@
         color: #fff;
     }
 }
-@media(min-width:520px) {
+@media(min-width:1024px) {
 .footer-navigation {
     display: block;
     list-style-type: none;    
