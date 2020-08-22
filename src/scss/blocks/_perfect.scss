@@ -184,17 +184,23 @@
     font-weight: 200;
     line-height: 1.5;
   }
-  @media(min-width:520px){
+  @media(min-width:600px){
     .section-perfect__video{
-      margin: 5px 120px;
+      margin: 5px auto;
     }
     .section-perfect__video:before{
-      right:-120px;
-      width: 120px;       
+      right:-185px;
+      width: 185px;       
     }
     .section-perfect__video:after{
-      left:-125px;
-      width: 125px;
+      left:-200px;
+      width: 200px;
+    }
+  }
+  @media(min-width:655px){
+    .section-perfect__video:before{
+      right:-200px;
+      width: 200px;       
     }
   }
   @media (min-width:1024px) {

@@ -15,6 +15,11 @@
     color: #fff; 
     margin-left: 25%;  
 }
+@media(min-width:600px){
+    .benefit__title{
+        margin-left: 36%;
+    }    
+}
 .wrapper-benifit {   
     margin-bottom: 55px;
     margin-right: 0px;
@@ -51,6 +56,14 @@
 
         &:nth-child(odd){
             margin-right: 80px;
+        }
+    }
+}
+@media(min-width:600px){
+    .wrapper-benifit {
+        margin-right: 0;
+        &:nth-child(odd){
+            margin-right: 10px;
         }
     }
 }
@@ -183,17 +196,19 @@
         margin-left: 38%;
     }
     .btn--bgc {
+        margin-left: 5%;
         margin-top: 60px;
         margin-bottom: 50px;
 
     }
 }
 
-@media(min-width:660px){
+@media(min-width:600px){
     .btn{
-        margin-left: 30%;
+        margin-left: 28%;
     }
     .btn--bgc {
+        margin-left: 5%;
         margin-top: 60px;
         margin-bottom: 50px;
 
