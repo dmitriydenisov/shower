@@ -636,6 +636,20 @@
 
     
 }
+@media(min-width:1366px){
+    .glass-type__visual {
+        margin: 0 121px;
+    }
+    .mr {
+        margin-right: 0px;
+    }
+    .ml{
+        margin-left: 0px;
+    }
+    .glass-type__color {
+        font-size: 9px;
+    }
+}
 
 @media(min-width:1920px){
     .comparison-glass-type {
