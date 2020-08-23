@@ -27,6 +27,11 @@ h1,h2,h3,h4,h5,h6 {
     margin-left: auto;
     margin-right: auto;
 }
+@media(min-width:1024px){
+    .container{
+        width: 1000px;
+    }
+}
 @media(min-width:1300px){
     .container {
         width: 1095px;

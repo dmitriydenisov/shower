@@ -20,7 +20,8 @@
     font-size: 22px;
     margin-bottom: 85px;
     border: 2px solid #F4B955;
-    border-radius: 10px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
   }
 }
 .section-perfect__wrapper {
@@ -161,14 +162,16 @@
       font-weight: normal;
       display: block;
       position: absolute;
-      left: 475px;    
+      left: 400px;    
       font-size: 19px;
       color: #fff;
       width: 512px;
     }
   }
   @media(min-width:1920px){
-    left: 375px; 
+    .description {
+      left: 527px; 
+    }
   }
 
  
@@ -203,6 +206,16 @@
       width: 200px;       
     }
   }
+  @media(min-width:768px){
+    .section-perfect__video:before{
+      right:-245px;
+      width: 245px;       
+    }
+    .section-perfect__video:after{
+      left:-250px;
+      width: 250px;
+    }
+  }
   @media (min-width:1024px) {
     .section-perfectionism__description {
       font-size: 19px;
@@ -220,7 +233,7 @@
         position: relative;
         top:0;
         right: 0;
-        width: 1420px;
+        width: 990px;
         height: 70px;
         border: 2px solid #F4B955;
         border-radius: 10px;
@@ -234,9 +247,9 @@
     }
     .section-perfect__video {
       //position: absolute;
-      right: 117px;
-      width: 280px;
-      height: 190px;
+      right: 5px;
+      width: 258px;
+      height: 177px;
       margin: 5px 10px;
       z-index: 1;
         video{
@@ -249,27 +262,31 @@
         right:-21px;
       }
       &--right {
+        right: 67%;
+    }
+    }     
+  }
+  // @media(min-width:1024px){
+  //   .section-perfect__video {
+  //     right: 0;
+  //     &--right {
+  //       right: 66%;
+  //     }
+  //   }
+  // }
+  @media(min-width:1920px){
+    .section-perfect__wrapper {
+      width: 1420px;
+    }
+    .section-perfect__video {
+      right: 116px;
+      width: 280px;
+      height: 190px;
+      &--right {
         right: 75%;
-    }
-    }
-    @media(min-width:1024px){
-      .section-perfect__video {
-        right: 0;
-        &--right {
-          right: 66%;
-        }
       }
     }
-    @media(min-width:1920px){
-      .section-perfect__video {
-        right: 116px;
-        &--right {
-          right: 75%;
-        }
-      }
-    }
-      
-    }
+  }
     .section-perfect__marker {
       display: none;
     }

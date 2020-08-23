@@ -4,11 +4,17 @@
     padding-top: 30px;
     padding-bottom: 11px;
     color: #fff;
+
 }
 @media(min-width:1024px){
     .section-footer {
         padding-top: 30px;
-        padding-bottom: 0px;
+        background: url(../img/bg/bg-footer-left.png) no-repeat left -15px center, url(../img/bg/bg-footer-right.png) no-repeat right -15px center, #7EA0AD;
+    }
+}
+@media(min-width:1920px){
+    .section-footer {
+        padding-top: 30px;
         background: url(../img/bg/bg-footer-left.png) no-repeat left 90px center, url(../img/bg/bg-footer-right.png) no-repeat right 90px center, #7EA0AD;
     }
 }
@@ -27,13 +33,18 @@
     
     border-radius: 5px;
     justify-content: space-between;
-
-
+}
+@media(min-width:768px){
+    .footer-wrapper{
+        width: 420px;
+        margin: auto;
+        padding-right: 35px;
+    }
 }
 
 @media(min-width:1024px){
     .footer-wrapper {
-        margin: auto;
+        width: 700px;
         height: 300px;
         padding: 15px 50px;
     }
@@ -64,12 +75,19 @@
         background-position: right 0px bottom 5px;
     }
 }
+@media(min-width:768px){
+    .footer-contact {        
+        width: 420px;
+        margin: auto;
+        margin-bottom: 20px;        
+    }
+}
 @media(min-width:1024px) {
     .footer-contact {
         display: none;
         &--desctop{
             display: block;
-            padding: 45px;
+            padding: 30px;
             border: 2px solid #adc2ca;
             border-radius: 5px;
             background-image: url('../img/bg-contact.png');    

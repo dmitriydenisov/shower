@@ -68,6 +68,17 @@
     }
 }
 @media(min-width:1024px){
+    .wrapper-benifit {
+        margin-right: 10px;
+        &:nth-child(odd){
+            margin-right: 10px;
+        }
+        &:nth-child(3){
+            margin-right: 0;
+        }
+    }
+}
+@media(min-width:1920px){
     .benefit__title {
         margin: auto;
         text-align: center;
@@ -75,9 +86,14 @@
         font-size: 20px;
         
     }
-    .wrapper-benifit {
-        
+    .wrapper-benifit {        
         margin-right: 80px;
+        &:last-child{
+            margin-right: 0px;
+        }
+        &:nth-child(odd){
+            margin-right: 80px;
+        }
         &:nth-child(3){
             margin-right: 0px;
         }
@@ -214,7 +230,29 @@
 
     }
 }
+@media(min-width:768px){
+    .btn{
+        margin-left: 33%;
+    }
+    .btn--bgc {
+        margin-left: 5%;
+        margin-top: 60px;
+        margin-bottom: 50px;
+
+    }
+}
 @media(min-width:1024px){
+    .btn{
+        margin-left: 36%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+        margin-top: 60px;
+        margin-bottom: 50px;
+
+    }
+}
+@media(min-width:1920px){
     .btn{
         margin-left: 38%;
     }

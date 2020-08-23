@@ -9,7 +9,8 @@
     flex-wrap: wrap;   
     margin-top: 30px;
     margin-bottom: 60px;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media(min-width:450px){
     .type-glass{
@@ -417,6 +418,21 @@
         }
     }
 }
+@media(min-width:768px){
+    .comparison-glass-mobile-type__visual {
+        margin-top: 30px;
+        height: 506px;
+
+        &::after{
+            width: 370px;
+            height: 525px;
+        }
+        &::before{
+            width: 370px;            
+            height: 525px;
+        }
+    }
+}
 .glass-qualities-mobile {
     display: flex;
     margin-top: 10px;
@@ -572,7 +588,7 @@
     }
     .qualities-left {
         text-align: right;
-        margin-right: 55px;
+        margin-right: 115px;
         width: 445px;
     }
     .qualities-right {
@@ -624,6 +640,9 @@
 @media(min-width:1920px){
     .comparison-glass-type {
         width: 1240px;
+    }
+    .qualities-left {
+        margin-right: 55px;
     }
 
     .glass-type__color {

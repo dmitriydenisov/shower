@@ -221,6 +221,11 @@
         margin-left: 235px;
     }
 }
+@media(min-width:768px){
+    .header__title--mobile {
+        margin-left: 270px;
+    }
+}
 @media (min-width:1024px) { 
     .header__title {
         display: block;
@@ -283,6 +288,11 @@
 @media(min-width:600px){
     .header-logo{
         left: 185px;
+    }
+}
+@media(min-width:768px){
+    .header-logo{
+        left: 218px;
     }
 }
 @media (min-width:1024px) {
