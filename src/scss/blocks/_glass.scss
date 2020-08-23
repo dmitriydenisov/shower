@@ -128,6 +128,7 @@
 }
 @media (min-width:1024px) {
     .type-glass-block {
+        
         margin-bottom: 0;
         position: relative;       
     }
@@ -266,11 +267,79 @@
         }
     }
 }
+@media(min-width:1366px){
+    .type-glass-block {
+        &:nth-child(4){
+            .type-glass__description {
+                left: -240px;
+                &:after{
+                    left: 420px;
+                }
+            }
+            .test-mod--last{
+                width: 495px;
+            }
+            .test-bg{
+                right: 180px;
+            }
+        }
+        &:nth-child(5){
+            .type-glass__description {
+                left: -240px;
+                &:after{
+                    left: 360px;
+                }
+            }
+            .test-mod--last{
+                width: 495px;
+            }
+            .test-bg{
+                right: -50px;
+            }
+        }
+        
+    }
+}
+@media(min-width:1920px){
+    .type-glass-block {
+        &:nth-child(4){
+            .type-glass__description {
+                left: -23px;
+                width: 765px;
+                &:after{
+                    left: 200px;
+                }
+            }
+            .test-mod--last{
+                width: 495px;
+            }
+            .test-bg{
+                right: -50px;
+            }
+        }
+        &:nth-child(5){
+            .type-glass__description {
+                left: -23px;
+                width: 765px;
+                &:after{
+                    left: 150px;
+                }
+            }
+            .test-mod--last{
+                width: 495px;
+            }
+            .test-bg{
+                right: -300px;
+            }
+        }
+        
+    }
+}
 
-.type-glass-block__img:hover .test-mod{
+.type-glass-block:hover .test-mod{
     display: block;
 }
-.type-glass-block__img:hover .type-glass__description{
+.type-glass-block:hover .type-glass__description{
     display: block;
 }
 .services-faq-block:hover .test-mod{
@@ -652,6 +721,9 @@
 }
 
 @media(min-width:1920px){
+    .glass-type__visual {
+        margin: 0 74px;
+    }
     .comparison-glass-type {
         width: 1240px;
     }
@@ -660,7 +732,7 @@
     }
 
     .glass-type__color {
-        font-size: 17px;        
+        font-size: 15px;        
     }
 }
 
