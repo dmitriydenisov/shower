@@ -52,7 +52,7 @@
         top: 22px;
         left: -21px;
         content: '';
-        width: 156px;
+        width: 168px;
         height: 71px;
         background-color: #7EA0AD;
         z-index: -1;
@@ -64,7 +64,7 @@
 }
 @media(min-width:350px){
     .type-glass-block {    
-        margin-right: 30px; 
+        margin-right: 20px; 
     }
 }
 
@@ -347,9 +347,10 @@
     display: block;
 }
 .type-glass-block__title {
+    text-align: center;
+    padding-right: 24px;
     color: #7EA0AD;
     line-height: 1;
-    text-align: left;
     font-weight: 500;
     font-size: 15px;
 }
@@ -500,6 +501,21 @@
         &::before{
             width: 370px;            
             height: 525px;
+        }
+    }
+}
+@media(min-width:900px){
+    .comparison-glass-mobile-type__visual {
+        margin-top: 30px;
+        height: 550px;
+
+        &::after{
+            width: 435px;
+            height: 570px;
+        }
+        &::before{
+            width: 435px;            
+            height: 570px;
         }
     }
 }
