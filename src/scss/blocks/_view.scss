@@ -135,6 +135,9 @@
         }
     }
 }
+.mbm{
+    margin-bottom: 25px;
+}
 
 @media(min-width:1024px) {
     .viev__slider-big {
@@ -143,6 +146,9 @@
         border-radius: 10px;
         margin-top: 20px;
         background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);
+    }
+    .mbm{
+        margin-bottom: 0;
     }
 }
 
@@ -246,48 +252,49 @@
     }
 }
 
+
 .slider-big__btn {
-    display: none;
-}
+    position: absolute;
+    bottom: -30px;
+    left: 342px;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    background-color: #F4B955;
+    outline: none;
+    border: 2px solid #7EA0AD;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    width: 390px;
 
-@media(min-width:1024px) {
-    .slider-big__btn {
-        position: absolute;
-        bottom: -30px;
-        left: 342px;
-        display: block;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 30px;
-        background-color: #F4B955;
-        outline: none;
-        border: 2px solid #7EA0AD;
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 500;
-        font-size: 16px;
-        cursor: pointer;
-        transition: all 0.3s ease-in;
-        width: 390px;
+    &:hover {
+        border: 2px solid #fff;
+    }
 
-        &:hover {
-            border: 2px solid #fff;
-        }
+    &--index {
+        &::after {
+            position: absolute;
+            top: 15px;
+            left: 30px;
+            content: '';
+            width: 20px;
+            height: 25px;
+            background-image: url("../img/calck.png");
+            background-size: cover;
 
-        &--index {
-            &::after {
-                position: absolute;
-                top: 15px;
-                left: 30px;
-                content: '';
-                width: 20px;
-                height: 25px;
-                background-image: url("../img/calck.png");
-                background-size: cover;
-
-            }
         }
     }
+}
+.slider-big__btn--index {
+    display: none;
+}
+@media(min-width:1024px) {
+    
 }
 
 .send-email {

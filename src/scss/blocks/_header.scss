@@ -206,6 +206,11 @@
         margin-left: 71px;
     }
 }
+@media(min-width:400px){
+    .header__title--mobile{        
+        margin-left: 87px;
+    }
+}
 @media(min-width:450px){
     .header__title--mobile{
         margin-left: 111px;
@@ -283,6 +288,11 @@
         width: 320px;
         top: 50px;
         left: 20px;
+    }
+}
+@media(min-width:400px){
+    .header-logo {
+        left: 35px;
     }
 }
 @media(min-width:520px){

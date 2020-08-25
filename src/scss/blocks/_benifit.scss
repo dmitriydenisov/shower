@@ -191,10 +191,13 @@
         }
     }
 }
-@media(min-width:350px){
-    // .btn{           
-    //     margin-left: 13%;
-    // }
+@media(min-width:400px){
+    .btn{           
+        margin-left: 16%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
 }
 @media(min-width:520px){
     .btn{
