@@ -257,7 +257,7 @@
 .slider-big__btn {
     position: absolute;
     bottom: -22px;
-    left: 52px;
+    left: 48px;
     display: block;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -290,6 +290,34 @@
             background-size: cover;
 
         }
+    }
+}
+@media(min-width:350px){
+    .slider-big__btn{
+        left: 60px;
+    }
+}
+@media(min-width:360px){
+    .slider-big__btn{
+        left: 67px;
+    }
+}
+@media(min-width:400px){
+    .slider-big__btn{
+        left: 90px;
+    }
+}
+@media(min-width:450px){
+    .slider-big__btn{
+        left: 115px;
+    }
+}
+@media(min-width:740px){
+    .slider-big__btn{
+        padding: 20px 25px;
+        font-size: 12px;
+        bottom: -30px;
+        left: 250px;
     }
 }
 @media(min-width:1024px){
@@ -426,7 +454,29 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+@media(min-width:350px){
+    .slider-big__view{
+        width: 95%;
+    }
+}
+@media(min-width:360px){
+    .slider-big__view{
+        width: 90%;
+    }
+}
+@media(min-width:400px){
+    .slider-big__view{
+        width: 80%;
+    }
+}
 
+@media(min-width:600px){
+    .slider-big__view {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
 @media (min-width:1024px) {
     .slider-big__heading {
         display: block;
@@ -436,15 +486,15 @@
         text-align: center;
     }
 
-    .slider-big__view {
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
+    
 }
 
 .slider-big__title {
     margin-top: 10px;
     color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding-right: 16px;
 
     &--color {
         color: #7EA0AD;
@@ -452,6 +502,12 @@
 
 }
 @media(min-width:1024px){
+    .slider-big__title{
+        font-size: 15px;
+        padding-right: 20px;
+    }
+}
+@media(min-width:600px){
     .slider-big__title--color {
         color: #fff;
     }
@@ -463,19 +519,30 @@
     margin-bottom: 25px;
     width: 200px;
 }
-@media(min-width:1024px){
+@media(min-width:400px){
     .slider-big__options--mobile{
-        display: none;
+        width: 245px;
     }
+}
+
+@media(min-width:740px){
     .slider-big__options {
         display: block;
         margin-top: 80px;
         margin-bottom: 30px;
-        width: 845px;
+        width: 735px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
         justify-content: space-around;
+        font-size: 12px;
+    }
+}
+@media(min-width:1024px){
+    .slider-big__options{
+        
+        font-size: 16px;
+        width: 845px;
     }
 }
 
@@ -585,12 +652,39 @@ input[type="checkbox"] {
 .slider-big--df {
     display: flex;
 }
+@media(min-width:350px){
+    .slider-big--df {
+        margin: auto;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+}
 .slider-big__comparison {
+    position: relative;
     border: 1px solid #D4E2E8;
     border-radius: 5px;
     width: 125px;
     height: 118px;
     margin-right: 15px;
+    a{
+        display: block;
+        padding-top: 62px;
+        width: 100%;
+        height: 100%;}
+}
+.slider-big__comparison--description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    color: rgba(126, 160, 173, 0.7)
+}
+@media(min-width:740px){
+    .slider-big--df{
+        display: none;
+    }
 }
 .block-option--mobile{
     font-size: 9px;
@@ -599,7 +693,7 @@ input[type="checkbox"] {
         font-size: 7px;
     }
 }
-@media(min-width:360px){
+@media(min-width:400px){
     .block-option--mobile{
         font-size: 12px;
         span {
@@ -609,13 +703,15 @@ input[type="checkbox"] {
 }
 .block-option {
     position: relative;
-    margin-right: 70px;
 
     &:last-child {
         margin-right: 0;
     }
 }
 @media(min-width:1024px) {
+    .block-option {
+        margin-right: 70px;
+    }
     .block-view {
         margin-bottom: 0;
     }
@@ -682,6 +778,12 @@ input[type="checkbox"] {
     background-image: url('../img/faq-bg.png');
     background-position: center;
     background-repeat: no-repeat;
+
+    &--glass{
+        top: 25px;
+        width: 37px;
+        height: 37px;
+    }
 }
 
 .deadlines,
