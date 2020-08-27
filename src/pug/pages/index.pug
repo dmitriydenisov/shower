@@ -375,7 +375,7 @@ html(lang="en")
                         .pagination__item(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="3").slider-big__btn Перейти к выбору фурнитуры
-                .viev__slider-big(data-card="3")
+                .viev__slider-big.mbm(data-card="3")
                     .slider-big__heading 3. Выберите вид фурнитуры
                     .slider-big__description Фурнитура влияет на функционал, внешний вид и на срок службы изделия. Дешево и идеально — не бывает, следует это понимать. Правда, и идеалы у всех разные.
                     .btn-block
@@ -482,7 +482,7 @@ html(lang="en")
                         .pagination__item.bg-color(data-showCard="3") 3
                         .pagination__item(data-showCard="4") 4
                     button(data-showCard="4").slider-big__btn Перейти к выбору услуг
-                .viev__slider-big(data-card="4")
+                .viev__slider-big.mbm(data-card="4")
                     .slider-big__heading 4. Детали и услуги
                     .slider-big__services
                         .block-services        
@@ -502,8 +502,8 @@ html(lang="en")
                         .block-services
                             input(type="checkbox")#devili.block-services___input
                             label(for="devili").block-services___label Доставка - 2000руб <br /> 
-                            a(href="#").services-option В пределах МКАД 
-                                img(src="img/test.png", alt="")
+                            a(href="#").services-option.services-option--map В пределах МКАД 
+                                //img(src="img/test.png", alt="")
                         .block-services 
                             input(type="checkbox")#shelf.block-services___input
                             label(for="shelf").block-services___label Стеклянные полки
@@ -511,6 +511,12 @@ html(lang="en")
                                 input(type="text").services-option-input 
                     .services-faq
                         .services-img
+                        .services-faq-block-mobile
+                            .services-faq-title Из чего складывается цена установки?
+                            .services-faq-title Откуда и когда осуществляется самовывоз?
+                            .services-faq-title Возможен ли монтаж без доставки? 
+                            .services-faq-title Вы делаете только душевые из стекла?
+
                         .services-faq-left
                             .services-faq-block
                                 .services-faq__item Из чего складывается цена установки?
@@ -555,7 +561,7 @@ html(lang="en")
                         .pagination__item.bg-color(data-showCard="3") 3
                         .pagination__item.bg-color(data-showCard="4") 4
                     button(data-showCard="5").slider-big__btn Перейти к расчету
-                .viev__slider-big(data-card="5")
+                .viev__slider-big.mbm(data-card="5")
                     .slider-big__heading 5. Итоги
                     .deadlines
                         .slider-big__title Сроки производства:
