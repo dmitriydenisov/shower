@@ -18,6 +18,11 @@
         justify-content: center;
     }
 }
+@media(min-width:600px){
+    .type-glass {
+        width: 450px;
+    }
+}
 @media(min-width:660px){
     .type-glass {
         width: 615px;
