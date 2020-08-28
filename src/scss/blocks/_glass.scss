@@ -250,18 +250,32 @@
         width: 543px;
         height: 170px;
         top: -177px;
-        right: -58px;
+        right: -85px;
         opacity: .7;
     
         &--last {        
             height: 150px;
-            top: -148px;
-            right: -40px;;
+            top: -145px;
+            right: -80px;
         }
         &--big {
             height: 192px;
             top: -199px;
         }
+    }
+}
+@media(min-width:740px){
+    .type-glass__description{
+        left: 64px;
+        width: 730px;
+        font-size: 12px;
+    }
+}
+@media(min-width:900px){
+    .type-glass__description{
+        left: 64px;
+        width: 730px;
+        font-size: 14px;
     }
 }
 @media (min-width:1024px) {
