@@ -371,21 +371,64 @@
     }
 }
 
+.btn-mobile{
+    display: flex;
+    flex-wrap: wrap;
+}
+.send-email--mobile {
+    position: static;
+    left: 65px;
+    width: 190px;
+    padding: 12px;
+    font-size: 11px;
+}
+
+.gager--mobile {
+    position: static;
+    left: 390px;
+    width: 149px;
+    padding: 12px;
+    font-size: 11px;
+}
+
+.consultation--mobile {
+    position: static;
+    left: 660px;
+    width: 115px;
+    padding: 12px 11px;
+    font-size: 11px;
+}
+.slider-contact {
+    width: 187px;
+
+    font-weight: 500;
+    font-size: 11px;
+    text-align: center;
+    color: #7EA0AD;
+}
 .send-email {
+    display: none;
     left: 65px;
     width: 286px;
     padding: 20px 10px;
 }
 
 .gager {
+    display: none;
     left: 390px;
     width: 235px;
     padding: 20px 10px;
 }
 
 .consultation {
+    display: none;
     left: 660px;
     width: 235px;
+}
+@media(min-width:900px){
+    .btn-mobile{
+        display: none;
+    }
 }
 
 .check {
@@ -524,7 +567,6 @@
     margin-top: 10px;
     color: #fff;
     font-size: 10px;
-    text-align: center;
     padding-right: 16px;
 
     &--color {
@@ -534,6 +576,7 @@
 }
 @media(min-width:900px){
     .slider-big__title{
+        text-align: center;
         font-size: 15px;
         padding-right: 20px;
     }
@@ -1071,9 +1114,21 @@ input[type="checkbox"] {
 }
 .deadlines,
 .price {
-    margin-left: 60px;
+    margin-left: 10px;
     font-weight: 500;
-    font-size: 16px
+    font-size: 5px
+}
+.price{
+    width: 300px;
+}
+@media(min-width:900px){
+    .deadlines,
+    .price {
+        width: auto;
+        margin-left: 60px;
+        font-weight: 500;
+        font-size: 16px
+    }
 }
 
 .deadlines-options {
@@ -1084,9 +1139,19 @@ input[type="checkbox"] {
 .slider-big__list {
     margin-top: 5px;
     margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 9px;
 
     li {
-        width: 840px;
+        max-width: 840px;
+    }
+    .pice-li {
+        margin-bottom: 17px;
+    }
+}
+@media(min-width:900px){
+    .slider-big__list {
+        padding-left: 18px;
     }
 }
 
@@ -1121,12 +1186,18 @@ input[type="checkbox"] {
 
 .price {
     color: #7EA0AD;
-    margin-top: 25px;
+    //margin-top: 25px;
+    margin-bottom: 25px;
+}
+@media(min-width:900px){
+    .price{
+        margin-top: 25px;
+    }
 }
 
-.slider-big__list {
-    padding-left: 18px;
-}
+// .slider-big__list {
+    
+// }
 
 .pagination {
     display: flex;
