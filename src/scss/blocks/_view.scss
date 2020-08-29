@@ -346,6 +346,16 @@
         left: 115px;
     }
 }
+@media(min-width:600px){
+    .slider-big__btn{
+        left: 180px;
+    }
+}
+@media(min-width:660px){
+    .slider-big__btn{
+        left: 223px;
+    }
+}
 @media(min-width:740px){
     .slider-big__btn{
         padding: 20px 25px;
@@ -366,6 +376,11 @@
     }
 }
 @media(min-width:1024px){
+    .slider-big__btn{
+        left: 300px;
+    }
+}
+@media(min-width:1366px){
     .slider-big__btn{
         left: 342px;
     }
@@ -628,6 +643,16 @@
         width: 80%;
     }
 }
+@media(min-width:450px){
+    .slider-big__view{
+        width: 79%;
+    }
+}
+@media(min-width:520px){
+    .slider-big__view{
+        width: 67%;
+    }
+}
 
 @media(min-width:600px){
     .slider-big__view {
@@ -684,7 +709,7 @@
     }
 }
 @media(min-width:600px){
-    .slider-big__title--color {
+    .slider-services__title--color {
         color: #fff;
     }
 }
@@ -934,6 +959,11 @@ input[type="checkbox"] {
         width: 90%;
         justify-content: center;
         align-items: center;
+    }
+}
+@media(min-width:660px){
+    .slider-big--df{
+        margin-top: 20px;
     }
 }
 .slider-big__comparison {
@@ -1194,8 +1224,12 @@ input[type="checkbox"] {
     .services-img {
         width: 50px;
         height: 50px;
-        top: -15%;
-        left: 50%;
+        top: -44%;
+        left: 99%;
+        &--glass{
+            top: 29px;
+            left: 50%;
+        }
     }
 }
 @media(min-width:740px){
@@ -1226,6 +1260,12 @@ input[type="checkbox"] {
         padding-left: 25px;
     } 
 }
+@media(min-width:900px){
+    .deadlines,
+    .price {
+        padding-left: 0px;
+    } 
+}
 .price{
     width: 300px;
 }
@@ -1236,7 +1276,7 @@ input[type="checkbox"] {
     .deadlines,
     .price {
         width: auto;
-        margin-left: 60px;
+        margin-left: 57px;
         font-weight: 500;
         font-size: 16px
     }
@@ -1281,6 +1321,7 @@ input[type="checkbox"] {
         font-size: 15px;
         padding-left: 18px;
         margin-bottom: 25px;
+        width: 805px;
    
         .pice-li {
             margin-bottom: 0;
