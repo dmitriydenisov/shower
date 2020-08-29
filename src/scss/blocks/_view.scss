@@ -144,6 +144,14 @@
 .mbm{
     margin-bottom: 25px;
 }
+.bgc{
+    background: linear-gradient(0deg, rgb(255, 255, 255) 61%, rgb(126, 160, 173) 11%);
+}
+@media(min-width:450px){
+    .bgc{
+        background: linear-gradient(0deg, rgb(255, 255, 255) 58%, rgb(126, 160, 173) 11%);
+    }
+}
 
 @media(min-width:900px) {
     .viev__slider-big {
@@ -374,21 +382,29 @@
 .btn-mobile{
     display: flex;
     flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+@media(min-width:450px){
+    .btn-mobile{
+        justify-content: center;
+    }
 }
 .send-email--mobile {
     position: static;
-    left: 65px;
-    width: 190px;
+    width: 143px;
+    margin-right: 12px;
     padding: 12px;
-    font-size: 11px;
+    font-size: 8px;
+    margin-bottom: 10px;
 }
 
 .gager--mobile {
     position: static;
-    left: 390px;
-    width: 149px;
-    padding: 12px;
-    font-size: 11px;
+    width: 134px;
+    padding: 11px;
+    font-size: 10px;
+    margin-bottom: 10px;
 }
 
 .consultation--mobile {
@@ -397,15 +413,83 @@
     width: 115px;
     padding: 12px 11px;
     font-size: 11px;
+    margin-bottom: 10px;
 }
+
 .slider-contact {
-    width: 187px;
+    width: 145px;
+    margin-right: 27px;
 
     font-weight: 500;
-    font-size: 11px;
+    font-size: 8px;
     text-align: center;
     color: #7EA0AD;
 }
+@media(min-width:350px){
+    .send-email--mobile{
+        width: 160px;
+    }
+    .gager--mobile{
+        width: 147px;
+        font-size: 11px;
+    }
+    .slider-contact{
+        width: 157px;
+        margin-right: 47px;
+    }
+}
+@media(min-width:380px){
+    .send-email--mobile{
+        width: 175px;
+        font-size: 10px;
+    }
+    .gager--mobile{
+        width: 160px;
+        font-size: 12px;
+    }
+    .slider-contact{
+        width: 175px;
+        margin-right: 58px;
+        font-size: 10px;        
+    }
+    .consultation--mobile{
+        width: 115px;
+        font-size: 11px;
+    }
+}
+@media(min-width:400px){
+    .send-email--mobile{
+        width: 190px;
+        font-size: 11px;
+    }
+    .gager--mobile{
+        width: 160px;
+        font-size: 11px;
+    }
+    .slider-contact{
+        width: 187px;
+        font-size: 11px;
+    }
+}
+@media(min-width:660px){
+    .send-email--mobile, .gager--mobile, .slider-contact{
+        width: 200px;
+    }
+    .consultation--mobile {
+        width: 153px;
+    }
+}
+@media(min-width:740px){
+    .send-email--mobile, .gager--mobile, .slider-contact{
+        width: 250px;
+    }
+    .consultation--mobile {
+        width: 200px;
+    }
+}
+// @media(min-width:660px){
+    
+// }
 .send-email {
     display: none;
     left: 65px;
@@ -429,6 +513,7 @@
     .btn-mobile{
         display: none;
     }
+    .send-email, .gager, .consultation{ display: block;}
 }
 
 .check {
@@ -566,7 +651,7 @@
 .slider-big__title {
     margin-top: 10px;
     color: #fff;
-    font-size: 10px;
+    font-size: 14px;
     padding-right: 16px;
 
     &--color {
@@ -576,8 +661,25 @@
 }
 @media(min-width:900px){
     .slider-big__title{
-        text-align: center;
-        font-size: 15px;
+        font-size: 18px;
+        padding-right: 20px;
+    }
+}
+.slider-services__title {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 10px;
+    padding-right: 16px;
+    text-align: center;
+
+    &--color {
+        color: #7EA0AD;
+    }
+
+}
+@media(min-width:900px){
+    .slider-services__title{
+        font-size: 18px;
         padding-right: 20px;
     }
 }
@@ -1118,8 +1220,17 @@ input[type="checkbox"] {
     font-weight: 500;
     font-size: 5px
 }
+@media(min-width:520px){
+    .deadlines,
+    .price {
+        padding-left: 25px;
+    } 
+}
 .price{
     width: 300px;
+}
+.price{
+    max-width: 435px;
 }
 @media(min-width:900px){
     .deadlines,
@@ -1149,22 +1260,56 @@ input[type="checkbox"] {
         margin-bottom: 17px;
     }
 }
+@media(min-width:350px){
+    .slider-big__list{
+        font-size: 10px;
+    }
+}
+@media(min-width:450px){
+    .slider-big__list{
+        width: 415px;
+    }
+}
+@media(min-width:520px){
+    .slider-big__list{
+        font-size: 13px;
+        width: 430px;
+    }
+}
 @media(min-width:900px){
     .slider-big__list {
+        font-size: 15px;
         padding-left: 18px;
+        margin-bottom: 25px;
+   
+        .pice-li {
+            margin-bottom: 0;
+        }
     }
+   
 }
 
 .deadlines-options__total {
-    margin-right: 70px;
+    margin-right: 65px;
     padding: 12px 15px;
     background: #97B0BA;
     border: 1px solid #BFD7E0;
     border-radius: 5px;
+    font-size: 8px;
 }
-
+@media(min-width:400px){
+    .deadlines-options__total{
+        font-size: 10px;
+    }
+}
+@media(min-width:450px){
+    .deadlines-options__total{
+        font-size: 13px;
+    }
+}
 .deadlines-options___label {
     cursor: pointer;
+    font-size: 6px;
 
     &:before {
         content: '';
@@ -1179,7 +1324,16 @@ input[type="checkbox"] {
         margin-right: 10px;
     }
 }
-
+@media(min-width:400px){
+    .deadlines-options___label{
+        font-size: 10px;
+    }
+}
+@media(min-width:450px){
+    .deadlines-options___label{
+        font-size: 13px;
+    }
+}
 .deadlines-options___input[type="checkbox"]:checked+.deadlines-options___label:before {
     background-image: url('../img/input-on.png');
 }
