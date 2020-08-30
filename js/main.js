@@ -152,4 +152,5 @@ $(document).ready(function () {
   document.querySelector('.gager-form__button-option').addEventListener('click', () => {
     toggleFormOption()
   })
+  
 });
