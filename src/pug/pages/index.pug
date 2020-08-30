@@ -986,30 +986,30 @@ html(lang="en")
             .copy Все права защищены 2020
 
 
-        #gager-form.gager-form
+        #gager-form.gager-form(name="grager-form")
             .modal-wrapper
                 .bg-form
                 .gager-form__title Заполните форму для связи
                 form.gager-form__form
                     .form-item
                         label.form-label Ваш телефон*
-                        input(type="text" placeholder="+7(___)___-__-__ :").form-input
+                        input(mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :").form-input
                     .form-item
                         label.form-label Ваше имя*
-                        input(type="text" placeholder="Иван").form-input                    
+                        input(name="grager-name" type="text" placeholder="Иван").form-input                    
 
                     div(data-hidden="").gager-form__button-option Укажите адрес, время и контакты представителя            
                     .form-option.hidden
                         .form-item
                             label.form-label Комментарий
-                            textarea(placeholder="текст").form-input.form-input--textarea
+                            textarea(name="grager-text" placeholder="текст").form-input.form-input--textarea
                         .gager-form__heading Выберите время и дату для звонка
                         .gager-form__description в ближайшее время завтра вечером
                         .time
-                            input(type="text" placeholder="00").form-input.form-input--time         
+                            input(name="grager-h" type="text" placeholder="00").form-input.form-input--time         
                             p.test-p : 
-                            input(type="text" placeholder="00").form-input.form-input--time  
-                            input(type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
+                            input(name="grager-s" type="text" placeholder="00").form-input.form-input--time  
+                            input(name="grager-date" type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
                 .gager-form__option
                 .gager-form-button-send Вызвать замерщика
                 .gager-form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies

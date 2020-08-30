@@ -120,6 +120,7 @@ $(document).ready(function () {
     document.querySelector('.gager-form').classList.remove('gager-form--active')
     document.body.style.overflow = 'auto'
   }
+  
 
   function openFormOption() {
     document.querySelector('.form-option').classList.add('form-option--active')
@@ -136,7 +137,7 @@ $(document).ready(function () {
   document.querySelectorAll('[data-grapper]').forEach(
     x => x.addEventListener('click', () => modalOpen())
   )
-
+  
   document.getElementById('gager-form').addEventListener('click', function (event) {
     if (event.target === this) {
       modalClose()
@@ -152,4 +153,5 @@ $(document).ready(function () {
   document.querySelector('.gager-form__button-option').addEventListener('click', () => {
     toggleFormOption()
   })
+  
 });
