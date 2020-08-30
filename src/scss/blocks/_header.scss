@@ -135,15 +135,16 @@
 
 .top-nav__list {
     display: none;
+    z-index: 7;
     position: fixed;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(35px);
     right: 0;
-    top: 70px;
+    top: 68px;
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-align: center;
-    background-color: rgba(152, 214, 236, 0.7);
+    background: rgba(152, 214, 236, 0.1);
     width: 270px;
     height: 270px;
     padding-top: 17px;
