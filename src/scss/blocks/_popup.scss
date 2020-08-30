@@ -1,4 +1,4 @@
-.gager-form {
+.form {
     display: none;
     position: fixed;
     top: 0;
@@ -46,19 +46,19 @@
         padding: 20px 60px;
     }
 }
-.gager-form__title {
+.form__title {
     margin: auto;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;    
     color: #85A8B6;
 }
-.gager-form__heading {
+.form__heading {
     font-weight: 600;
     font-size: 15px;
     color: #85A8B6;
 }
-.gager-form__form {
+.form__form {
     margin-top: 20px;
 }
 .form-input {
@@ -119,7 +119,7 @@
 
     
 }
-.gager-form__button-option {
+.form__button-option {
     position: relative;
     border: 1px solid #F4B955;
     border-radius: 5px;
@@ -153,7 +153,7 @@
     }
 
 }
-.gager-form-button-send {
+.form-button-send {
     background: #F4B955;
     border-radius: 10px;
     width: 290px;
@@ -163,7 +163,7 @@
     text-align: center;
     cursor: pointer;
 }
-.gager-form__description {
+.form__description {
     font-weight: 500;
     font-size: 12px;
     text-align: center;
@@ -184,5 +184,17 @@
 
     &--active {
         display: block;
+    }
+}
+
+.phone-send {
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '(необязательно)';
+        bottom: -18px;
+        left: 85px;
+        font-size: 12px;
+        color: #7EA0AD;
     }
 }
