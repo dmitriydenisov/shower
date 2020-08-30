@@ -416,12 +416,12 @@
             </ol>
           </div>
           <div class="btn-mobile">
-            <button class="slider-big__btn send-email--mobile popup-link" href="#popup">1. Отправить расчёт на e-mail</button>
+            <button class="slider-big__btn send-email--mobile popup-link" href="#popup" data-email="">1. Отправить расчёт на e-mail</button>
             <button class="slider-big__btn gager--mobile popup-link" href="#" data-grapper="">2. Вызвать замерщика</button>
             <div class="slider-contact">С нами так же можно связаться по телефону +7 (499) 677-20-67 или по E-mail - info@v-t-x.ru</div>
             <button class="slider-big__btn consultation--mobile popup-link" href="#" data-grapper="">3. Консультация</button>
           </div>
-          <button class="slider-big__btn send-email popup-link" href="#popup">1. Отправить расчёт на e-mail</button>
+          <button class="slider-big__btn send-email popup-link" href="#popup" data-email="">1. Отправить расчёт на e-mail</button>
           <button class="slider-big__btn gager popup-link" href="#" data-grapper="">2. Вызвать замерщика</button>
           <button class="slider-big__btn consultation popup-link" href="#" data-grapper="">3. Консультация</button>
         </div>
@@ -831,11 +831,11 @@
       </div>
       <div class="copy">Все права защищены 2020</div>
     </div>
-    <div class="gager-form" id="gager-form" name="grager-form">
+    <div class="form" id="gager-form" name="grager-form">
       <div class="modal-wrapper">
         <div class="bg-form"></div>
-        <div class="gager-form__title">Заполните форму для связи</div>
-        <form class="gager-form__form">
+        <div class="form__title">Заполните форму для связи</div>
+        <form class="form__form">
           <div class="form-item">
             <label class="form-label">Ваш телефон*</label>
             <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :"/>
@@ -844,14 +844,14 @@
             <label class="form-label">Ваше имя*</label>
             <input class="form-input" name="grager-name" type="text" placeholder="Иван"/>
           </div>
-          <div class="gager-form__button-option" data-hidden="">Укажите адрес, время и контакты представителя            </div>
+          <div class="form__button-option" data-hidden="">Укажите адрес, время и контакты представителя            </div>
           <div class="form-option hidden">
             <div class="form-item">
               <label class="form-label">Комментарий</label>
               <textarea class="form-input form-input--textarea" name="grager-text" placeholder="текст"></textarea>
             </div>
-            <div class="gager-form__heading">Выберите время и дату для звонка</div>
-            <div class="gager-form__description">в ближайшее время завтра вечером</div>
+            <div class="form__heading">Выберите время и дату для звонка</div>
+            <div class="form__description">в ближайшее время завтра вечером</div>
             <div class="time">
               <input class="form-input form-input--time" name="grager-h" type="text" placeholder="00"/>
               <p class="test-p">: </p>
@@ -860,9 +860,31 @@
             </div>
           </div>
         </form>
-        <div class="gager-form__option"></div>
-        <div class="gager-form-button-send">Вызвать замерщика</div>
-        <div class="gager-form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
+        <div class="form__option"></div>
+        <div class="form-button-send">Вызвать замерщика</div>
+        <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
+      </div>
+    </div>
+    <div class="form" id="email-form" name="email-form">
+      <div class="modal-wrapper">
+        <div class="bg-form"></div>
+        <div class="form__title">Куда отправить расчет?</div>
+        <form class="form__form">
+          <div class="form-item">
+            <label class="form-label">Ваше e-mail*</label>
+            <input class="form-input" name="grager-name" type="text" placeholder="@mail.ru"/>
+          </div>
+          <div class="form-item">
+            <label class="form-label">Ваше имя*</label>
+            <input class="form-input" name="grager-name" type="text" placeholder="Иван"/>
+          </div>
+          <div class="form-item phone-send">
+            <label class="form-label">Ваш телефон</label>
+            <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :"/>
+          </div>
+        </form>
+        <div class="form-button-send">Отправить расчет</div>
+        <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
       </div>
     </div>
     <!--script(src="libs/jquery/jquery-1.11.2.min.js")-->

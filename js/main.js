@@ -112,12 +112,21 @@ $(document).ready(function () {
 
   //управление модальными окнами 
   function modalOpen() {
-    document.querySelector('.gager-form').classList.add('gager-form--active')
+    document.querySelector('#gager-form').classList.add('form--active')
     document.body.style.overflow = 'hidden'
   }
 
   function modalClose() {
-    document.querySelector('.gager-form').classList.remove('gager-form--active')
+    document.querySelector('#gager-form').classList.remove('form--active')
+    document.body.style.overflow = 'auto'
+  }
+  function modalEmailOpen() {
+    document.querySelector('#email-form').classList.add('form--active')
+    document.body.style.overflow = 'hidden'
+  }
+
+  function modalEmailClose() {
+    document.querySelector('#email-form').classList.remove('form--active')
     document.body.style.overflow = 'auto'
   }
 
@@ -143,13 +152,23 @@ $(document).ready(function () {
     }
   })
 
+  document.querySelectorAll('[data-email]').forEach(
+    x => x.addEventListener('click', () => modalEmailOpen())
+  )
+
+  document.getElementById('email-form').addEventListener('click', function (event) {
+    if (event.target === this) {
+      modalEmailClose()
+    }
+  })
+
   // function optionTrigger() {
   //   document.querySelector('.form-option').classList.toggle('form-option--active')
   // }
 
   // document.querySelectorAll('[data-hidden]').onclick = () => optionTrigger()
 
-  document.querySelector('.gager-form__button-option').addEventListener('click', () => {
+  document.querySelector('.form__button-option').addEventListener('click', () => {
     toggleFormOption()
   })
   
