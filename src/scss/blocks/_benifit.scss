@@ -243,6 +243,14 @@
 
     }
 }
+@media(min-width:900px){
+    .btn{
+        margin-left: 35%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
+}
 @media(min-width:1024px){
     .btn{
         margin-left: 36%;

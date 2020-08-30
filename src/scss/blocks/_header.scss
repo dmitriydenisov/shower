@@ -60,11 +60,9 @@
         border-radius: 0 0 50px 0;
      }
     .top-nav {    
-        z-index: 2;   
         border-radius: 0 0 0 50px;
         background: rgba(152, 214, 236, 0.1);
         width: auto;
-        z-index: 2;
     }
 }
 
@@ -80,6 +78,11 @@
         margin-top: 18px;
         margin-left: 17px;
         margin-right: 70px;
+    }
+}
+@media(min-width:900px){
+    .top-nav__contact {
+        margin-right: 46px;
     }
 }
 .contact__phone {
@@ -233,7 +236,9 @@
 }
 @media(min-width:900px){
     .header__title--mobile {
-        margin-left: 328px;
+        margin-top: 110px;
+        margin-bottom: 134px;
+        margin-left: 320px;
     }
 }
 @media (min-width:1024px) { 
@@ -323,7 +328,9 @@
 }
 @media(min-width:900px){
     .header-logo{
-        left: 276px;
+        width: 380px;
+        top: 6px;
+        left: 235px;
     }
 }
 @media (min-width:1024px) {
