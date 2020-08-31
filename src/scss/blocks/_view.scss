@@ -890,6 +890,13 @@ input[type="checkbox"] {
     font-weight: 500;
     font-size: 8px;
     display: block;
+    background: #7EA0AD;
+    border:none;
+    outline: none;
+
+    option{
+        box-shadow: none;
+    }
     
     img {
         margin-left: 10px;

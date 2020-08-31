@@ -315,10 +315,27 @@
       width: 1250px;
     }
   }
+  @media(min-width:1600px){
+    .section-perfect__wrapper {
+      width: 1400px;
+    }
+    .section-perfect__video{
+      right: 132px;
+
+      &--right {
+        right: 76%;
+    }
+    }
+  }
   @media(min-width:1800px){
     .section-perfect__wrapper {
       width: 1420px;
     }
+@media(min-width:1900px){
+  .section-perfect__wrapper {
+    width: 1600px;
+  }
+}
     .section-perfect__video {
       right: 116px;
       width: 280px;

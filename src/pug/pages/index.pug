@@ -505,7 +505,12 @@ html(lang="en")
                         .block-services
                             input(type="checkbox")#devili.block-services___input
                             label(for="devili").block-services___label Доставка - 2000руб <br /> 
-                            a(href="#").services-option.services-option--map В пределах МКАД 
+                            select.services-option.services-option--map 
+                                option В пределах МКАД 
+                                option До 30км от МКАД 
+                                option 30-50км от МКАД 
+                                option 80-100км от МКАД 
+                                option Свыше 100км от МКАД 
                                 //img(src="img/test.png", alt="")
                         .block-services 
                             input(type="checkbox")#shelf.block-services___input

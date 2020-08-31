@@ -54,6 +54,18 @@
         font-size: 12px;
     }
 }
+@media(min-width:900px){
+    .accordion--help{
+        font-weight: 200;
+    }
+}
+@media(min-width:900px){
+    .accordion--help{
+        &:after{
+            bottom: -2px;
+        }
+    }
+}
 .active-slide--help{
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(130deg, rgba(244, 185, 85, .46), #91b7c6);
@@ -67,6 +79,13 @@
         border: 15px solid transparent;
         border-bottom: 20px solid #7EA0AD;
         border-radius: 2px;
+    }
+}
+@media(min-width:900px){
+    .active-slide--help{
+        &:after{
+            bottom: 15px;
+        }
     }
 }
 @media(min-width:520px){
