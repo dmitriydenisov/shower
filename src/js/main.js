@@ -81,10 +81,12 @@ $(document).ready(function () {
 
   document.querySelectorAll('[data-showCard]').forEach(btn => {
     btn.addEventListener("click", () => {
-      document.querySelectorAll('.view__slider-item').forEach(li => li.classList.remove('view__slider-item--active'))
+      const li = btn.closest('li')
 
-      const li = btn.closest('.view__slider-item')
-      //li.classList.add('view__slider-item--active')
+      if (li) {
+        document.querySelectorAll('.view__slider-item').forEach(li => li.classList.remove('view__slider-item--active'))
+        li.classList.add('view__slider-item--active')
+      }
       
       showCard(`[data-card="${btn.dataset.showcard}"]`)
     })
