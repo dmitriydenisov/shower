@@ -16,10 +16,10 @@
     border: none;
     text-align: left;
     outline: none;
-    font-size: 10px;
+    font-size: 9px;
     transition: 0.4s; 
     color: #7EA0AD;
-    font-weight: 200;
+    font-weight: 600;
 
     &:after {
         content: '';
@@ -33,10 +33,25 @@
 }
 @media(min-width:350px){
     .accordion--help {
-        font-size: 12px;
+        font-size: 10px;
         &:after{            
             bottom: -10px;
         }
+    }
+}
+@media(min-width:360px){
+    .accordion--help{
+        font-size: 11px;
+    }
+}
+@media(min-width:380px){
+    .accordion--help{
+        width: 99%;
+    }
+}
+@media(min-width:360px){
+    .accordion--help{
+        font-size: 12px;
     }
 }
 .active-slide--help{

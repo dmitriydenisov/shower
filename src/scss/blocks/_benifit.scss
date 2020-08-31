@@ -191,6 +191,38 @@
         }
     }
 }
+@media(min-width:350px){
+    .btn{           
+        margin-left: 10%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
+}
+@media(min-width:360px){
+    .btn{           
+        margin-left: 11%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
+}
+@media(min-width:380px){
+    .btn{           
+        margin-left: 14%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
+}
+@media(min-width:390px){
+    .btn{           
+        margin-left: 15%;
+    }
+    .btn--bgc {
+        margin-left: 0%;
+    }
+}
 @media(min-width:400px){
     .btn{           
         margin-left: 16%;

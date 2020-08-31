@@ -73,18 +73,7 @@
     text-align: right;
     width: 127px;
 }
-@media(min-width:350px){
-    .top-nav__contact {
-        margin-top: 18px;
-        margin-left: 17px;
-        margin-right: 70px;
-    }
-}
-@media(min-width:900px){
-    .top-nav__contact {
-        margin-right: 46px;
-    }
-}
+
 .contact__phone {
     font-weight: 500;
     font-size: 14px;
@@ -210,6 +199,11 @@
         margin-left: 71px;
     }
 }
+@media(min-width:390px){
+    .header__title--mobile{        
+        margin-left: 91px;
+    }
+}
 @media(min-width:400px){
     .header__title--mobile{        
         margin-left: 87px;
@@ -294,6 +288,11 @@
         width: 320px;
         top: 50px;
         left: 20px;
+    }
+}
+@media(min-width:390px){
+    .header-logo {
+        left: 40px;
     }
 }
 @media(min-width:400px){

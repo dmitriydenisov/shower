@@ -133,6 +133,13 @@
   }
   
   
+  @media(min-width:390px){
+    .section-perfect__video:before {
+      right:-57px;
+      width: 57px;    
+    }
+  }
+  
   .section-perfect__video video {
     width: 100%;
     height: 100%;
