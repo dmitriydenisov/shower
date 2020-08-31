@@ -21,13 +21,17 @@
     position: absolute;
     content: '';
     width: 291px;
-    height: 110%;
+    height: 106%;
     right: -24px;
-    top: -20px;
+    top: -13px;
     background: rgba(133, 168, 182, 0.5);
-    z-index: -1;
-
-    
+    z-index: -1;    
+}
+@media(min-width:350px){
+    .bg-form {
+        height: 110%;
+        top: -20%;
+    }
 }
 .modal-wrapper {
     position: relative;
@@ -82,13 +86,20 @@
     &--textarea {
         height: 50px;
         resize: vertical;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
     }
 
     
     &::placeholder {
         color: #D8E2E6;
         font-size: 16px;
+    }
+}
+@media(min-width:350px){
+    .form-input {
+        &--textarea {
+            margin-bottom: 35px;
+        }
     }
 }
 .form-input--date {
@@ -159,9 +170,14 @@
     width: 290px;
     color: #fff;
     padding: 20px 40px;
-    margin-top: 30px;
+    margin-top: 5px;
     text-align: center;
     cursor: pointer;
+}
+@media(min-width:350px){
+    .form-button-send{
+        margin-top: 30px;
+    }
 }
 .form__description {
     font-weight: 500;

@@ -36,4 +36,16 @@ $(document).ready(function(){
   $('.top-nav__list a').on('click', function(){
     $('top-nav__list').removeClass('top-nav__list--open');
   })
+
+  
+
 });
+
+document.body.addEventListener('click', e => {
+  const topNavToggleBtn = e.target.closest('.top-nav-toogle-btn')
+  const topNavList = document.querySelector('.top-nav__list')
+
+  if (topNavList.classList.contains('top-nav__list--open') && !topNavToggleBtn) {
+      topNavList.classList.remove('top-nav__list--open')
+  }
+})

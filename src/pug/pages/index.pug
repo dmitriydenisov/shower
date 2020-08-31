@@ -56,7 +56,7 @@ html(lang="en")
             .container
                 h2.view__title Виды и примеры душевых ограждений            
                 ul.view__slider
-                    li.view__slider-item
+                    li.view__slider-item.view__slider-item--active
                         button(data-showCard="1")
                             img(src="img/slider/item-1.png", alt="1")
                     li.view__slider-item
@@ -1006,7 +1006,7 @@ html(lang="en")
             .copy Все права защищены 2020
 
 
-        #gager-form.form(name="grager-form" data-gragerForm="")
+        #gager-form.form(name="grager-form" data-gragerForm="" action="/php/mail.php" method="POST")
             .modal-wrapper
                 .bg-form
                 .form__title Заполните форму для связи
@@ -1031,7 +1031,7 @@ html(lang="en")
                             input(name="grager-s" type="text" placeholder="00").form-input.form-input--time  
                             input(name="grager-date" type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
                 .form__option
-                .form-button-send Вызвать замерщика
+                .form-button-send(type="submit") Вызвать замерщика
                 .form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies
 
         #email-form.form(name="email-form" data-emailForm="")

@@ -76,37 +76,19 @@ $(document).ready(function () {
   variantButtons.forEach(vb => vb.addEventListener('click', () => showOwl(vb.dataset.variant)))
   showOwl(variantButtons[0].dataset.variant)
 
-
-
-  // let slider = $(".owl-carousel");
-  // slider.owlCarousel({
-  //   loop: true,
-  //   dots: false
-  // });
-
-  // $('.prev').click(function () {
-  //   event.preventDefault()
-  //   slider.trigger('prev.owl.carousel');
-  // })
-  // $('.next').click(function () {
-  //   event.preventDefault()
-  //   slider.trigger('next.owl.carousel');
-  // })
-
   //переключение слайдов по кнопке
-  const cards = document.querySelectorAll('.viev__slider-big')
-
-  // document
-  //   .querySelectorAll('.viev__slider--item')
-  //   .forEach(x =>
-  //     x.classList.add('viev__slider-item--active')
-  //   )
+  const cards = document.querySelectorAll('.viev__slider-big')  
 
   document.querySelectorAll('[data-showCard]').forEach(btn => {
-    btn.addEventListener("click", () =>
+    btn.addEventListener("click", () => {
+      document.querySelectorAll('.view__slider-item').forEach(li => li.classList.remove('view__slider-item--active'))
+
+      const li = btn.closest('.view__slider-item')
+      //li.classList.add('view__slider-item--active')
+      
       showCard(`[data-card="${btn.dataset.showcard}"]`)
-    )
-  })
+    })
+})
 
   showCard('[data-card="1"]')
 
@@ -162,14 +144,15 @@ $(document).ready(function () {
     }
   })
 
-  // function optionTrigger() {
-  //   document.querySelector('.form-option').classList.toggle('form-option--active')
-  // }
-
-  // document.querySelectorAll('[data-hidden]').onclick = () => optionTrigger()
-
   document.querySelector('.form__button-option').addEventListener('click', () => {
     toggleFormOption()
   })
   
+
+  const myForm = document.querySelector('[data-gragerForm]')
+
+  myForm.addEventListener('submit', e => {
+    // Закрыть модальное окно
+    modalClose()
+  })  
 });
