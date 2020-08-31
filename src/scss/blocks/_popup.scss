@@ -30,7 +30,7 @@
 @media(min-width:350px){
     .bg-form {
         height: 110%;
-        top: -20%;
+        top: -4%;
     }
 }
 .modal-wrapper {
@@ -173,6 +173,8 @@
     margin-top: 5px;
     text-align: center;
     cursor: pointer;
+    border:none;
+    outline: none;
 }
 @media(min-width:350px){
     .form-button-send{

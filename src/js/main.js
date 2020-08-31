@@ -94,6 +94,8 @@ $(document).ready(function () {
 
   showCard('[data-card="1"]')
 
+  
+
   //управление модальными окнами 
   function modalOpen() {
     document.querySelector('#gager-form').classList.add('form--active')
@@ -157,4 +159,9 @@ $(document).ready(function () {
     // Закрыть модальное окно
     modalClose()
   })  
+  const phoneMask = IMask(
+    document.getElementById('grager-phone'), {
+      mask: '+{7}(000)000-00-00'
+    });
+  
 });

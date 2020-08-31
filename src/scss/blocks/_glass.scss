@@ -273,11 +273,20 @@
 }
 @media(min-width:900px){
     .type-glass__description{
-        left: 64px;
-        width: 730px;
+        // left: 64px;
+        // width: 730px;
+        left: 2px;
+        width: 445px;
         font-size: 14px;
     }
 }
+// @media(min-width:900px){
+//     .type-glass__description{
+//         left: 64px;
+//         width: 730px;
+//         font-size: 14px;
+//     }
+// }
 @media (min-width:1024px) {
     .type-glass__description {
         width: 765px;

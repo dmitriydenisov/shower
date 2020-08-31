@@ -139,7 +139,26 @@
       width: 57px;    
     }
   }
-  
+  @media(min-width:410px){
+    .section-perfect__video:after {
+      left:-67px;
+      width: 67px;    
+    }
+    .section-perfect__video:before {
+      right:-67px;
+      width: 67px;    
+    }
+  }
+  @media(min-width:480px){
+    .section-perfect__video:after {
+      left:-100px;
+      width: 100px;    
+    }
+    .section-perfect__video:before {
+      right:-100px;
+      width: 100px;    
+    }
+  }
   .section-perfect__video video {
     width: 100%;
     height: 100%;

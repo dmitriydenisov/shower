@@ -44,6 +44,7 @@
     padding: 18px 1px;
     cursor: pointer;
     width: 230px;
+    height: 60px;
     border: none;
     text-align: left;
     outline: none;
@@ -84,6 +85,7 @@
   }
   @media(min-width:1024px){
       .accordion{
+          height: auto;
           &:after{
               right: 5px;
           }
