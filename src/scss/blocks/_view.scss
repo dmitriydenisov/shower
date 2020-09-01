@@ -156,7 +156,7 @@
 @media(min-width:900px) {
     .viev__slider-big {
         padding-top: 20px;
-        height: 450px;
+        height: 470px;
         border-radius: 10px;
         margin-top: 20px;
         background: linear-gradient(0deg, rgb(255, 255, 255) 40%, rgb(126, 160, 173) 11%);
@@ -1516,7 +1516,7 @@ input[type="checkbox"] {
         margin-right: 0;
     }
 
-    &:hover {
+    &:hover, &--active {
         background: #F4B955;
         color: #fff;
         border: 2px solid #F4B955;
@@ -1547,7 +1547,7 @@ input[type="checkbox"] {
 .carousel__item {
     margin-right: 10px;
     width: 170px;
-    height: 125px;
+    height: 153px;
     border: 1px solid #98B7C3;
     border-radius: 5px;
     overflow: hidden;

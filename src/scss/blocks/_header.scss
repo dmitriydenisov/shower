@@ -275,6 +275,11 @@
         margin-left: 38%;
     }
 }
+@media(min-width:1980px){
+    .header__title{
+        margin-left: 40%;
+    }
+}
 .header-logo {
     width: 310px;
     position: absolute;
@@ -362,6 +367,11 @@
         height: 667px;
         top: -8px;
         left: 490px;
+    }
+}
+@media(min-width:1980px){
+    .header-logo{
+        left: 558px;
     }
 }
 .header-bottom {
