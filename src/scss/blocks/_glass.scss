@@ -583,6 +583,43 @@
         font-size: 8px;
     }
 }
+.glass-type__visualVatermal {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0;
+    left: 42%;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.vatermal-text {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(126, 160, 173, 0.4);
+    margin: 0 auto;
+    margin-bottom: 147px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    justify-content: center;
+    &:last-child{
+        margin-top: -60px;
+    }
+    img{
+        opacity: .5;
+        margin-bottom: 15px;
+    }
+    &--perf{
+        color: rgba(126, 160, 173, 0.75);
+        margin-bottom: 0;
+        margin-left: -15px;
+        &:last-child{
+            margin-top: 110px;
+        }
+    }
+}
 @media(min-width:350px){
     .glass-qualities-mobile__heading{
         span {
@@ -706,6 +743,7 @@
             border-radius: 3px;
         }
     }
+    
     .glass-qualities {
         display: flex;
         justify-content: space-around;
