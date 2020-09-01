@@ -189,10 +189,26 @@ $(document).ready(function () {
 			toggleFormOption();
 		});
 
-	const myForm = document.querySelector("[data-gragerForm]");
+	// const myForm = document.querySelector("[data-gragerForm]");
 
-	myForm.addEventListener("submit", (e) => {
-		// Закрыть модальное окно
-		modalClose();
-	});
+	// myForm.addEventListener("submit", (e) => {
+	// 	// Закрыть модальное окно
+	// 	modalClose();
+	// });
 });
+
+// Отправка заявки 
+function ajaxFormSubmit(){
+  var string = $("#gager-form").serialize(); // Соханяем данные введенные в форму в строку. 
+
+  // Формируем ajax запрос
+  $.ajax({
+    method: "POST", // Тип запроса - POST
+    url: "php/mail.php", // Куда отправляем запрос
+    data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+    success:function(){ alert('123') }
+   
+  }).done(
+    alert('done')
+  )
+  }
