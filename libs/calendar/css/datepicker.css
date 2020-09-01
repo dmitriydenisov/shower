@@ -162,9 +162,15 @@
    ------------------------------------------------- */
 .datepickers-container {
   position: absolute;
-  left: 0;
-  top: 0; 
+  left: -275px;
+  top: -250px;
   z-index: 50000;}
+  @media(min-width:900px){
+    .datepickers-container {
+      left: 0;
+      top: 0;  
+    }
+  }
   @media print {
     .datepickers-container {
       display: none; } }

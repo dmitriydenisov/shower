@@ -41,7 +41,7 @@
       <div class="container">
         <h2 class="view__title">Виды и примеры душевых ограждений            </h2>
         <ul class="view__slider">
-          <li class="view__slider-item">
+          <li class="view__slider-item view__slider-item--active">
             <button data-showCard="1"><img src="img/slider/item-1.png" alt="1"/></button>
           </li>
           <li class="view__slider-item">
@@ -310,8 +310,15 @@
             </div>
             <div class="block-services">
               <input class="block-services___input" type="checkbox" id="devili"/>
-              <label class="block-services___label" for="devili">Доставка - 2000руб <br /> </label><a class="services-option services-option--map" href="#">В пределах МКАД 
-                <!--img(src="img/test.png", alt="")--></a>
+              <label class="block-services___label" for="devili">Доставка - 2000руб <br /> </label>
+              <select class="services-option services-option--map"> 
+                <option>В пределах МКАД </option>
+                <option>До 30км от МКАД </option>
+                <option>30-50км от МКАД </option>
+                <option>80-100км от МКАД </option>
+                <option>Свыше 100км от МКАД </option>
+                <!--img(src="img/test.png", alt="")-->
+              </select>
             </div>
             <div class="block-services"> 
               <input class="block-services___input" type="checkbox" id="shelf"/>
@@ -447,11 +454,11 @@
             <button class="slider-big__btn send-email--mobile popup-link" href="#popup" data-email="">1. Отправить расчёт на e-mail</button>
             <button class="slider-big__btn gager--mobile popup-link" href="#" data-grapper="">2. Вызвать замерщика</button>
             <div class="slider-contact">С нами так же можно связаться по телефону +7 (499) 677-20-67 или по E-mail - info@v-t-x.ru</div>
-            <button class="slider-big__btn consultation--mobile popup-link" href="#" data-grapper="">3. Консультация</button>
+            <button class="slider-big__btn consultation--mobile popup-link" href="#" data-consultation="">3. Консультация</button>
           </div>
           <button class="slider-big__btn send-email popup-link" href="#popup" data-email="">1. Отправить расчёт на e-mail</button>
           <button class="slider-big__btn gager popup-link" href="#" data-grapper="">2. Вызвать замерщика</button>
-          <button class="slider-big__btn consultation popup-link" href="#" data-grapper="">3. Консультация</button>
+          <button class="slider-big__btn consultation popup-link" href="#" data-consultation="">3. Консультация</button>
         </div>
       </div>
     </div>
@@ -863,10 +870,10 @@
       <div class="modal-wrapper">
         <div class="bg-form"></div>
         <div class="form__title">Заполните форму для связи</div>
-        <form class="form__form">
+        <form class="form__form" action="/php/mail.php" method="POST" data-gragerForm="">
           <div class="form-item">
             <label class="form-label">Ваш телефон*</label>
-            <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :"/>
+            <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :" id="grager-phone"/>
           </div>
           <div class="form-item">
             <label class="form-label">Ваше имя*</label>
@@ -879,7 +886,6 @@
               <textarea class="form-input form-input--textarea" name="grager-text" placeholder="текст"></textarea>
             </div>
             <div class="form__heading">Выберите время и дату для звонка</div>
-            <div class="form__description">в ближайшее время завтра вечером</div>
             <div class="time">
               <input class="form-input form-input--time" name="grager-h" type="text" placeholder="00"/>
               <p class="test-p">: </p>
@@ -887,17 +893,48 @@
               <input class="form-input form-input--date datepicker-here" name="grager-date" type="text" value="выберете дату" data-position="right top"/>
             </div>
           </div>
+          <button class="form-button-send" type="submit">Вызвать замерщика</button>
         </form>
-        <div class="form__option"></div>
-        <div class="form-button-send">Вызвать замерщика</div>
         <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
       </div>
     </div>
-    <div class="form" id="email-form" name="email-form">
+    <div class="form" id="consultation-form" name="consultation-form">
+      <div class="modal-wrapper">
+        <div class="bg-form"></div>
+        <div class="form__title">Заполните форму для связи</div>
+        <form class="form__form" action="/php/mail.php" method="POST" data-consultation="">
+          <div class="form-item">
+            <label class="form-label">Ваш телефон*</label>
+            <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :"/>
+          </div>
+          <div class="form-item">
+            <label class="form-label">Ваше имя*</label>
+            <input class="form-input" name="grager-name" type="text" placeholder="Иван"/>
+          </div>
+          <div class="form__button-option" data-hidden="">Выберете удобное <br> время для звонка           </div>
+          <div class="form-option hidden">
+            <div class="form-item">
+              <label class="form-label">Комментарий</label>
+              <textarea class="form-input form-input--textarea" name="grager-text" placeholder="текст"></textarea>
+            </div>
+            <div class="form__heading">Выберите время и дату для звонка</div>
+            <div class="time">
+              <input class="form-input form-input--time" name="grager-h" type="text" placeholder="00"/>
+              <p class="test-p">: </p>
+              <input class="form-input form-input--time" name="grager-s" type="text" placeholder="00"/>
+              <input class="form-input form-input--date datepicker-here" name="grager-date" type="text" value="выберете дату" data-position="right top"/>
+            </div>
+          </div>
+          <button class="form-button-send" type="submit">Вызвать замерщика</button>
+        </form>
+        <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
+      </div>
+    </div>
+    <div class="form" id="email-form" name="email-form" data-emailForm="">
       <div class="modal-wrapper">
         <div class="bg-form"></div>
         <div class="form__title">Куда отправить расчет?</div>
-        <form class="form__form">
+        <form class="form__form" action="/php/mail.php" method="POST">
           <div class="form-item">
             <label class="form-label">Ваше e-mail*</label>
             <input class="form-input" name="grager-name" type="text" placeholder="@mail.ru"/>
