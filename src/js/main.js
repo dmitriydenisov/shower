@@ -197,18 +197,18 @@ $(document).ready(function () {
 	// });
 });
 
-// Отправка заявки 
-function ajaxFormSubmit(){
-  var string = $("#gager-form").serialize(); // Соханяем данные введенные в форму в строку. 
+// // Отправка заявки 
+// function ajaxFormSubmit(){
+//   var string = $("#gager-form").serialize(); // Соханяем данные введенные в форму в строку. 
 
-  // Формируем ajax запрос
-  $.ajax({
-    method: "POST", // Тип запроса - POST
-    url: "php/mail.php", // Куда отправляем запрос
-    data: string, // Какие даные отправляем, в данном случае отправляем переменную string
-    success:function(){ alert('123') }
+//   // Формируем ajax запрос
+//   $.ajax({
+//     method: "POST", // Тип запроса - POST
+//     url: "php/mail.php", // Куда отправляем запрос
+//     data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+//     success:function(){ alert('123') }
    
-  }).done(
-    alert('done')
-  )
-  }
+//   }).done(
+//     alert('done')
+//   )
+//   }
