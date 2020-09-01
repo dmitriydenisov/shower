@@ -106,6 +106,15 @@ $(document).ready(function () {
     document.querySelector('#gager-form').classList.remove('form--active')
     document.body.style.overflow = 'auto'
   }
+  function modalConsultationOpen() {
+    document.querySelector('#consultation-form').classList.add('form--active')
+    document.body.style.overflow = 'hidden'
+  }
+
+  function modalConsultationClose() {
+    document.querySelector('#consultation-form').classList.remove('form--active')
+    document.body.style.overflow = 'auto'
+  }
   function modalEmailOpen() {
     document.querySelector('#email-form').classList.add('form--active')
     document.body.style.overflow = 'hidden'
@@ -114,14 +123,6 @@ $(document).ready(function () {
   function modalEmailClose() {
     document.querySelector('#email-form').classList.remove('form--active')
     document.body.style.overflow = 'auto'
-  }
-
-  function openFormOption() {
-    document.querySelector('.form-option').classList.add('form-option--active')
-  }
-
-  function closeFormOption() {
-    document.querySelector('.form-option').classList.remove('form-option--active')
   }
 
   function toggleFormOption() {
@@ -135,6 +136,16 @@ $(document).ready(function () {
   document.getElementById('gager-form').addEventListener('click', function (event) {
     if (event.target === this) {
       modalClose()
+    }
+  })
+
+  document.querySelectorAll('[data-consultation]').forEach(
+    x => x.addEventListener('click', () => modalConsultationOpen())
+  )
+
+  document.getElementById('consultation-form').addEventListener('click', function (event) {
+    if (event.target === this) {
+      modalConsultationClose()
     }
   })
 
@@ -159,9 +170,6 @@ $(document).ready(function () {
     // Закрыть модальное окно
     modalClose()
   })  
-  const phoneMask = IMask(
-    document.getElementById('grager-phone'), {
-      mask: '+{7}(000)000-00-00'
-    });
+  
   
 });
