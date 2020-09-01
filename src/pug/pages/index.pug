@@ -1054,31 +1054,31 @@ html(lang="en")
                     button.form-button-send(type="submit") Вызвать замерщика
                 .form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies
 
-        #consultation-form.form(name="consultation-form")
-            .modal-wrapper
-                .bg-form
-                .form__title Заполните форму для связи
-                form(action="/php/mail.php" method="POST" data-consultation="").form__form
-                    .form-item
-                        label.form-label Ваш телефон*
-                        input(mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :").form-input
-                    .form-item
-                        label.form-label Ваше имя*
-                        input(name="grager-name" type="text" placeholder="Иван").form-input                    
+        //- #consultation-form.form(name="consultation-form")
+        //-     .modal-wrapper
+        //-         .bg-form
+        //-         .form__title Заполните форму для связи
+        //-         form(action="/php/mail.php" method="POST" data-consultation="").form__form
+        //-             .form-item
+        //-                 label.form-label Ваш телефон*
+        //-                 input(mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :").form-input
+        //-             .form-item
+        //-                 label.form-label Ваше имя*
+        //-                 input(name="grager-name" type="text" placeholder="Иван").form-input                    
 
-                    div(data-hidden="").form__button-option Выберете удобное <br> время для звонка           
-                    .form-option.hidden
-                        .form-item
-                            label.form-label Комментарий
-                            textarea(name="grager-text" placeholder="текст").form-input.form-input--textarea
-                        .form__heading Выберите время и дату для звонка
-                        .time
-                            input(name="grager-h" type="text" placeholder="00").form-input.form-input--time         
-                            p.test-p : 
-                            input(name="grager-s" type="text" placeholder="00").form-input.form-input--time  
-                            input(name="grager-date" type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
-                    button.form-button-send(type="submit") Вызвать замерщика
-                .form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies
+        //-             div(data-hidden="").form__button-option Выберете удобное <br> время для звонка           
+        //-             .form-option.hidden
+        //-                 .form-item
+        //-                     label.form-label Комментарий
+        //-                     textarea(name="grager-text" placeholder="текст").form-input.form-input--textarea
+        //-                 .form__heading Выберите время и дату для звонка
+        //-                 .time
+        //-                     input(name="grager-h" type="text" placeholder="00").form-input.form-input--time         
+        //-                     p.test-p : 
+        //-                     input(name="grager-s" type="text" placeholder="00").form-input.form-input--time  
+        //-                     input(name="grager-date" type="text" value="выберете дату" data-position="right top").form-input.form-input--date.datepicker-here
+        //-             button.form-button-send(type="submit") Вызвать замерщика
+        //-         .form__description Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies
 
         #email-form.form(name="email-form" data-emailForm="")
             .modal-wrapper

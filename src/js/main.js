@@ -72,9 +72,21 @@ function showOwl(variant) {
 }
 
 $(document).ready(function () {
-  const variantButtons = document.querySelectorAll('button[data-variant]')
-  variantButtons.forEach(vb => vb.addEventListener('click', () => showOwl(vb.dataset.variant)))
-  showOwl(variantButtons[0].dataset.variant)
+  const variantButtons = document.querySelectorAll("button[data-variant]");
+  
+  variantButtons.forEach((vb) =>
+        vb.addEventListener("click", () => {
+            variantButtons.forEach((vb) =>
+                vb.classList.remove("btn-block__item--active")
+      );
+      
+      vb.classList.add("btn-block__item--active");
+      
+            showOwl(vb.dataset.variant);
+        })
+  );
+  
+  showOwl(variantButtons[0].dataset.variant);
 
   //переключение слайдов по кнопке
   const cards = document.querySelectorAll('.viev__slider-big')  
@@ -97,79 +109,90 @@ $(document).ready(function () {
   
 
   //управление модальными окнами 
-  function modalOpen() {
-    document.querySelector('#gager-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+  function modalOpen(buttonText) {
+		const form = document.querySelector("#gager-form");
 
-  function modalClose() {
-    document.querySelector('#gager-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
-  function modalConsultationOpen() {
-    document.querySelector('#consultation-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+		form.classList.add("form--active");
+		document.body.style.overflow = "hidden";
 
-  function modalConsultationClose() {
-    document.querySelector('#consultation-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
-  function modalEmailOpen() {
-    document.querySelector('#email-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+		form.querySelector(".form__button-option").innerHTML = buttonText;
+	}
 
-  function modalEmailClose() {
-    document.querySelector('#email-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
+	function modalClose() {
+		document.querySelector("#gager-form").classList.remove("form--active");
+		document.body.style.overflow = "auto";
+	}
 
-  function toggleFormOption() {
-    document.querySelector('.form-option').classList.toggle('form-option--active')
-  }
+	function modalConsultationClose() {
+		document
+			.querySelector("#consultation-form")
+			.classList.remove("form--active");
+		document.body.style.overflow = "auto";
+	}
 
-  document.querySelectorAll('[data-grapper]').forEach(
-    x => x.addEventListener('click', () => modalOpen())
-  )
+	function modalEmailOpen() {
+    console.log("done")
+		document.querySelector("#email-form").classList.add("form--active");
+		document.body.style.overflow = "hidden";
+	}
 
-  document.getElementById('gager-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalClose()
-    }
-  })
+	function modalEmailClose() {
+		document.querySelector("#email-form").classList.remove("form--active");
+		document.body.style.overflow = "auto";
+	}
 
-  document.querySelectorAll('[data-consultation]').forEach(
-    x => x.addEventListener('click', () => modalConsultationOpen())
-  )
+	function toggleFormOption() {
+		document
+			.querySelector(".form-option")
+			.classList.toggle("form-option--active");
+	}
 
-  document.getElementById('consultation-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalConsultationClose()
-    }
-  })
+	document
+		.querySelectorAll("[data-grapper]")
+		.forEach((x) => x.addEventListener("click", () => modalOpen("Укажите адрес, время и контакты представителя")));
 
-  document.querySelectorAll('[data-email]').forEach(
-    x => x.addEventListener('click', () => modalEmailOpen())
-  )
+	document
+		.getElementById("gager-form")
+		.addEventListener("click", function (event) {
+			if (event.target === this) {
+				modalClose();
+			}
+		});
 
-  document.getElementById('email-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalEmailClose()
-    }
-  })
+	document
+		.querySelectorAll("[data-consultation]")
+		.forEach((x) => x.addEventListener("click", () => modalOpen("Выберете удобное <br> время для звонка")));
 
-  document.querySelector('.form__button-option').addEventListener('click', () => {
-    toggleFormOption()
-  })
-  
+	document
+		.getElementById("consultation-form")
+		.addEventListener("click", function (event) {
+			if (event.target === this) {
+				modalConsultationClose();
+			}
+		});
 
-  const myForm = document.querySelector('[data-gragerForm]')
+	document
+		.querySelectorAll("[data-email]")
+		.forEach((x) => x.addEventListener("click", () => modalEmailOpen()));
 
-  myForm.addEventListener('submit', e => {
-    // Закрыть модальное окно
-    modalClose()
-  })  
-  
-  
+	document
+		.getElementById("email-form")
+		.addEventListener("click", function (event) {
+			if (event.target === this) {
+				modalEmailClose();
+			}
+		});
+
+	document
+		.querySelector(".form__button-option")
+		.addEventListener("click", () => {
+			toggleFormOption();
+		});
+
+	const myForm = document.querySelector("[data-gragerForm]");
+
+	myForm.addEventListener("submit", (e) => {
+		// Закрыть модальное окно
+		modalClose();
+	});
 });
