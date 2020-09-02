@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="libs/jquery/jquery-3.5.1.min.js">       </script>
-    <script src="libs/carousel/jquery.waterwheelCarousel.js"></script>
     <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css"/>
     <link rel="stylesheet" href="fonts/noto-webfont/noto.css"/>
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"/>
@@ -15,7 +13,7 @@
   </head>
   <body>
     <div class="header">           
-      <div class="logo"><a href="#"></a></div><img class="header-rhombus header-rhombus--left" src="img/g.png" alt=""/>
+      <div class="logo"><a href="/"></a></div><img class="header-rhombus header-rhombus--left" src="img/g.png" alt=""/>
       <p class="header__title">Душевые ограждения и двери на заказ  </p>
       <p class="header__title--mobile">
          Душевые ограждения и двери из стекла <br/> на заказ</p><img class="header-logo" src="img/logo-head.png" alt=""/><img class="header-rhombus header-rhombus--right" src="img/g2.png" alt=""/>
@@ -888,7 +886,7 @@
       <div class="modal-wrapper">
         <div class="bg-form"></div>
         <div class="form__title">Заполните форму для связи</div>
-        <form class="form__form" action="/php/mail.php" method="POST" data-gragerForm="">
+        <form class="form__form" data-gragerForm="">
           <div class="form-item">
             <label class="form-label">Ваш телефон*</label>
             <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :" id="grager-phone"/>
@@ -911,39 +909,7 @@
               <input class="form-input form-input--date datepicker-here" name="grager-date" type="text" value="выберете дату" data-position="right top"/>
             </div>
           </div>
-          <button class="form-button-send" type="submit">Вызвать замерщика</button>
-        </form>
-        <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
-      </div>
-    </div>
-    <div class="form" id="consultation-form" name="consultation-form">
-      <div class="modal-wrapper">
-        <div class="bg-form"></div>
-        <div class="form__title">Заполните форму для связи</div>
-        <form class="form__form" action="/php/mail.php" method="POST" data-consultation="">
-          <div class="form-item">
-            <label class="form-label">Ваш телефон*</label>
-            <input class="form-input" mame="grager-phone" type="text" placeholder="+7(___)___-__-__ :"/>
-          </div>
-          <div class="form-item">
-            <label class="form-label">Ваше имя*</label>
-            <input class="form-input" name="grager-name" type="text" placeholder="Иван"/>
-          </div>
-          <div class="form__button-option" data-hidden="">Выберете удобное <br> время для звонка           </div>
-          <div class="form-option hidden">
-            <div class="form-item">
-              <label class="form-label">Комментарий</label>
-              <textarea class="form-input form-input--textarea" name="grager-text" placeholder="текст"></textarea>
-            </div>
-            <div class="form__heading">Выберите время и дату для звонка</div>
-            <div class="time">
-              <input class="form-input form-input--time" name="grager-h" type="text" placeholder="00"/>
-              <p class="test-p">: </p>
-              <input class="form-input form-input--time" name="grager-s" type="text" placeholder="00"/>
-              <input class="form-input form-input--date datepicker-here" name="grager-date" type="text" value="выберете дату" data-position="right top"/>
-            </div>
-          </div>
-          <button class="form-button-send" type="submit">Вызвать замерщика</button>
+          <input class="form-button-send" type="submit" value="Вызвать замерщика"/>
         </form>
         <div class="form__description">Нажимаю на кнопку, Вы даете согласие с Политикой конфиденциальности и cookies</div>
       </div>
@@ -952,7 +918,7 @@
       <div class="modal-wrapper">
         <div class="bg-form"></div>
         <div class="form__title">Куда отправить расчет?</div>
-        <form class="form__form" action="/php/mail.php" method="POST">
+        <form class="form__form">
           <div class="form-item">
             <label class="form-label">Ваше e-mail*</label>
             <input class="form-input" name="grager-name" type="text" placeholder="@mail.ru"/>
@@ -971,9 +937,13 @@
       </div>
     </div>
     <!--script(src="libs/jquery/jquery-1.11.2.min.js")-->
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/carousel/jquery.waterwheelCarousel.js"></script>
     <script src="libs/owl/owl.carousel.js"></script>
     <script src="libs/calendar/js/datepicker.min.js"></script>
+    <script src="libs/maskedinput/jquery.maskedinput.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/formEmail.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/ac.js"></script>
   </body>

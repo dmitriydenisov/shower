@@ -1,175 +1,206 @@
 // Уже активированные карусели
-const initedList = []
+const initedList = [];
 
 // Активируем карточку с каруселью
 function showCard(selector) {
-  // Скрываем все карусели
-  document.querySelectorAll('[data-card]').forEach(x => x.classList.add('hidden'))
+	// Скрываем все карусели
+	document
+		.querySelectorAll("[data-card]")
+		.forEach((x) => x.classList.add("hidden"));
 
-  // Находим публикуемую карточку
-  const card = document.querySelector(selector)
+	// Находим публикуемую карточку
+	const card = document.querySelector(selector);
 
-  // Убираем у нее класс hidden, чтобы карточку было видно
-  card.classList.remove('hidden')
+	// Убираем у нее класс hidden, чтобы карточку было видно
+	card.classList.remove("hidden");
 
-  // Проверка уже активированной карусели
-  if (initedList.includes(selector)) {
-    return
-  }
+	// Проверка уже активированной карусели
+	if (initedList.includes(selector)) {
+		return;
+	}
 
-  initedList.push(selector)
+	initedList.push(selector);
 
-  // Находим карусель внутри карточки, и кнопки вперед назад
-  let carousel = card.querySelector('.carousel')
-  const next = card.querySelector('.next')
-  const prev = card.querySelector('.prev')
+	// Находим карусель внутри карточки, и кнопки вперед назад
+	let carousel = card.querySelector(".carousel");
+	const next = card.querySelector(".next");
+	const prev = card.querySelector(".prev");
 
-  // Инициализа карусели
-  carousel = $(carousel).waterwheelCarousel({
-    flankingItems: 3,
-    imageNav: true,
-    autoPlay: 4000,
-  });
+	// Инициализа карусели
+	carousel = $(carousel).waterwheelCarousel({
+		flankingItems: 3,
+		imageNav: true,
+		autoPlay: 4000,
+	});
 
-  // Инициалируем кнопки
-  prev.addEventListener('click', e => {
-    e.preventDefault()
-    e.stopPropagation()
+	// Инициалируем кнопки
+	if (prev) {
+		prev.addEventListener("click", (e) => {
+			e.preventDefault();
+			e.stopPropagation();
 
-    carousel.prev();
-  })
+			carousel.prev();
+		});
+	}
 
-  next.addEventListener('click', e => {
-    e.preventDefault()
-    e.stopPropagation()
+	if (next) {
+		next.addEventListener("click", (e) => {
+			e.preventDefault();
+			e.stopPropagation();
 
-    carousel.next();
-  })
+			carousel.next();
+		});
+	}
 }
 
 function showOwl(variant) {
-  const sliders = document.querySelectorAll(`.slider-big__slider`)
-  sliders.forEach(x => x.classList.add('hidden'))
+	const sliders = document.querySelectorAll(`.slider-big__slider`);
+	sliders.forEach((x) => x.classList.add("hidden"));
 
-  const carousel = document.querySelector(`.slider-big__slider[data-variant="${variant}"] > .owl-carousel`)
-  const slider = carousel.closest('.slider-big__slider')
-  slider.classList.remove('hidden')
+	const carousel = document.querySelector(
+		`.slider-big__slider[data-variant="${variant}"] > .owl-carousel`
+	);
+	const slider = carousel.closest(".slider-big__slider");
+	slider.classList.remove("hidden");
 
-  const owlCarousel = $(carousel).owlCarousel({
-    loop: true,
-    dots: false
-  });
+	const owlCarousel = $(carousel).owlCarousel({
+		loop: true,
+		dots: false,
+	});
 
-  $('.prev').click(function () {
-    event.preventDefault()
-    owlCarousel.trigger('prev.owl.carousel');
-  })
+	$(".prev").click(function () {
+		event.preventDefault();
+		owlCarousel.trigger("prev.owl.carousel");
+	});
 
-  $('.next').click(function () {
-    event.preventDefault()
-    owlCarousel.trigger('next.owl.carousel');
-  })
+	$(".next").click(function () {
+		event.preventDefault();
+		owlCarousel.trigger("next.owl.carousel");
+	});
 }
 
 $(document).ready(function () {
-  const variantButtons = document.querySelectorAll('button[data-variant]')
-  variantButtons.forEach(vb => vb.addEventListener('click', () => showOwl(vb.dataset.variant)))
-  showOwl(variantButtons[0].dataset.variant)
+	const variantButtons = document.querySelectorAll("button[data-variant]");
 
-  //переключение слайдов по кнопке
-  const cards = document.querySelectorAll('.viev__slider-big')  
+	variantButtons.forEach((vb) =>
+		vb.addEventListener("click", () => {
+			variantButtons.forEach((vb) =>
+				vb.classList.remove("btn-block__item--active")
+			);
 
-  document.querySelectorAll('[data-showCard]').forEach(btn => {
-    btn.addEventListener("click", () => {
-      const li = btn.closest('li')
+			vb.classList.add("btn-block__item--active");
 
-      if (li) {
-        document.querySelectorAll('.view__slider-item').forEach(li => li.classList.remove('view__slider-item--active'))
-        li.classList.add('view__slider-item--active')
-      }
-      
-      showCard(`[data-card="${btn.dataset.showcard}"]`)
-    })
-})
+			showOwl(vb.dataset.variant);
+		})
+	);
 
-  showCard('[data-card="1"]')
+	showOwl(variantButtons[0].dataset.variant);
 
-  
+	//переключение слайдов по кнопке
+	const cards = document.querySelectorAll(".viev__slider-big");
 
-  //управление модальными окнами 
-  function modalOpen() {
-    document.querySelector('#gager-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+	document.querySelectorAll("[data-showCard]").forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const li = btn.closest("li");
 
-  function modalClose() {
-    document.querySelector('#gager-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
-  function modalConsultationOpen() {
-    document.querySelector('#consultation-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+			if (li) {
+				document
+					.querySelectorAll(".view__slider-item")
+					.forEach((li) => li.classList.remove("view__slider-item--active"));
+				li.classList.add("view__slider-item--active");
+			}
 
-  function modalConsultationClose() {
-    document.querySelector('#consultation-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
-  function modalEmailOpen() {
-    document.querySelector('#email-form').classList.add('form--active')
-    document.body.style.overflow = 'hidden'
-  }
+			showCard(`[data-card="${btn.dataset.showcard}"]`);
+		});
+	});
 
-  function modalEmailClose() {
-    document.querySelector('#email-form').classList.remove('form--active')
-    document.body.style.overflow = 'auto'
-  }
+	showCard('[data-card="1"]');
 
-  function toggleFormOption() {
-    document.querySelector('.form-option').classList.toggle('form-option--active')
-  }
+	//управление модальными окнами
+	function modalOpen(buttonText) {
+		const form = document.querySelector("#gager-form");
 
-  document.querySelectorAll('[data-grapper]').forEach(
-    x => x.addEventListener('click', () => modalOpen())
-  )
+		form.classList.add("form--active");
+		document.body.style.overflow = "hidden";
 
-  document.getElementById('gager-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalClose()
-    }
-  })
+		form.querySelector(".form__button-option").innerHTML = buttonText;
+	}
 
-  document.querySelectorAll('[data-consultation]').forEach(
-    x => x.addEventListener('click', () => modalConsultationOpen())
-  )
+	function modalClose() {
+		document.querySelector("#gager-form").classList.remove("form--active");
+		document.body.style.overflow = "auto";
+	}
 
-  document.getElementById('consultation-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalConsultationClose()
-    }
-  })
+	// function modalConsultationClose() {
+	// 	document
+	// 		.querySelector("#consultation-form")
+	// 		.classList.remove("form--active");
+	// 	document.body.style.overflow = "auto";
+	// }
 
-  document.querySelectorAll('[data-email]').forEach(
-    x => x.addEventListener('click', () => modalEmailOpen())
-  )
+	function toggleFormOption() {
+		document
+			.querySelector(".form-option")
+			.classList.toggle("form-option--active");
+	}
 
-  document.getElementById('email-form').addEventListener('click', function (event) {
-    if (event.target === this) {
-      modalEmailClose()
-    }
-  })
+	document
+		.querySelectorAll("[data-grapper]")
+		.forEach((x) =>
+			x.addEventListener("click", () =>
+				modalOpen("Укажите адрес, время и контакты представителя")
+			)
+		);
 
-  document.querySelector('.form__button-option').addEventListener('click', () => {
-    toggleFormOption()
-  })
-  
+	document
+		.getElementById("gager-form")
+		.addEventListener("click", function (event) {
+			if (event.target === this) {
+				modalClose();
+			}
+		});
 
-  const myForm = document.querySelector('[data-gragerForm]')
+	document
+		.querySelectorAll("[data-consultation]")
+		.forEach((x) =>
+			x.addEventListener("click", () =>
+				modalOpen("Выберете удобное <br> время для звонка")
+			)
+		);
 
-  myForm.addEventListener('submit', e => {
-    // Закрыть модальное окно
-    modalClose()
-  })  
-  
-  
+	// document
+	// 	.getElementById("consultation-form")
+	// 	.addEventListener("click", function (event) {
+	// 		if (event.target === this) {
+	// 			modalConsultationClose();
+	// 		}
+	// 	});
+
+	document
+		.querySelector(".form__button-option")
+		.addEventListener("click", () => {
+			toggleFormOption();
+		});
+
+	// const myForm = document.querySelector("[data-gragerForm]");
+
+	// myForm.addEventListener("submit", (e) => {
+	// 	// Закрыть модальное окно
+	// 	modalClose();
+	// });
 });
+
+// Отправка заявки
+function ajaxFormSubmit() {
+	var string = $("#gager-form").serialize(); // Соханяем данные введенные в форму в строку.
+
+	// Формируем ajax запрос
+	$.ajax({
+		method: "POST", // Тип запроса - POST
+		url: "php/mail.php", // Куда отправляем запрос
+		data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+		success: function () {
+			alert("123");
+		},
+	}).done(alert("done"));
+}
