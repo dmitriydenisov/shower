@@ -152,7 +152,7 @@
 .test-mod {
     display: none;
     position: absolute;
-    width: 765px;
+    width: 730px;
     top: -20px;
     left: 0;
     transform: translateX(-19%);
@@ -264,7 +264,19 @@
         }
     }
 }
-@media(min-width:740px){
+@media(min-width:1300px){
+    .test-bg{
+        width: 295px;
+        height: 181px;
+        top: -178px;
+    }}
+@media(min-width:1920px){
+    .test-bg{
+        width: 543px;
+        height: 185px;
+        top: -177px;
+    }}
+@media(min-width:1920px){
     .type-glass__description{
         left: 64px;
         width: 730px;
@@ -303,6 +315,9 @@
 }
 @media(min-width:1300px){
     .type-glass-block {
+        .type-glass__description {
+            width: 656px;
+        }
         &:nth-child(4){
             .type-glass__description {
                 left: -240px;
@@ -325,7 +340,7 @@
                 }
             }
             .test-mod--last{
-                width: 495px;
+                width: 420px;
             }
             .test-bg{
                 right: -50px;
@@ -336,6 +351,9 @@
 }
 @media(min-width:1920px){
     .type-glass-block {
+        .type-glass__description {
+            width: 790px;
+        }
         &:nth-child(4){
             .type-glass__description {
                 left: -23px;
@@ -369,16 +387,18 @@
         
     }
 }
+@media(min-width:900px){
+    .type-glass-block:hover .test-mod{
+        display: block;
+    }
+    .type-glass-block:hover .type-glass__description{
+        display: block;
+    }
+    .services-faq-block:hover .test-mod{
+        display: block;
+    }
+}
 
-.type-glass-block:hover .test-mod{
-    display: block;
-}
-.type-glass-block:hover .type-glass__description{
-    display: block;
-}
-.services-faq-block:hover .test-mod{
-    display: block;
-}
 .type-glass-block__title {
     text-align: center;
     padding-right: 24px;
