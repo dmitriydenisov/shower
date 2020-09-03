@@ -167,7 +167,7 @@
 .form-button-send {
     background: #F4B955;
     border-radius: 10px;
-    width: 290px;
+    width: 279px;
     color: #fff;
     padding: 20px 40px;
     margin-top: 5px;
@@ -179,6 +179,11 @@
 @media(min-width:350px){
     .form-button-send{
         margin-top: 30px;
+    }
+}
+@media(min-width:900px){
+    .form-button-send{
+        width: 290px;
     }
 }
 .form__description {
